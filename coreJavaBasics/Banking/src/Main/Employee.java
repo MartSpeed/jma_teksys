@@ -1,12 +1,13 @@
 package Main;
 
-public class Employee {
+public class Employee extends AbstractAccountActions {
 // fields and Variables at the top
-	// encapsulation 
+	// encapsulation
 	private String firstName;
 	private String lastName;
 	private long employeeId;
 	private String jobTitle;
+	private float totalAmount;
 
 	// employee default constructor
 	public Employee() {
@@ -74,9 +75,20 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [" + "firstName=" + firstName + ", " + "lastName=" + lastName + ", employeeId=" + employeeId
-				+ ", jobTitle=" + jobTitle + "]";
+				+ ", jobTitle=" + jobTitle +  ", totalAmount=" + totalAmount + "]"; 
 	}
 
 	// other methods
+	@Override
+	float withdraw(int amount, int withdrawAmount) {
+		totalAmount = amount - withdrawAmount;
+		return totalAmount;
+	}
+
+	@Override
+	float deposit(int amount, int depositAmount) {
+		totalAmount = amount + depositAmount;
+		return totalAmount;
+	}
 
 }
