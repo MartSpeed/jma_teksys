@@ -1,7 +1,16 @@
 package monster;
 
+// extend the Monster class
 public class FireMonster extends Monster {
-	public static void fireAttack() {
-		System.out.println("attack with fire");
+
+	// calling the string arg
+	public FireMonster(String monsterName) {
+		super(monsterName);
 	}
+
+	// subclass String method
+	public String attack() {
+		return "Attack with fire!";
+	}
+
 }

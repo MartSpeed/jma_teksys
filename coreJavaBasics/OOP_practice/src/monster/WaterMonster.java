@@ -1,7 +1,17 @@
 package monster;
 
+// extends to Monster class
 public class WaterMonster extends Monster {
-	public static void waterAttack() {
-		System.out.println("Evil water, gonna hurt you so bad");
+
+	// calling the string arg
+	public WaterMonster(String monsterName) {
+		// super keyword
+		super(monsterName);
 	}
+
+	// subclass String method
+	public String attack() {
+		return "Attack with water!";
+	}
+
 }
