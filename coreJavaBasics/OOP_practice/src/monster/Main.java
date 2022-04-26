@@ -34,5 +34,4 @@ public class Main {
 		Monster monster = new Monster("grey duck");
 		System.out.println(monster.attack());
 	}
-
 }
