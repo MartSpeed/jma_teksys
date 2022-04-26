@@ -4,19 +4,34 @@ package doorAndLocks;
 import java.util.UUID;
 
 public class Key implements Cloneable, Comparable<Key> {
+	
+	// key default UUID
+	private UUID key = UUID.randomUUID();
+	// key default shape
+	private KeyShape shape = KeyShape.Unknown;
 
-	public UUID key = UUID.randomUUID();
-
-	// default constructor
+	// default Key constructor
 	public Key() {
 		key = UUID.randomUUID();
 	}
+	
+	// Shape of the key
+	public Key(KeyShape shape) {
+		this(); // Init key using the default constructor
+		this.shape = shape;
+	}	
 
+	// copy constructor
 	public Key(Key original) {
 		key = original.key;
+		shape = original.shape;
+	}
+	
+	public KeyShape shape() {
+		return shape;
 	}
 
-	// *** OVEERRIDES ***
+	// *** OVERRIDES ***
 	@Override
 	public boolean equals(Object obj) {
 		if (!getClass().isInstance(obj))
