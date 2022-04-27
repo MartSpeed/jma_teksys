@@ -16,7 +16,7 @@ Create a new package in your exercise project named com.perscholas.cafe. Create 
     -- [x] calculates the product subtotal for the order.
 [x] create a driver class called CafeApp
 [x] create Product instances
-    [x] --coffee
+    [x] -- coffee
     [x] -- espresso
     [x] -- cappuccino
         [x] -- assign product descriptions
