@@ -20,7 +20,7 @@ public class MainLinkList {
 	// LinkedList take more memory than ArrayList
 	LinkedList<Integer> linkOne = new LinkedList<Integer>();
 	System.out.println(linkOne.add(23));	
-	linkOne.add(12)
+	linkOne.add(12);
 	//linkOne.add(4, 56)
 	//System.out.println(linkOne.get(23));
 	//linkOne.get(4)
