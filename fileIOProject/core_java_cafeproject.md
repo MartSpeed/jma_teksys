@@ -2,7 +2,7 @@
 
 Create a new package in your exercise project named com.perscholas.cafe. Create a class named Product inside this package with four private attributes (name, price, description, quantity). The class should also include a no-arg constructor and a constructor which takes three arguments for name, price and description. Next, create getters and setters and include a method named calculateProductTotal( ) which calculates the product subtotal for the order. Create a driver class (i.e., class that includes a main method) named CafeApp which creates three Product instances named "coffee", "espresso" and "cappuccino". Assign descriptions and prices to each product instance. Use the Scanner class to prompt the user for the quantity of each product and then print the name, description and product subtotal for each after each prompt. Print the sales subtotal, sales tax and sales total before exiting the application.
 
-[x] create a new package name com.perscholas.cafe
+# [x] create a new package name com.perscholas.cafe
 [x] create a class named Product inside this package
 [x] create 4 private variables
     [x] -- name
@@ -40,7 +40,7 @@ In the Espresso class, add the boolean attributes extraShot and macchiato and co
 In the Cappuccino class, add the boolean attributes peppermint and whippedCream and complete the rest of the class as with the Coffee and Espresso classes. In the calculateProductSubtotal method, add $2.00 to each item with peppermint and add $1.00 to each item with whipped cream.
 Rewrite the CafeApp class to utilize the Scanner class to accept orders for each product and, as before, print the name, description, quantity, and product subtotal for each item along with the sales subtotal, sales tax, and sales total.
 
-[x] make the Product class and abstract class
+# [x] make the Product class and abstract class
 [x] create calculateProductSubtotal() method
     [x] -- make calculateProductSubtotal() method and abstract class
 [x] create 3 classes that extends from Product
