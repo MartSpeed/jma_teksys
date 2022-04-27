@@ -3,31 +3,31 @@
 Create a new package in your exercise project named com.perscholas.cafe. Create a class named Product inside this package with four private attributes (name, price, description, quantity). The class should also include a no-arg constructor and a constructor which takes three arguments for name, price and description. Next, create getters and setters and include a method named calculateProductTotal( ) which calculates the product subtotal for the order. Create a driver class (i.e., class that includes a main method) named CafeApp which creates three Product instances named "coffee", "espresso" and "cappuccino". Assign descriptions and prices to each product instance. Use the Scanner class to prompt the user for the quantity of each product and then print the name, description and product subtotal for each after each prompt. Print the sales subtotal, sales tax and sales total before exiting the application.
 
 # [x] create a new package name com.perscholas.cafe
-[x] create a class named Product inside this package
-[x] create 4 private variables
-    [x] -- name
-    [x] -- price
-    [x] -- description
-[x] create getters and setters
-    [x] -- name get/return, set/this.set
-    [x] -- price get/price, set/this.set
-    [x] -- description get/description, set/this.set
-[x] create method calculateProductTotal()
-    -- [x] calculates the product subtotal for the order.
-[x] create a driver class called CafeApp
-[x] create Product instances
-    [x] -- coffee
-    [x] -- espresso
-    [x] -- cappuccino
-        [x] -- assign product descriptions
-        [x] -- assign product prices
-[x] Use the Scanner class to prompt the user for the quantity of each product
-    [x] -- print the name of products
-    [x] -- print the description of products
-    [x] -- print subtotal of products
-        [x] -- print the sales subtotal
-        [x] -- print the sales tax
-        [x] -- sales total
+    [x] create a class named Product inside this package
+    [x] create 4 private variables
+        [x] -- name
+        [x] -- price
+        [x] -- description
+    [x] create getters and setters
+        [x] -- name get/return, set/this.set
+        [x] -- price get/price, set/this.set
+        [x] -- description get/description, set/this.set
+    [x] create method calculateProductTotal()
+        [x] -- calculates the product subtotal for the order.
+    [x] create a driver class called CafeApp
+    [x] create Product instances
+        [x] -- coffee
+        [x] -- espresso
+        [x] -- cappuccino
+            [x] -- assign product descriptions
+            [x] -- assign product prices
+    [x] Use the Scanner class to prompt the user for the quantity of each product
+        [x] -- print the name of products
+        [x] -- print the description of products
+        [x] -- print subtotal of products
+            [x] -- print the sales subtotal
+            [x] -- print the sales tax
+            [x] -- sales total
 
 # Project 2
 
@@ -41,22 +41,22 @@ In the Cappuccino class, add the boolean attributes peppermint and whippedCream 
 Rewrite the CafeApp class to utilize the Scanner class to accept orders for each product and, as before, print the name, description, quantity, and product subtotal for each item along with the sales subtotal, sales tax, and sales total.
 
 # [x] make the Product class and abstract class
-[x] create calculateProductSubtotal() method
-    [x] -- make calculateProductSubtotal() method and abstract class
-[x] create 3 classes that extends from Product
-    [x] -- create coffee class
-        [x] -- extends Product class
-    [x] -- create espresso class
-        [x] -- extends Product class
-    [x] -- create cappuccino class
-        [x] -- extends Product class
-[x] add override method to new classes
-    [x] -- override coffee class
-        [x] -- w/calculateProductSubtotal( ) method
-    [x] -- override espresso class
-        [x] -- w/calculateProductSubtotal( ) method
-    [x] -- override cappuccino class
-        [x] -- w/calculateProductSubtotal( ) method
+    [x] create calculateProductSubtotal() method
+        [x] -- make calculateProductSubtotal() method and abstract class
+    [x] create 3 classes that extends from Product
+        [x] -- create coffee class
+            [x] -- extends Product class
+        [x] -- create espresso class
+            [x] -- extends Product class
+        [x] -- create cappuccino class
+            [x] -- extends Product class
+    [x] add override method to new classes
+        [x] -- override coffee class
+            [x] -- w/calculateProductSubtotal( ) method
+        [x] -- override espresso class
+            [x] -- w/calculateProductSubtotal( ) method
+        [x] -- override cappuccino class
+            [x] -- w/calculateProductSubtotal( ) method
 # [x] Coffee Class
     [x] -- booleans attributes
         [x] -- sugar
