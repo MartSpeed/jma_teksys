@@ -98,6 +98,13 @@ public class Functional_Interfaces_Main {
 		 //
 		 Runn_ableDemo runTwo = new Runn_ableDemo("Thread-2");
 		 runTwo.start();
+		 
+		 // run our threads
+		 Sender send = new Sender();
+		 SendingThread sendOne = new SendingThread("Thread 1 is sending the shiniest meat bicycle", send);
+		 SendingThread sendTwo = new SendingThread("Thread 2 is sending the Fart Sparkle Effect", send);
+		 
+		 sendOne.run();
+		 sendTwo.run();
 	}
-
 }
