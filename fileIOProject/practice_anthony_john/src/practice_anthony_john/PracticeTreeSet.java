@@ -20,6 +20,7 @@ public class PracticeTreeSet {
 		// give TreeSet an arg <String>,<Integer>,<Boolean>
 		TreeSet<String> words = new TreeSet<>();
 		TreeSet<String> numbers = new TreeSet<>();
+		
 		//
 		words.addAll(Arrays.asList(phraseList));
 		numbers.addAll(Arrays.asList(quoteList));
