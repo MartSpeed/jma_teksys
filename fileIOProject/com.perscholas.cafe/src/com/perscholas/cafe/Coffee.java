@@ -52,11 +52,13 @@ public class Coffee extends Product {
 		System.out.println("Would you like sugar?");
 
 		// do you want sugar?
-		String sugar = coffeeScanner.nextLine();
-		if (sugar == "Y") {
-			o1 = true;
+		// needed to rename sugar variable for the input value
+		// not the boolean field
+		String sugarInput = coffeeScanner.nextLine();
+		if (sugarInput == "Y") {
+			sugar = true;
 		} else {
-			o1 = false;
+			sugar = false;
 		}
 
 		// scanner for milk choice
