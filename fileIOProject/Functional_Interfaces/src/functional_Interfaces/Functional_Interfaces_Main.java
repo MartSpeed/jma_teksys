@@ -1,6 +1,6 @@
 package functional_Interfaces;
 
-import java.util.StringJoiner;
+import java.util.*;
 
 //declaration*
 @FunctionalInterface
@@ -68,13 +68,23 @@ public class Functional_Interfaces_Main {
 		
 		// single line lambda output
 		AddMethod addOne = (a,b)->(a+b);
-		 System.out.println(addOne.add(10,40));
+		 System.out.println(addOne.add(10,40)  + "\n");
 		 
 		 // multiline output
 			/*
 			 * AddMethod addOne = (a,b)->{ System.out.println(a+b); }; addOne.add(35, 25);
 			 */
 		 
+		 // creating a list for a foreach loop lambda
+		 List<String> listOne = new ArrayList<>();
+		 listOne.add("Zorro");
+		 listOne.add("Jimbei");
+		 listOne.add("Kaku");
+		 listOne.add("Lucci");
+		 
+		 // lambda for-each
+		 // lambda requires semicolon at the end rather than in the print method
+		 listOne.forEach((n)-> System.out.println(n));
 	}
 
 }
