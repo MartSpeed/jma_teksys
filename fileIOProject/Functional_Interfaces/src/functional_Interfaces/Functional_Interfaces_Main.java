@@ -84,7 +84,20 @@ public class Functional_Interfaces_Main {
 		 
 		 // lambda for-each
 		 // lambda requires semicolon at the end rather than in the print method
-		 listOne.forEach((n)-> System.out.println(n));
+		 listOne.forEach((n)-> System.out.println(n + "\n"));
+		 
+		 // multi-threading
+		 // this method can use a LOT of memory and can be quite taxing if youre not careful
+		 // [1] new thread() -> 
+		 // [2] start("starting the execution of a task") -> 
+		 // [3] run("allows us to do the waiting or run the program)	..... waiting ..... Dead()
+		 // [4] provide a runnable interface, a RUN thread
+		 Runn_ableDemo runOne = new Runn_ableDemo("Thread-1");
+		 runOne.start();
+		 
+		 //
+		 Runn_ableDemo runTwo = new Runn_ableDemo("Thread-2");
+		 runTwo.start();
 	}
 
 }
