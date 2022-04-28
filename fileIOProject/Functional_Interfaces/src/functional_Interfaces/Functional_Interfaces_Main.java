@@ -4,31 +4,38 @@ import java.util.StringJoiner;
 
 //declaration*
 @FunctionalInterface
-interface addMethod{
+interface AddMethod {
 	// method to take two numbers and adds them together
+	//public void msg();
+
+	int add(int a, int b);
 }
 
 public class Functional_Interfaces_Main {
 
 	public static void main(String[] args) {
 		// functional interfaces take a single abstract method (S.A.M.)
-		
+
 		// stringJoiner
 		// joins strings by:
 		// always import utils for new methods?
-		
-		  StringJoiner joinName = new StringJoiner(", ","[","]");
-		  joinName.add("Anthony"); joinName.add("Albedo"); joinName.add("Albion");
-		  
-		  System.out.println("this is the StringJoiner\n" + joinName);
-		  
-		  StringJoiner joinName2 = new StringJoiner("-","(",")");
-		  joinName2.add("Musasibou"); joinName2.add("Oda");
-		  
-		  //merging names using String joiner 
-		  StringJoiner m = joinName2.merge(joinName); System.out.println(m);
-		 
-		
+
+		StringJoiner joinName = new StringJoiner(", ", "[", "]");
+		joinName.add("Anthony");
+		joinName.add("Albedo");
+		joinName.add("Albion");
+
+		System.out.println("this is the StringJoiner\n" + joinName);
+
+		StringJoiner joinName2 = new StringJoiner("-", "(", ")");
+		joinName2.add("Musasibou");
+		joinName2.add("Oda");
+
+		// merging names using String joiner
+		StringJoiner m = joinName2.merge(joinName);
+		System.out.println(m);
+		System.out.println("=====END OF STRING JOINER======\n");
+
 		// StringBuffer class
 		// creates a mutable
 		StringBuffer sb = new StringBuffer("Barge in! Relate mere war of 1991 for a were-metal Ernie grab!");
@@ -43,7 +50,31 @@ public class Functional_Interfaces_Main {
 		// reverse method
 		sb.reverse();
 		System.out.println(sb);
+		System.out.println("=====END OF STRING BUFFER======\n");
+
+		// LAMBDA practice (exaggerated arrow function)
+		// () ->
+		// can only use with functional interface
+		// functional interface can 
+
+		/*
+		 * AddMethod me = ()-> {
+		 * System.out.println("Yellow Valkyrie needs food BADLY!\n"); }; me.msg();
+		 * 
+		 * AddMethod say = ()-> {
+		 * System.out.println("That sentence had to TOO MANY syllables... APOLOGIZE!\n"
+		 * ); }; say.msg();
+		 */
 		
+		// single line lambda output
+		AddMethod addOne = (a,b)->(a+b);
+		 System.out.println(addOne.add(10,40));
+		 
+		 // multiline output
+			/*
+			 * AddMethod addOne = (a,b)->{ System.out.println(a+b); }; addOne.add(35, 25);
+			 */
+		 
 	}
 
 }
