@@ -5,7 +5,7 @@ public class Monster {
 	String monsterName;
 	
 	// MONSTER CONSTUCTORS: String name
-	public Monster(String monsterName) {
+	public  Monster(String monsterName) {
 		this.monsterName = monsterName;
 	}
 	// default Sting method

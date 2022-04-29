@@ -10,8 +10,9 @@ public class WaterMonster extends Monster {
 	}
 
 	// subclass String method
+	// SUBCLASS DOES NOT TAKE A STRING ARG!!!!!
 	public String attack() {
-		return "Attack with water!";
+		return "EVIL WATER, gonna hurt you SO bad~!";
 	}
 
 }

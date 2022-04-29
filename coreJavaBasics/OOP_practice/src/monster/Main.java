@@ -20,18 +20,25 @@ public class Main {
 		Monster waterMonster = new WaterMonster("raven");
 		// [x] stone monster
 		Monster stoneMonster = new StoneMonster("strix");
+		// [] ice monster
+		Monster iceMonster = new IceMonster("sheetz");
 
 		// [x] invoke the actual implementation
 		System.out.println(fireMonster.attack());
 		System.out.println(waterMonster.attack());
 		System.out.println(stoneMonster.attack());
+		System.out.println(iceMonster.attack());
 		
 		// [x] fire monster dies, new fire monster type instantiates
-		Monster flameMonster = new FireMonster("goose");
+		Monster flameMonster = new Monster("goose");
 		System.out.println(flameMonster.attack());
 		
 		// [x] something wrong
 		Monster monster = new Monster("grey duck");
 		System.out.println(monster.attack());
+		
+		// [] call new monster type
+		Monster frostMonster = new IceMonster("Cypher");
+		System.out.println(frostMonster.attack());
 	}
 }

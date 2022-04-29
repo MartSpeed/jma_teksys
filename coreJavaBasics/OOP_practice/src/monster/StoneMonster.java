@@ -10,6 +10,7 @@ public class StoneMonster extends Monster {
 	}
 
 	// subclass String method
+	// SUBCLASS DOES NOT TAKE A STRING ARG!!!!!
 	public String attack() {
 		return "Attack with stone!";
 	}
