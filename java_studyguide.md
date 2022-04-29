@@ -1,0 +1,33 @@
+# **JAVA OOP CONCEPT APPLICATION STUDY GUIDE**
+
+---
+
+- **[x] Array Lists**
+  - [] .add();
+  - [] .remove();
+  - [] .clear();
+- [] TreeSet
+- [] LinkedList
+- [] Stacks in Java
+- [] Java collections frameworks
+- [] How do you import Array Lists
+- [] How do you import Java Collections
+- [] How do you import Java Utilities
+- [] Generics
+- [] Sets - (TreeSet, EnumSet, HashSet, MapSet)
+- [] Go over the map interface and array lists
+- [] Look at map, set, and list interfaces and how to implement them
+- [] Maps - map methods (Treemap, Hashmap, EnumMap) and implementation
+- [] how to create a lambda
+- [] Functional Interface
+- [] Go over interfaces and methods used in interfaces
+- [] String buffer
+- [] StringJoiner
+- [] understand how the following methods work .insert(), .reverse(), .delete(), .merge(), .toString()
+- [] Input Streams, OutputStreams String Buffer
+- [] Try to implement method over-writing with two -- interfaces in one class, what is the result?
+- [] How do you use String Joiner, How do you use .add method?
+- [] know what an interface is and which methods you use in the interface static method
+- [] know the definiton of String buffer and what it does
+- [] what is input stream
+- [] what is output stream
