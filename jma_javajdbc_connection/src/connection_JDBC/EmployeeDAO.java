@@ -60,9 +60,9 @@ public class EmployeeDAO {
 			while (resultSet.next()) {
 				
 				// print out everything inside of the employee model
-				System.out.println("Employee Number: " + resultSet.getInt("employeeNumber") + "First Name: "
-						+ resultSet.getString("firstName") + resultSet.getString("lastName")
-						+ resultSet.getString("jobTitle"));
+				System.out.println("Employee ID: " + resultSet.getInt("employeeNumber") + "\n" + " \nName: "
+						+ resultSet.getString("firstName") + " " + resultSet.getString("lastName")
+						+ " \nJob Title: " + resultSet.getString("jobTitle"));
 			}
 			
 		} catch (Exception e) {

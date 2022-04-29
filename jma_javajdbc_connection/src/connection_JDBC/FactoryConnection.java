@@ -14,13 +14,14 @@ public class FactoryConnection {
 	// locate database driver
 	// SQL server connection
 	// jdbc:sqlserver://[serverName[\instanceName][:portNumber]][;property=value[;property=value]]
+	// MySQL connection string: "jdbc:mysql://localhost:3306/classicmodels" <- change name and location of DB here
 	private final String url = "jdbc:mysql://localhost:3306/classicmodels";
 	
 	// root user
 	private final String user = "root";
 	
 	// enter pw
-	private final String pass = "1qaz!QAZ2wsx@WSX";
+	private final String pass = "********";
 	
 	//Connection conn = DriverManager.getConnection(url, user, pass);
 	
