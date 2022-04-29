@@ -21,7 +21,7 @@ public class FactoryConnection {
 	private final String user = "root";
 	
 	// enter pw
-	private final String pass = "********";
+	private final String pass = "*****";
 	
 	//Connection conn = DriverManager.getConnection(url, user, pass);
 	

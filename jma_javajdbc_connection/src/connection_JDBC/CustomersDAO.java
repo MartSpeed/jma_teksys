@@ -59,7 +59,7 @@ public class CustomersDAO {
 			return customer;
 		}
 
-public CustomersModel getAllCustomersId(String city) {
+public CustomersModel getAllByCity(String city) {
 			
 			// create space for new information
 			CustomersModel customer = new CustomersModel();
