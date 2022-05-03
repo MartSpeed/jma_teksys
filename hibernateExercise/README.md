@@ -1,11 +1,14 @@
 <h1>Hibernate Project</h1>
 <h3>John Anthony</h3>
 
-1. [x] create db project and folder using [Spring Boot Website](https://start.spring.io/)
+# [x] Create DB project using [Spring Boot Website](https://start.spring.io/)
 
-   - [x] name project
-   - [x] import using eclipse
-   - [x] upload to git
+1. [x] name project
+2. [x] import using eclipse
+3. [x] upload to git
 
-2. [] create MD document for database practice
-3. [] download and copy documents for project
+# [x] Create MD document for database practice
+
+# [] Create persistence class (Model or POJO)
+
+1. [] create a package named "com.test.hib.model"
