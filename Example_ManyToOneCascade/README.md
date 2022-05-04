@@ -2,11 +2,11 @@
 
 ## Set Up:
 
-- [x]fields
+- [x] fields
   - [x] primary key = @Id
   - [x] Object = @Entity
-- [x]table identifier
-- [x]import persistence dependencies
+- [x] table identifier
+- [x] import persistence dependencies
 
 ```
 import javax.persistence.Entity;
