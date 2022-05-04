@@ -3,9 +3,14 @@ package entity;
 // this is what makes it an entity and connecting it to a DB
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.mapping.List;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -20,6 +25,11 @@ public class DepartmentEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int deptId;
 	private String deptName;
+	
+	// target anything on the one to many relationship
+	@OneToMany(targetEntity = TeacherEntity.class, cascade = {CascadeType.ALL})
+	// we need to give one to many a net target
+	private List teacherList; // TEACHERLIST FIELD 
 	
 	// DEFAULT CONSTRUCTOR
 	public DepartmentEntity() {
@@ -47,5 +57,12 @@ public class DepartmentEntity implements Serializable {
 	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
+	public List getTeacherList() {
+		return teacherList;
+	}
+	public void setTeacherList(List teacherList) {
+		this.teacherList = teacherList;
+	}
+	
 
 }

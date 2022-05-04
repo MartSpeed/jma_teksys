@@ -24,21 +24,27 @@ public class TeacherEntity {
 	// Associations
 	// FOREIGN KEY - departmentEntity is the foreign key
 	// this is telling it how to map to the DB
-	@ManyToOne
+	//@ManyToOne
 	// joining the Id
-	@JoinColumn(name="fkey_dept")
-	private DepartmentEntity departmentEntity; 
+	//@JoinColumn(name="fkey_dept")
+	//private DepartmentEntity departmentEntity; 
 
 	// DEFAULT CONSTRUCTOR
 	public TeacherEntity() {
 
 	}
 
-	public TeacherEntity(int teacherId, String salary, String teacherName, DepartmentEntity departmentEntity) {
+//	public TeacherEntity(int teacherId, String salary, String teacherName, DepartmentEntity departmentEntity) {
+//		this.teacherId = teacherId;
+//		this.salary = salary;
+//		this.teacherName = teacherName;
+//		this.departmentEntity = departmentEntity;
+//	}
+	
+	public TeacherEntity(int teacherId, String salary, String teacherName) {
 		this.teacherId = teacherId;
 		this.salary = salary;
 		this.teacherName = teacherName;
-		this.departmentEntity = departmentEntity;
 	}
 
 	// ***GETTERS/SETTERS START***
@@ -67,12 +73,12 @@ public class TeacherEntity {
 		this.teacherName = teacherName;
 	}
 
-	public DepartmentEntity getDepartmentEntity() {
-		return departmentEntity;
-	}
-
-	public void setDepartmentEntity(DepartmentEntity departmentEntity) {
-		this.departmentEntity = departmentEntity;
+//	public DepartmentEntity getDepartmentEntity() {
+//		return departmentEntity;
+//	}
+//
+//	public void setDepartmentEntity(DepartmentEntity departmentEntity) {
+//		this.departmentEntity = departmentEntity;
 	}
 	// ***GETTERS/SETTERS END***
 

@@ -8,9 +8,9 @@
 		<property name="hibernate.hbm2ddl.auto"> update </property>
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/employeesmavendb</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/departmentdb</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">1qaz!QAZ2wsx@WSX</property>
+		<property name="connection.password">********</property>
 		<!-- Maria DB dialect -->
 		<property name="dialect">org.hibernate.dialect.MariaDB53Dialect</property>
 		<!-- Echo all executed SQL to stdout -->
@@ -18,7 +18,9 @@
 		<property name="hibernate.format_sql">true </property>
 
 		<!-- Mapping entity file -->
+		<!-- NOTE BE SURE TO ADD ALL CLASSES THAT WILLBE ACCESSED OR USED -->
 		<mapping class="entity.DepartmentEntity" />
+		<mapping class="entity.TeacherEntity" />
 
 	</session-factory>
 </hibernate-configuration>  
