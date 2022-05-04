@@ -3,8 +3,8 @@
 ## Set Up:
 
 - [x]fields
-  -[] primary key = @Id
-  -[] Object = @Entity
+  - [x] primary key = @Id
+  - [x] Object = @Entity
 - [x]table identifier
 - [x]import persistence dependencies
 
