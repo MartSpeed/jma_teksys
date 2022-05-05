@@ -115,7 +115,7 @@ public class TeacherEntity {
 
 > NOTE: _ADD ALL ENTITIES IN THE MAP SECTION_
 
-```
+```{toggle}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
