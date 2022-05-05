@@ -19,7 +19,7 @@ public abstract class Product {
 		this.description = description;
 	}
 
-	// **CONSTRUCTORS END***
+	// ***CONSTRUCTORS END***
 	// ***GETTERS/SETTERS START***
 	// NAME
 	public void setName(String name) {

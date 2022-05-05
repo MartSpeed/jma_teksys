@@ -10,7 +10,7 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/departmentdb</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">********</property>
+		<property name="connection.password">1qaz!QAZ2wsx@WSX</property>
 		<!-- Maria DB dialect -->
 		<property name="dialect">org.hibernate.dialect.MariaDB53Dialect</property>
 		<!-- Echo all executed SQL to stdout -->
@@ -21,6 +21,7 @@
 		<!-- NOTE BE SURE TO ADD ALL CLASSES THAT WILLBE ACCESSED OR USED -->
 		<mapping class="entity.DepartmentEntity" />
 		<mapping class="entity.TeacherEntity" />
+		<mapping class="entity.CohortEntity" />
 
 	</session-factory>
 </hibernate-configuration>  

@@ -1,11 +1,13 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 //import javax.persistence.JoinColumn;
 //import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -31,6 +33,12 @@ public class TeacherEntity implements Serializable {
 	// joining the Id
 	//@JoinColumn(name="fkey_dept")
 	//private DepartmentEntity departmentEntity; 
+	
+	//=====MANY TO MANY
+	@ManyToMany(targetEntity = CohortEntity.class)
+	// use this to set the cohortSet in a list
+	// NOTE: Sets dont allow duplicates
+	private Set cohortSet;
 
 	// DEFAULT CONSTRUCTOR
 	public TeacherEntity() {
@@ -44,10 +52,11 @@ public class TeacherEntity implements Serializable {
 //		this.departmentEntity = departmentEntity;
 //	}
 	
-	public TeacherEntity(int teacherId, String salary, String teacherName) {
+	public TeacherEntity(int teacherId, String salary, String teacherName, Set cohortSet) {
 		this.teacherId = teacherId;
 		this.salary = salary;
 		this.teacherName = teacherName;
+		this.cohortSet = cohortSet;
 	}
 
 	// ***GETTERS/SETTERS START***
@@ -75,6 +84,15 @@ public class TeacherEntity implements Serializable {
 	public void setTeacherName(String teacherName) {
 		this.teacherName = teacherName;
 	}
+
+	public Set getCohortSet() {
+		return cohortSet;
+	}
+
+	public void setCohortSet(Set cohortSet) {
+		this.cohortSet = cohortSet;
+	}
+	
 
 //	public DepartmentEntity getDepartmentEntity() {
 //		return departmentEntity;

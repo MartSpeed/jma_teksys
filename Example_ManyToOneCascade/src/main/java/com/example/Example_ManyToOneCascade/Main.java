@@ -1,13 +1,16 @@
 package com.example.Example_ManyToOneCascade;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import entity.CohortEntity;
 import entity.DepartmentEntity;
 import entity.TeacherEntity;
 
@@ -58,48 +61,101 @@ public class Main {
 
 //		-- OneToMany Relationship --
 
-		TeacherEntity t1 = new TeacherEntity();
-		t1.setTeacherName("Roronoa");
-		t1.setSalary("100");
+//		TeacherEntity t1 = new TeacherEntity();
+//		t1.setTeacherName("Roronoa");
+//		t1.setSalary("100");
+//
+//		TeacherEntity t2 = new TeacherEntity();
+//		t2.setTeacherName("Nico Robin");
+//		t2.setSalary("10000");
+//
+//		TeacherEntity t3 = new TeacherEntity();
+//		t3.setTeacherName("Ton-Tony Chopper");
+//		t3.setSalary("25000");
+//
+//		TeacherEntity t4 = new TeacherEntity();
+//		t4.setTeacherName("Jimbei");
+//		t4.setSalary("3000");
+//
+//		TeacherEntity t5 = new TeacherEntity();
+//		t5.setSalary("200");
+//		t5.setTeacherName("Brook");
+//
+//		// Add teacher entity object to the list
+//		List<TeacherEntity> teachlist = new ArrayList<>();
+//		teachlist.add(t1);
+//		teachlist.add(t2);
+//		teachlist.add(t3);
+//		teachlist.add(t4);
+//		teachlist.add(t5);
+//		session.save(t1);
+//		session.save(t2);
+//		session.save(t3);
+//		session.save(t4);
+//		session.save(t5);
+//		
+//
+//		// Create Department
+//		DepartmentEntity department = new DepartmentEntity();
+//		department.setDeptName("Development");
+//		department.setTeacherList(teachlist);
 
-		TeacherEntity t2 = new TeacherEntity();
-		t2.setTeacherName("Nico Robin");
-		t2.setSalary("10000");
+		// =====MANY TO MANY======
+		CohortEntity c1 = new CohortEntity();
+		c1.setCohortName("Straw Hat");
+		c1.setDuration("30 years");
 
-		TeacherEntity t3 = new TeacherEntity();
-		t3.setTeacherName("Ton-Tony Chopper");
-		t3.setSalary("25000");
+		CohortEntity c2 = new CohortEntity();
+		c2.setCohortName("Heart");
+		c2.setDuration("30 years");
 
-		TeacherEntity t4 = new TeacherEntity();
-		t4.setTeacherName("Jimbei");
-		t4.setSalary("3000");
+		CohortEntity c3 = new CohortEntity();
+		c3.setCohortName("Whole Cake");
+		c3.setDuration("200 years");
 
-		TeacherEntity t5 = new TeacherEntity();
-		t5.setSalary("200");
-		t5.setTeacherName("Brook");
+		// Store Cohort
+		session.save(c1);
+		session.save(c2);
+		session.save(c3);
 
-		// Add teacher entity object to the list
-		List<TeacherEntity> teachlist = new ArrayList<>();
-		teachlist.add(t1);
-		teachlist.add(t2);
-		teachlist.add(t3);
-		teachlist.add(t4);
-		teachlist.add(t5);
-		session.save(t1);
-		session.save(t2);
-		session.save(t3);
-		session.save(t4);
-		session.save(t5);
-		
+		// class set 1
+		// what is this set doing or creating again?
+		Set<CohortEntity> classSetOne = new HashSet<>();
+		classSetOne.add(c1);
+		classSetOne.add(c2);
+		classSetOne.add(c3);
 
-		// Create Department
-		DepartmentEntity department = new DepartmentEntity();
-		department.setDeptName("Development");
-		department.setTeacherList(teachlist);
+		// class set 2
+		Set<CohortEntity> classSetTwo = new HashSet<>();
+		classSetTwo.add(c3);
+		classSetTwo.add(c1);
+		classSetTwo.add(c2);
 
-		// Store Department
-		session.save(department);
+		// class set 3
+		Set<CohortEntity> classSetThr = new HashSet<>();
+		classSetThr.add(c3);
+		classSetThr.add(c2);
+		classSetThr.add(c1);
+
+		TeacherEntity t1000 = new TeacherEntity();
+		t1000.setTeacherName("Crocodile");
+		t1000.setCohortSet(classSetOne);
+
+		TeacherEntity t2000 = new TeacherEntity();
+		t2000.setTeacherName("Mr. 1");
+		t2000.setCohortSet(classSetTwo);
+
+		TeacherEntity t3000 = new TeacherEntity();
+		t3000.setTeacherName("Mr. 3");
+		t3000.setCohortSet(classSetThr);
+
+		// Store Teacher
+		session.save(t1000);
+		session.save(t2000);
+		session.save(t3000);
+
 		t.commit();
+		session.close();
 
 	}
 }

@@ -2,6 +2,7 @@ package entity;
 
 // this is what makes it an entity and connecting it to a DB
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.mapping.List;
+//import org.hibernate.mapping.List;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

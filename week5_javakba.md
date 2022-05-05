@@ -1,0 +1,44 @@
+# Topics
+
+- Connecting to a Database
+- Executing a Query
+- Parsing Results
+- Abstract DAO
+- DAO Interfaces
+- Implementing a DAO
+- Querying data for expected values
+- TDD
+- Parameterized Tests
+- Parameterized Querying connector
+- Entity Relationships
+- What is JUnit?
+- What are Parameterized unit
+- What is .equals?
+- Go over the SQL JDBC portion.
+- Be able to write a JUnit test case.
+- Know how to write and run a session
+- Make sure you konw how to build an entity.
+- Understand the @BeforeAll and @Test Annotations.
+- Know what a JDBC connection is
+- What is a session?
+- What is the difference between ORM, JPA, and Hibernate
+- What is Hibernate?
+- what is the given clause in JUnit
+- Parametized Tests
+- Junit tests
+- SessionFactory() in hibernate
+- statement vs Prepared Statement interfaces in Java
+- insert() save() add() put() methods
+- Study what is Hibernate
+- Study what is JDBC
+- Study what the difference between Hibernate and JDBC
+- JDBC ResultSet
+- object instance in Hibernate
+- What is a PreparedStatement
+- @Column annotations
+- @JoinColumn annotations
+- @Id annotations
+- @Table annotation
+- @OneToOne (slide 17)
+- @ManyToMany (slide 22)
+- @OneToMany (slide 12)
