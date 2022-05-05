@@ -80,4 +80,8 @@ File file = new File("sample.txt");
 itemCollection.put("sample.txt", file);
 ```
 
-## []
+## [] create add() method
+
+```
+
+```
