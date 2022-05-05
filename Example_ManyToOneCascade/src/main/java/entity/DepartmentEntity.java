@@ -19,6 +19,7 @@ import javax.persistence.GenerationType;
 @Table
 
 public class DepartmentEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
 	// turn this into an object
 	@Id
 	// add a generated value

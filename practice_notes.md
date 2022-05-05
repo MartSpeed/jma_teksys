@@ -1,13 +1,16 @@
 # **JAVA STUDY GUIDE**
 
 # **[x] ArrayList**
-## *[x] - Give ArrayList<arg> an argument*
+
+## _[x] - Give ArrayList<arg> an argument_
 
 ### ArrayList passes as an unchecked exception.
+
 - [x] arrayList.add();
 - [x] arrayList.remove();
 - [x] arrayList.clear();
 - [x] arrayList.contains();
+
 ---
 
 ```
@@ -18,7 +21,7 @@ import java.util.ArrayList;
 public class PracticeArrayLists {
 
 	public static void main(String[] args) {
-		
+
 		// ===ArrayList Concepts and Practice===
 		// Standard Array
 		String[] fruits = new String[3];
@@ -29,7 +32,7 @@ public class PracticeArrayLists {
 		System.out.println("this is a standard array output of " + fruits[1]);
 		System.out.println("this is a standard array output of " + fruits[2]);
 		System.out.println("=====End of standard array=====\n");
-		
+
 		//ArrayList
 		// import ArrayList methods
 		// add the ArrayList argument <String>, <Integer>, <Boolean>
@@ -40,18 +43,18 @@ public class PracticeArrayLists {
 		fruitList.add("Papaya");
 		fruitList.add("Apple");
 		fruitList.add("Kiwi");
-		
+
 		System.out.println("This is the fruitList ArrayList\n " + fruitList);
-		
+
 		// using the .remove() method
 		fruitList.remove("Apple");
 		System.out.println("ArrayList.remove() method" + fruitList);
 		System.out.println("Question? Can you store the removed object and log it into something?\n" + fruitList.remove("Kiwi"));
-		
+
 		// you can use the .clear() method to remove all items from the arrayList
 		fruitList.clear();
 		System.out.println("The fruitList contains\n" + fruitList);
-		
+
 		// reset the fruitList
 		fruitList.add("Coconut");
 		fruitList.add("Mango");
@@ -59,7 +62,7 @@ public class PracticeArrayLists {
 		fruitList.add("Apple");
 		fruitList.add("Kiwi");
 		System.out.println("Instantiate new ArrayList\n " + fruitList);
-		
+
 		// we can check to see if the fruitList contains "something"
 		Boolean aContainer = fruitList.contains("Apple");
 		Boolean bContainer = fruitList.contains("Blackberry");
@@ -70,12 +73,16 @@ public class PracticeArrayLists {
 
 }
 ```
+
 ---
 
 # **[x] TreeSet**
+
 ## **[x] Imports**
+
 - [x] import java array util
 - [x] import java treeset util
+
 ---
 
 ```
@@ -89,7 +96,7 @@ public class PracticeTreeSet {
 
 	public static void main(String[] args) {
 		System.out.println("=====Beginning of TreeSet Practice=====");
-		
+
 		// Sets do not contain nor list duplicate values (the)
 		String phrase = "the quick brown fox jumps over the lazy dog";
 		String quote = "12, 14, 66, 89, 1";
@@ -101,7 +108,7 @@ public class PracticeTreeSet {
 		// give TreeSet an arg <String>,<Integer>,<Boolean>
 		TreeSet<String> words = new TreeSet<>();
 		TreeSet<String> numbers = new TreeSet<>();
-		
+
 		//
 		words.addAll(Arrays.asList(phraseList));
 		numbers.addAll(Arrays.asList(quoteList));
@@ -121,6 +128,7 @@ public class PracticeTreeSet {
 
 }
 ```
+
 ---
 
 # **[x] LinkedList**

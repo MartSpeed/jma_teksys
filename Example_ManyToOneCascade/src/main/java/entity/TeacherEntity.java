@@ -1,16 +1,19 @@
 package entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity // letting it know its an entity that will be an object
 @Table // the type of object we are telling it to be
-public class TeacherEntity {
+public class TeacherEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	// ***fields START***
 
@@ -79,7 +82,7 @@ public class TeacherEntity {
 //
 //	public void setDepartmentEntity(DepartmentEntity departmentEntity) {
 //		this.departmentEntity = departmentEntity;
-	}
+//	}
 	// ***GETTERS/SETTERS END***
 
 }

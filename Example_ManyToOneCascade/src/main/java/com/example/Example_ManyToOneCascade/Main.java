@@ -14,59 +14,92 @@ import entity.TeacherEntity;
 public class Main {
 
 	public static void main(String[] args) {
-		// starting a new session connection in MAIN
+
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
+
+		/*-- ManyToOne Relationship --
 		
-//		//  create a new session
-//		DepartmentEntity it_dept = new DepartmentEntity();
-//		it_dept.setDeptName("IT");  // setting the it_dept name
-//		
-//		DepartmentEntity hr_dept = new DepartmentEntity();
-//		hr_dept.setDeptName("HR");  // setting the it_dept name
+		Department dep = new Department();
+		dep.setDepartmentName("IT");
 		
-		// EXERCISE: create four new teachers
-		TeacherEntity t1 = new TeacherEntity();  // teacher 1
-		t1.setTeacherName("Pirate Hunter Roronoa");
-		t1.setSalary("320,000,000");
-		//t1.setDepartmentEntity(it_dept);
-		TeacherEntity t2 = new TeacherEntity();  // teacher 2
-		t2.setTeacherName("Cat-Burlgar Nami");
-		t2.setSalary("66,000,000");
-		//t2.setDepartmentEntity(it_dept);
-		TeacherEntity t3 = new TeacherEntity();  // teacher 3
-		t3.setTeacherName("God/King Usopp");
-		t3.setSalary("200,000,000");
-		//t3.setDepartmentEntity(hr_dept);
-		TeacherEntity t4 = new TeacherEntity();  // teacher 4
-		t4.setTeacherName("Tony-Tony Chopper");
-		t4.setSalary("100?");
-		//t4.setDepartmentEntity(hr_dept);
+		Department dep2 = new Department();
+		dep2.setDepartmentName("HR");
 		
-		// save each session
-		//session.save(hr_dept);
-		//session.save(it_dept);
-		List<TeacherEntity> teacherList = new ArrayList<>();
-		teacherList.add(t1);
-		teacherList.add(t2);
-		teacherList.add(t3);
-		teacherList.add(t4);
+		Teacher t1 = new Teacher();
+		t1.setDepartment(dep);
+		t1.setSalary("1000");
+		t1.setTeacherName("MHaseeb");
+		
+		Teacher t2 = new Teacher();
+		t2.setDepartment(dep);
+		t2.setSalary("2220");
+		t2.setTeacherName("Shahparan");
+		
+		Teacher t3 = new Teacher();
+		t3.setDepartment(dep);
+		t3.setSalary("30000");
+		t3.setTeacherName("James");
+		
+		Teacher t4 = new Teacher();
+		t4.setDepartment(dep2);
+		t4.setSalary("40000");
+		t4.setTeacherName("Joseph");
+		
+		session.save(dep);
+		session.save(dep2);
 		session.save(t1);
 		session.save(t2);
 		session.save(t3);
 		session.save(t4);
 		
-		// create new department
-		DepartmentEntity dept = new DepartmentEntity();
-		dept.setDeptName("Worst Generation");
-		dept.setTeacherList(teacherList);
+		t.commit();*/
+
+//		-- OneToMany Relationship --
+
+		TeacherEntity t1 = new TeacherEntity();
+		t1.setTeacherName("Roronoa");
+		t1.setSalary("100");
+
+		TeacherEntity t2 = new TeacherEntity();
+		t2.setTeacherName("Nico Robin");
+		t2.setSalary("10000");
+
+		TeacherEntity t3 = new TeacherEntity();
+		t3.setTeacherName("Ton-Tony Chopper");
+		t3.setSalary("25000");
+
+		TeacherEntity t4 = new TeacherEntity();
+		t4.setTeacherName("Jimbei");
+		t4.setSalary("3000");
+
+		TeacherEntity t5 = new TeacherEntity();
+		t5.setSalary("200");
+		t5.setTeacherName("Brook");
+
+		// Add teacher entity object to the list
+		List<TeacherEntity> teachlist = new ArrayList<>();
+		teachlist.add(t1);
+		teachlist.add(t2);
+		teachlist.add(t3);
+		teachlist.add(t4);
+		teachlist.add(t5);
+		session.save(t1);
+		session.save(t2);
+		session.save(t3);
+		session.save(t4);
+		session.save(t5);
 		
-		session.save(dept);
-		
-		t.commit();  //commit the session
-		session.close();  //close the session
+
+		// Create Department
+		DepartmentEntity department = new DepartmentEntity();
+		department.setDeptName("Development");
+		department.setTeacherList(teachlist);
+
+		// Store Department
+		session.save(department);
+		t.commit();
 
 	}
-
 }

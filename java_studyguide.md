@@ -3,9 +3,9 @@
 ---
 
 - **[x] Array Lists**
-  - [] .add();
-  - [] .remove();
-  - [] .clear();
+  - [x] .add();
+  - [x] .remove();
+  - [x] .clear();
 - [] TreeSet
 - [] LinkedList
 - [] Stacks in Java
