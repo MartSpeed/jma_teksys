@@ -145,7 +145,3 @@ public class TeacherEntity {
 
 </hibernate-configuration>
 ```
-
-```{r, message=FALSE}
-message("You will not see the message.")
-```
