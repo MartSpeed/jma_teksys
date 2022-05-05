@@ -17,7 +17,7 @@
 - Go over the SQL JDBC portion.
 - Be able to write a JUnit test case.
 - Know how to write and run a session
-- Make sure you konw how to build an entity.
+- Make sure you know how to build an entity.
 - Understand the @BeforeAll and @Test Annotations.
 - Know what a JDBC connection is
 - What is a session?
