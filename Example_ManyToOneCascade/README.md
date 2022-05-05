@@ -30,8 +30,6 @@ public class TeacherEntity {
 }
 ```
 
----
-
 # CONSTRUCTORS
 
 ```
@@ -87,8 +85,6 @@ public class TeacherEntity {
 	// ***GETTERS/SETTERS END***
 ```
 
----
-
 # SETTING THE JOIN TYPE & CREATING THE FOREIGN KEY
 
 ```
@@ -105,8 +101,6 @@ public class TeacherEntity {
 	private DepartmentEntity departmentEntity;
 ```
 
----
-
 # CREATING THE HIBERNATE.CFG.XML FILE
 
 > NOTE: _this is where we tell our class where to find the database table we are using or will be using_
@@ -115,8 +109,7 @@ public class TeacherEntity {
 
 > NOTE: _ADD ALL ENTITIES IN THE MAP SECTION_
 
-```{admonition} Click the button to reveal! :class:dropdown
-
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
