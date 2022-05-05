@@ -39,6 +39,8 @@ public class CodeBlock {
 			int finalScore = Score + (levelCompleted * bonus);
 			System.out.println("You final score was " + finalScore);
 		}
+		
+		//if then else RECAP
 
 	}
 
