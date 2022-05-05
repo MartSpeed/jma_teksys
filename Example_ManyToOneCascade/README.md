@@ -115,7 +115,8 @@ public class TeacherEntity {
 
 > NOTE: _ADD ALL ENTITIES IN THE MAP SECTION_
 
-```{toggle}
+```{admonition} Click the button to reveal! :class:dropdown
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
@@ -135,11 +136,16 @@ public class TeacherEntity {
 		<property name="hibernate.show_sql">true </property>
 		<property name="hibernate.format_sql">true </property>
 
-		<!-- Mapping entity file -->
-		<!-- NOTE BE SURE TO ADD ALL CLASSES THAT WILL BE ACCESSED OR USED -->
-		<mapping class="entity.DepartmentEntity" />
-		<mapping class="entity.TeacherEntity" />
+    	<!-- Mapping entity file -->
+    	<!-- NOTE BE SURE TO ADD ALL CLASSES THAT WILL BE ACCESSED OR USED -->
+    	<mapping class="entity.DepartmentEntity" />
+    	<mapping class="entity.TeacherEntity" />
 
-	</session-factory>
+    </session-factory>
+
 </hibernate-configuration>
+```
+
+```{r, message=FALSE}
+message("You will not see the message.")
 ```
