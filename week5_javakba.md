@@ -1,15 +1,18 @@
 # Topics
 
-- Connecting to a Database
-- Executing a Query
-- Parsing Results
-- Abstract DAO
-- DAO Interfaces
-- Implementing a DAO
-- Querying data for expected values
-- TDD
-- Parameterized Tests
-- Parameterized Querying connector
+1. [] Connecting to a Database
+2. [] Executing a Query
+3. [] Parsing Results
+4. [] Abstract DAO
+5. [] DAO Interfaces
+6. [] Implementing a DAO
+7. [] Querying data for expected values
+8. [] TDD
+9. [] Parameterized Tests
+10. [] Parameterized Querying connector
+
+---
+
 - Entity Relationships
 - What is JUnit?
 - What are Parameterized unit
