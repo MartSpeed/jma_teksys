@@ -22,7 +22,7 @@ public class Methods {
 		highScore = calculateScore(gameOver, score, levelCompleted, bonus); // method with args
 		System.out.println("method expression " + highScore);
 		
-		/* test
+		/* test 2
 		 *CHALLENGE
 		 *create a a method called displayHighScorePosition
 		 *it should receive a players name as a parameter, and a 2nd parameter as a position in the high score table
