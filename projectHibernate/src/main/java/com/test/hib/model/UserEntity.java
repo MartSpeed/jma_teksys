@@ -22,7 +22,7 @@ public class UserEntity {
 
 	// CONSTRUCTORS
 	public UserEntity() {
-		
+
 	}
 
 	public UserEntity(String fullname, String email, String password, int age, double salary, String city, Integer id) {
