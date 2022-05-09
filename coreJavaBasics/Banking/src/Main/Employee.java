@@ -1,9 +1,5 @@
 package Main;
 
-import java.io.FileReader;
-
-import javax.naming.NameNotFoundException;
-
 public class Employee extends AbstractAccountActions {
 	// fields and Variables at the top
 	// encapsulation
@@ -20,23 +16,29 @@ public class Employee extends AbstractAccountActions {
 	}
 
 	// method
-	public Employee(String firstName, String lastName, long employeeId, String jobTitle, String workDay)
+	public Employee(String firstName, String lastName, Long employeeId, String jobTitle, String workDay)
 			throws CustomExceptionFile {
 
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.employeeId = employeeId;
 		this.jobTitle = jobTitle;
+		this.workDay = workDay;
 
 	}
 
 	// BREAKOUT ROOM METHOD
 	public static void dayOfWeek(String workDay) throws CustomExceptionFile {
-		if (workDay == workDay) {
-			System.out.println(workDay);
-		} else {
-			System.out.println(workDay);
-			throw new CustomExceptionFile(workDay);
+		try {
+			if (workDay === workDay) {
+				System.out.println(workDay);
+			} else {
+				System.out.println(workDay);
+				throw new CustomExceptionFile(workDay);
+			}
+		} catch (CustomExceptionFile e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		// try/catch method
 		/*
@@ -115,6 +117,14 @@ public class Employee extends AbstractAccountActions {
 	float deposit(int amount, int depositAmount) {
 		totalAmount = amount + depositAmount;
 		return totalAmount;
+	}
+
+	public String getWorkDay() {
+		return workDay;
+	}
+
+	public void setWorkDay(String workDay) {
+		this.workDay = workDay;
 	}
 
 }

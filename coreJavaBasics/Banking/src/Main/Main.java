@@ -7,11 +7,13 @@ public class Main {
 		// arguments need to be inserted in the same order as they are created in the
 		// Employee class
 		
-		Employee empOne = new Employee("Albedo", "Palazzo", 98765, "Hero");
+		Employee empOne = new Employee();
 		empOne.withdraw(200,50);
-		Employee empTwo = new Employee("Musasibou", "Oda", 44556, "Super Hero");
-		Employee empThree = new Employee("Power","Hawk", 00000, "Hidden Savior");
-		Manager managerOne = new Manager("Vynarius", "Indignation", 19735, "World Boss", "Sales Timecards");
+		Employee empTwo = new Employee();
+		empTwo.withdraw(100, 75);
+		Employee empThree = new Employee();
+		empThree.withdraw(350, 75);
+		Manager managerOne = new Manager();
 		managerOne.PrintThis(1,2,4,5,8,5,7895,95,23485,45,4,5,8,9*7,6);
 		/*
 		 * empOne.setFirstName("Abraxxas"); System.out.println(empOne);
