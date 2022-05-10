@@ -47,27 +47,25 @@ public class Methods {
 
 		int highScorePosition = calculateHighScorePosition(1500);
 		displayHighScorePosition("Time", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(900);
 		displayHighScorePosition("Space", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(400);
 		displayHighScorePosition("Seconds", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(50);
 		displayHighScorePosition("Gravity", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(1000);
 		displayHighScorePosition("Gimbal", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(500);
 		displayHighScorePosition("Shockter", highScorePosition);
-		
+
 		highScorePosition = calculateHighScorePosition(100);
 		displayHighScorePosition("Krow", highScorePosition);
 	}
-	
-	
 
 	// receive String playerName, int highScorePosition in args
 	// display the players name with highScorePosition message
@@ -83,9 +81,8 @@ public class Methods {
 			return 2;
 		} else if (playerScore >= 100 && playerScore < 500) {
 			return 3;
-		} else {
-			return 4;
 		}
+		return 4;
 	}
 
 	// calculate score method
