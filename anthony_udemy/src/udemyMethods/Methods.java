@@ -21,23 +21,19 @@ public class Methods {
 		// method expression
 		highScore = calculateScore(gameOver, score, levelCompleted, bonus); // method with args
 		System.out.println("method expression " + highScore);
-		
-		/* test 2
-		 *CHALLENGE
-		 *create a a method called displayHighScorePosition
-		 *it should receive a players name as a parameter, and a 2nd parameter as a position in the high score table
-		 *you should display the players name along with a message "on the high score table".
+
+		/*
+		 * CHALLENGE create a a method called displayHighScorePosition it should receive
+		 * a players name as a parameter, and a 2nd parameter as a position in the high
+		 * score table you should display the players name along with a message
+		 * "on the high score table".
 		 *
-		 *create a 2nd method called calculateHighScorePosition
-		 *it should be sent one argument only, the player score
-		 *it should return an int
-		 *the return data should be
-		 *1 if the score > 1000
-		 *2 if the score is > 500 and < 1000
-		 *3 if the score is > 100 and < 500
-		 *4 in all other cases
-		 *call both methods and display the results of the following
-		 *a score of 1500, 900, 500 and 50*/
+		 * create a 2nd method called calculateHighScorePosition it should be sent one
+		 * argument only, the player score it should return an int the return data
+		 * should be 1 if the score > 1000 2 if the score is > 500 and < 1000 3 if the
+		 * score is > 100 and < 500 4 in all other cases call both methods and display
+		 * the results of the following a score of 1500, 900, 400 and 50
+		 */
 
 		// method with false arg
 		gameOver = false;
@@ -49,6 +45,47 @@ public class Methods {
 		highScore = calculateScore(gameOver, score, levelCompleted, bonus); // method with args
 		System.out.println("method expression " + highScore);
 
+		int highScorePosition = calculateHighScorePosition(1500);
+		displayHighScorePosition("Time", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(900);
+		displayHighScorePosition("Space", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(400);
+		displayHighScorePosition("Seconds", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(50);
+		displayHighScorePosition("Gravity", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(1000);
+		displayHighScorePosition("Gimbal", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(500);
+		displayHighScorePosition("Shockter", highScorePosition);
+		
+		highScorePosition = calculateHighScorePosition(100);
+		displayHighScorePosition("Krow", highScorePosition);
+	}
+	
+	
+
+	// receive String playerName, int highScorePosition in args
+	// display the players name with highScorePosition message
+	public static void displayHighScorePosition(String playerName, int highScorePosition) {
+		System.out.println(
+				playerName + " managed to get into position " + highScorePosition + " on the high score table");
+	}
+
+	public static int calculateHighScorePosition(int playerScore) {
+		if (playerScore >= 1000) {
+			return 1;
+		} else if (playerScore >= 500 && playerScore < 1000) {
+			return 2;
+		} else if (playerScore >= 100 && playerScore < 500) {
+			return 3;
+		} else {
+			return 4;
+		}
 	}
 
 	// calculate score method
