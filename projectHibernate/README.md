@@ -212,3 +212,5 @@ public class UserEntity {
     - [x] FindingUser.java
     - [x] UpdatingUser.java
     - [x] DeletingUser.java
+
+# Create User table using hibernate
