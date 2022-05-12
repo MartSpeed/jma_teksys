@@ -1,8 +1,58 @@
 body {
   margin: 0;
   padding: 0;
+  color: aliceblue;
 }
 html {
-  margin: auto 5px;
+  margin: 0;
   padding: 0;
+  background-color: black;
+}
+.general {
+  margin: 5px 0 0 0;
+  padding: 5px;
+  background-color: darkblue;
+}
+.bio {
+  margin: 15px 0 0 0;
+  padding: 5px;
+  background-color: darkgrey;
+}
+
+/*flexbox css, keyframe and transition*/
+.master-container {
+  background-color: white;
+  margin: 15px auto;
+  padding: 5px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.red {
+  order: 4;
+  background-color: red;
+  margin: 8px;
+  width: 400px;
+  height: 400px;
+}
+.blue {
+  order: 3;
+  background-color: blue;
+  margin: 8px;
+  width: 400px;
+  height: 400px;
+}
+.green {
+  order: 2;
+  background-color: green;
+  margin: 8px;
+  width: 400px;
+  height: 400px;
+}
+.yellow {
+  order: 1;
+  background-color: yellow;
+  margin: 8px;
+  width: 400px;
+  height: 400px;
 }

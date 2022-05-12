@@ -14,27 +14,27 @@ The goal is to have a responsive online resume you can showcase to any employer 
 - [x] title -- Full Stack Java Developer
 - [x] general information
 - [x] bio
-- [] connect css to html
+- [x] connect css to html
   - what is my style?
 - [] change font
-- [] change font colors
-- [] change background
-- [] change margin
-- [] change padding
+- [x] change font colors
+- [x] change background
+- [x] change margin
+- [x] change padding
 - [] add header
 - [] add footer
-- [] add section
-- [] add class
-- [] ass id
+- [x] add section
+- [x] add class
+- [] add id
 - [] add button
 - [] add label
 - [] add ordered list
-- [] add unordered list
+- [x] add unordered list
 - [] add link with new tab opening
-- [] add page title
+- [x] add page title
 - [] add table of contents
 - [] add form
-- []
+- [x] use flexbox
 
 ## Desktop Version
 
