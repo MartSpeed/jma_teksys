@@ -422,11 +422,3 @@ maximum_grade DESC,
 student_first_name ASC,
 student_last_name ASC;
 ```
-
----
-
-# assignment today
-
-1. add a new database called
-
-# **DAILY STAND-UP**
