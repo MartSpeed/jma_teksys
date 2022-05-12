@@ -2,10 +2,10 @@
 
 - _read through the following slides_
 
-1. [] Build Management Tools (Maven)
-2. [] Day 1 and Day 2 - Hibernate
-3. [] Install Maven
-4. [] [Maven Project Builder](https://start.spring.io/)
+1. [x] Build Management Tools (Maven)
+2. [x] Day 1 and Day 2 - Hibernate
+3. [x] Install Maven
+4. [x] [Maven Project Builder](https://start.spring.io/)
 
 ---
 
