@@ -10,11 +10,31 @@ The goal is to have a responsive online resume you can showcase to any employer 
 ## Resume structure/wireframe
 
 - [] image of yourself
-- [] full name
-- [] title
-- [] general information
-- [] bio
+- [x] full name - John Anthony
+- [x] title -- Full Stack Java Developer
+- [x] general information
+- [x] bio
 - [] connect css to html
+  - what is my style?
+- [] change font
+- [] change font colors
+- [] change background
+- [] change margin
+- [] change padding
+- [] add header
+- [] add footer
+- [] add section
+- [] add class
+- [] ass id
+- [] add button
+- [] add label
+- [] add ordered list
+- [] add unordered list
+- [] add link with new tab opening
+- [] add page title
+- [] add table of contents
+- [] add form
+- []
 
 ## Desktop Version
 
