@@ -1,0 +1,35 @@
+html {
+    background-color: black;
+    color: coral;
+}
+
+.menu_container {
+    display: flex;
+}
+
+.title_container {
+    color: burlywood;
+    flex: 2;
+}
+
+.one,
+.two,
+.three {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    border: 2px solid purple;
+    background-color: blue;
+    justify-content: center;
+}
+
+.two {
+    background-color: darkgreen;
+}
+
+.outer_container {
+    display: flex;
+    flex: 10;
+    justify-content: space-between;
+    align-items: center;
+}
