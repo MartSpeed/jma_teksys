@@ -21,7 +21,7 @@ The goal is to have a responsive online resume you can showcase to any employer 
 - [x] change background
 - [x] change margin
 - [x] change padding
-- [] add header
+- [x] add header
 - [] add footer
 - [x] add section
 - [x] add class

@@ -4,27 +4,58 @@ html {
   background-color: black;
 }
 body {
-  margin: auto 250px;
+  margin: 0 250px;
   padding: 0;
   color: aliceblue;
   background-color: grey;
 }
-.info {
-  margin: auto 10px;
+/* HEADER CONTAINER*/
+.header-container {
+  margin: 0;
   padding: 0;
+  display: flex;
+}
+.photo {
+  margin: 0;
+  padding: 0;
+  background-color: orange;
+  width: 150px;
+  height: 150px;
+}
+.info {
+  margin: 0;
+  padding: 0;
+  background-color: darkgreen;
+  flex-grow: 2;
+}
+.info h1 {
+  font-size: 3rem;
+  background-color: black;
+}
+.info,
+title {
+  background-color: orange;
+  font-size: 1em;
+}
+.info h3 {
+  background-color: black;
 }
 .general {
-  margin: 5px 0 0 0;
-  padding: 5px;
+  margin: 0;
+  padding: 0 15px;
   background-color: darkblue;
+  align-content: center;
+}
+.general h1 {
+  font-size: 3em;
 }
 .bio {
-  margin: 15px 0 0 0;
+  margin: 0;
   padding: 5px;
   background-color: darkgrey;
 }
 
-/*flexbox css, keyframe and transition*/
+/*MASTER CONTAINER*/
 .master-container {
   background-color: tan;
   margin: 15px auto;
