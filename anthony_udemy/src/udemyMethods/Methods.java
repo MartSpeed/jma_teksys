@@ -46,25 +46,25 @@ public class Methods {
 		System.out.println("method expression " + highScore);
 
 		int highScorePosition = calculateHighScorePosition(1500);
-		displayHighScorePosition("Time", highScorePosition);
+		displayHighScorePosition("Luffy", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(900);
-		displayHighScorePosition("Space", highScorePosition);
+		displayHighScorePosition("Zoro", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(400);
-		displayHighScorePosition("Seconds", highScorePosition);
+		displayHighScorePosition("Chopper", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(50);
-		displayHighScorePosition("Gravity", highScorePosition);
+		displayHighScorePosition("Jimbei", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(1000);
-		displayHighScorePosition("Gimbal", highScorePosition);
+		displayHighScorePosition("Robin", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(500);
-		displayHighScorePosition("Shockter", highScorePosition);
+		displayHighScorePosition("Yamato", highScorePosition);
 
 		highScorePosition = calculateHighScorePosition(100);
-		displayHighScorePosition("Krow", highScorePosition);
+		displayHighScorePosition("Brook", highScorePosition);
 	}
 
 	// receive String playerName, int highScorePosition in args

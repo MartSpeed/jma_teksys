@@ -1,0 +1,10 @@
+html{
+    background-color: aliceblue;
+    color: red;
+}
+.header_div{
+    background-color: lightgray;
+}
+.menu_container{
+    display: flex;
+}
