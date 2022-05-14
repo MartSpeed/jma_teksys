@@ -17,8 +17,11 @@ _Work-Flow_:
 - [x] create jpa.entitymodels package
 - [x] add studentEntity class
 - [x] add courseEntity class
-
+---
 - ### STUDENT TABLE
+> Every Model class must contain the following general two requirements:
+> The first constructor takes no parameters and initializes every member to an initial value.
+> The second constructor must initialize every private member with a parameter provided to the constructor.
 
   - [x] String sEmail (PK)
   - [x] String sName
@@ -28,9 +31,6 @@ _Work-Flow_:
   - [x] create student constructors with args
   - [x] create student initializer constructor
   - [x] create student ToString arg
-    > Every Model class must contain the following general two requirements:
-    > The first constructor takes no parameters and initializes every member to an initial value.
-    > The second constructor must initialize every private member with a parameter provided to the constructor.
 ```
 package jpa.entitymodels;
 
@@ -65,8 +65,11 @@ public class studentEntity {
 	}
 
 ```
-
+--- 
 - ### COURSE TABLE
+> Every Model class must contain the following general two requirements:
+> The first constructor takes no parameters and initializes every member to an initial value.
+> The second constructor must initialize every private member with a parameter provided to the constructor.
   - [x] Integer cId (PK)
   - [x] String cName
   - [x] String cInstructorName
@@ -74,9 +77,6 @@ public class studentEntity {
   - [x] create course constructors with args
   - [x] create course initializer constructor
   - [x] create course ToString arg
-  - > Every Model class must contain the following general two requirements:
-    > The first constructor takes no parameters and initializes every member to an initial value.
-    > The second constructor must initialize every private member with a parameter provided to the constructor.
 ```
 @Entity
 @Table(name = "Course")
@@ -100,14 +100,14 @@ public class courseEntity {
 		this.cInstructorsName = cInstructorsName;
 	}
 ```
-
+---
 ## Requirement 3
 
 ### Student DAO
+> This interface is going to have the following method declarations. Please include the proper method signature based on the **Service** table
 
 - [x] create package jpa.dao
 - [x] create class interface StudentDAO
-  > This interface is going to have the following method declarations. Please include the proper method signature based on the **Service** table
   - [x] getAllStudents();
   - [x] getStudentByEmail();
   - [x] validateStudent();
@@ -128,7 +128,6 @@ public class courseEntity {
 	getStudentCourses(); // get student courses
 }
 ```
-
 ### CourseDAO
 
 - [x] create class interface CourseDAO
