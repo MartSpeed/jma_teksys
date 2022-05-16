@@ -10,13 +10,13 @@ import javax.persistence.Query;
 import jpa.dao.StudentDAO;
 
 public abstract class StudentService implements StudentDAO {
-	EntityManagerFactory sessionFactory = Persistence.createEntityManagerFactory("SMSDB");; // hql entity manager?
+	EntityManagerFactory sessionFactory = Persistence.createEntityManagerFactory("SMSDB"); // hql entity manager?
 	EntityManager session = sessionFactory.createEntityManager(); // hql > sql method manager?
 
 	// This method reads the student table in your database and returns the data as
 	// a List<Student>
 	public List<StudentDAO> getAllStudents() {
-		Query query = session.createQuery("SELECT s FROM Student s");
+		Query query = session.createQuery("SELECT * FROM Student s");
 		List<StudentDAO> studentList = query.getResultList();
 		return studentList;
 	}
