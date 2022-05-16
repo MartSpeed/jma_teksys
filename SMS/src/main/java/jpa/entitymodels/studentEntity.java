@@ -1,5 +1,6 @@
 package jpa.entitymodels;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,16 +9,23 @@ import javax.persistence.Table;
 import org.hibernate.mapping.List;
 
 @Entity
-@Table(name="Student")
+@Table(name = "Student")
 public class studentEntity {
-	@Column(name = "email") // column name PK
 
 	@Id
+	@Column(name = "email") // column name email and PK
 	private String sEmail;
 
+	// a column for each field is required
 	// FIELD NAMES
-	private String sName, sPass;
-	private List sCourses;
+	@Basic
+	@Column(name = "name") // student name
+	private String sName;
+
+	@Basic
+	@Column(name = "password") // student password
+	private String sPass;
+	private List sCourses; // courses that the students registered for
 
 	// CONSTRUCTORS
 	public studentEntity() {

@@ -4,5 +4,5 @@ import jpa.entitymodels.courseEntity;
 import java.util.List;
 
 public interface CourseDAO {
-	List<Course> getAllCourses(); // one to many table?
+	List<CourseDAO> getAllCourses(); // one to many table?
 }
