@@ -1,15 +1,27 @@
 package jpa.dao;
 
+import jpa.entitymodels.studentEntity;
+
+import java.util.List;
+
+import jpa.entitymodels.courseEntity;
+import jpa.entitymodels.studentEntity;
+
 public interface StudentDAO {
 	// INTERFACE THAT IMPLEMENTS THESE FOLLOWING CLASSES
 	
-	getAllStudents(); // all student information?
+	// all student information is contained here and out put into a list
+	List<Student> getAllStudents(); 
 	
-	getStudentByEmail(); // student email information?
+	// grabbing the student email information
+	Student getStudentByEmail(String sEmail); 
 	
-	validateStudent(); // what does this validate?
+	// checks to make sure the email and password values match for correct entry
+	boolean validateStudent(String sEmail, String sPassword); 
 	
-	registerStudentToCourse(); // adding a student to a course
+	// adding a student to a course
+	void registerStudentToCourse(String sEmail, Integer cId); 
 	
-	getStudentCourses(); // get student courses
+	// get student courses as a List
+	List<Course> getStudentCourses(); 
 }

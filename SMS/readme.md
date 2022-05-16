@@ -141,11 +141,11 @@ public interface CourseDAO {
 ## Requirement 4
 
 ### Services (Implementation)
-- [] create a package jpa.service
+- [x] create a package jpa.service
   - [] create class StudentService
     - [] StudentService class implements StudentDAO
-  - [] create class CourseService
-    - [] CourseService class implements CourseDAO
+  - [x] create class CourseService
+    - [x] CourseService class implements CourseDAO
 
 ### StudentService Class Methods
 
