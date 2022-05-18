@@ -7,7 +7,6 @@ body {
   margin: 0 250px;
   padding: 0;
   color: aliceblue;
-  background-color: grey;
 }
 /* HEADER CONTAINER*/
 .header-container {
@@ -15,27 +14,19 @@ body {
   padding: 0;
   display: flex;
 }
-.photo {
-  margin: 0;
+.photo, img {
+  margin: 3px;
   padding: 0;
-  background-color: orange;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 250px;
 }
 .info {
   margin: 0;
   padding: 0;
-  background-color: darkgreen;
   flex-grow: 2;
 }
-.info h1 {
-  font-size: 3rem;
-  background-color: black;
-}
-.info,
-title {
-  background-color: orange;
-  font-size: 1em;
+h1 {
+  font-size: 350%;
 }
 .info h3 {
   background-color: black;
@@ -43,7 +34,6 @@ title {
 .general {
   margin: 0;
   padding: 0 15px;
-  background-color: darkblue;
   align-content: center;
 }
 .general h1 {
@@ -52,7 +42,6 @@ title {
 .bio {
   margin: 0;
   padding: 5px;
-  background-color: darkgrey;
 }
 
 /*MASTER CONTAINER*/

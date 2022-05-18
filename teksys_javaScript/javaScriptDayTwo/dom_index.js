@@ -90,3 +90,6 @@ btnOne[0].addEventListener('click', btnClick)
 //     console.log('key'+ e.code);
 //     console.log('key' + e.key);
 // })
+
+const message = document.querySelector('#message');
+const result = document.querySelector('#result');
