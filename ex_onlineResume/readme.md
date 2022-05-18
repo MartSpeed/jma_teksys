@@ -9,7 +9,7 @@ The goal is to have a responsive online resume you can showcase to any employer 
 
 ## Resume structure/wireframe
 
-- [] image of yourself
+- [x] image of yourself
 - [x] full name - John Anthony
 - [x] title -- Full Stack Java Developer
 - [x] general information

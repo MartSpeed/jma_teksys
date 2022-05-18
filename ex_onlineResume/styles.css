@@ -22,11 +22,15 @@ body {
 }
 .info {
   margin: 0;
-  padding: 0;
+  padding: 0 30px;
   flex-grow: 2;
 }
-h1 {
+.info_header {
   font-size: 350%;
+}
+span{
+  font-size: 50%;
+  height: 10%;
 }
 .info h3 {
   background-color: black;
