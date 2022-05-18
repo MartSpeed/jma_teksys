@@ -37,6 +37,7 @@
     }
     ```
 - Numbers
+> what do they mean by numbers?
 
 ## Operators
 - Arithmetic
@@ -59,6 +60,7 @@
     }
     ```
 - Comparisons
+> go over comparator function again
 - Assignment
     ```
     let add = function(a,b,c){
@@ -69,7 +71,26 @@
 
 ## Control Statements
 - If/else
+```
+let testThis = true;
+
+if(testThis){
+    return testThis
+}else{
+    return false;
+}
+```
 - if/elseif
+```
+let number = 7;
+if(number > 6){
+    return number + 1;
+}else if(number > 8){
+    return number + 2;
+}else{
+    return number - 6;
+}
+```
 - switch statements
 
 ## Loops
