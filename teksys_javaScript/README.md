@@ -135,7 +135,7 @@
 - Apply
 - Closures
 
-## QUESTINONS
+## QUESTIONS
 1. What is Javascript?
 2. What is the benefirt of Modern JavaScript
 3. What is Prototypes in javascipt   in regards to object?
