@@ -1,25 +1,18 @@
-// setup
-let name = "Zoro";
-let hasJob = true;
-let age = 22;
+// javascript shapes assignment
+console.log("inside of the shapes assignment");
 
-// construction
-let person = {
-    first_name:"Luffy",
-    last_name:"Monkey D. ",
-    isWorking: false,
-    hasJob: true,
-    jobTitle: "Yonko Pirate King Select",
-    fullName: function(){
-        return this.last_name + " " + this.first_name;
+// creating a square
+// first loop is the height
+// second loop is the width
+let n = 4; // this should determine the height of the box
+let string = ""; // our separator
+// the first loop is for the external box, this is what the HEIGHT of the shape will be
+for(let i = 0; i < n; ++i){
+    // the second loop is the internal box, this prints out the stars and determines the WIDTH
+    for(let j = 0; j < 7; ++j){
+        string += "*";
     }
+    // new line for each row
+    string += "\n";
 }
-
-console.log(`${person.fullName()} is the ${person.jobTitle}`);
-
-let names = ["Lucci","Kaku","Kuro","Don Kreig", age, hasJob, 88.8];
-console.log(names);
-
-var varx = 10;
-let letx = 10;
-console.log(`this is var ${varx}, this is let ${letx}`);
+console.log(string);
