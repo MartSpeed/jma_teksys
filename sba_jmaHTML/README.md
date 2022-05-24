@@ -1,6 +1,6 @@
 # HTML/CSS/JAVASCRIPT SBA
 
-(John Anthony GitHub)[]
+(John Anthony GitHub)[https://github.com/MartSpeed/jma_teksys/tree/main/sba_jmaHTML]
 
 ## GOAL
 
