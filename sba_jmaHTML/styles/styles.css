@@ -1,6 +1,8 @@
 html {
   margin: 0;
   padding: 0;
+  background-color: #293462;
+  color: #f24c4c;
 }
 body {
   margin: 15px;
