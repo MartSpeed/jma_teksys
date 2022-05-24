@@ -11,7 +11,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
 
 ## HTML
 
-- [] create 3 web pages
+- [x] create 3 web pages
 - [] use at least 10 different HTML tags
   - 1. [x] header
   - 2. [x] footer
@@ -42,14 +42,14 @@ In this Skill-based Assessment, you will be creating a small website and you get
 - [] use 5 different CSS selectors
   - 1. [x] html
   - 2. [x] body
-  - 3. []
-  - 4. []
-  - 5. []
+  - 3. [x] section
+  - 4. [x] .container
+  - 5. [] a:hover
 - [] Use 3 fonts minimum
 - [x] use colors that compliment each other
   - [x] background color
   - [x] font color
-  - [ ] content color
+  - [x] content color
 
 ### CSS OPTIONAL
 
