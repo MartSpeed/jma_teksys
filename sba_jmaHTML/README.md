@@ -17,7 +17,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
   - 2. [x] footer
   - 3. [x] section
   - 4. [x] h1
-  - 5. []
+  - 5. [x] nav
   - 6. []
   - 7. []
   - 8. []
