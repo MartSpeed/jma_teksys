@@ -1,12 +1,12 @@
 # Hibernate Tut
 
-1. Intro
+## Intro Hibernate and Object Relational Mapping
 
 - [] mapping member variables to columns
-  - @Columns
+  - @Columns???
 - [] mapping relationships
-  - @OneToMany
-  - Primary Key (PK)
-  - Foreign Key (FK)
+  - @OneToMany???
+  - Primary Key (PK)???
+  - Foreign Key (FK)???
 - [] Handling Data Types
 - [] Managing changes to object state
