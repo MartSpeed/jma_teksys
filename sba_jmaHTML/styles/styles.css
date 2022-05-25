@@ -3,11 +3,57 @@ html {
   padding: 0;
   background-color: #293462;
   color: #EC9B3B;
+  /*web fonts content*/
+  font-family: 'Nunito Sans', sans-serif;
 }
 body {
-  margin: 15px;
-  padding: 8px;
+  margin: 0;
+  padding: 0;
+}
+/*NAVBAR START*/
+nav{
+  margin: 0;
+  padding: 0 8px;
+  display: flex;
+  background-color: rgba(21, 19, 60, .5);
+  align-items: center;
+  justify-content:end;
+}
+ul li{
+  display: inline;
+  list-style: none;
+}
+/*NAVBAR END*/
+
+/*HEADER START*/
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  /*web fonts title*/
+  font-family: 'Bebas Neue', cursive;
+  background-color: rgba(21, 19, 60, .5);
+}
+/*HEADER END*/
+
+/*CONTAINER START*/
+.container{
+  display: flex;
+  flex-direction: column;
 }
 section {
-  margin:0;
+  background-color: rgba(21, 19, 60, .5);
+  margin: 15px 0;
+  padding: 8px;
 }
+/*CONTAINER END*/
+
+/*FOOTER START*/
+footer{
+  display: flex;
+  justify-content: center;
+  /*web fonts title*/
+  font-family: 'Bebas Neue', cursive;
+  background-color: rgba(21, 19, 60, .5);
+}
+/*FOOTER END*/
