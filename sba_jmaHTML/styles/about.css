@@ -149,7 +149,7 @@ header {
     -o-transform: translatex(50px);
     transform: translatex(50px);
     transition: all 0.5s;
-    background-color: orange;
+    background-color: #F24C4C;
 }
 
 #outer3.outerActive {
@@ -162,7 +162,7 @@ header {
     height: 450px;
     width: 450px;
     border-radius: 5px;
-    background-color: rgba(21, 19, 60, 1);
+    background-color: rgba(21, 19, 60, .2);
     margin-left: 10px;
     margin-right: 10px;
     z-index: 1;
@@ -181,7 +181,7 @@ header {
     border-radius: 5px;
     transform: skewy(5deg);
     transform-origin: top right;
-    background-color: rgba(21, 19, 60, 1);
+    background-color: rgba(21, 19, 60, .2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,7 +200,6 @@ header {
     border-radius: 5px;
     transform: skewY(-5deg);
     transform-origin: top left;
-    background-color: rgba(21, 19, 60, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,4 +209,36 @@ header {
 #rightView:hover {
     opacity: 1;
     transition: all 1s;
+}
+
+.navBtns {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    opacity: 0.8;
+    cursor: pointer;
+    color: #F7D716;
+}
+
+.navBtns:hover {
+    opacity: 1;
+    transition: all 1s;
+    background-color: #F24C4C;
+}
+
+#navLeft {
+    left: 50px;
+}
+
+#navRight {
+    right: 50px;
+}
+
+#linkTag {
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+    align-self: center;
 }
