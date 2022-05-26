@@ -23,7 +23,8 @@ public class EmployeeController {
 	EmployeeController(EmployeeRepository employeeRepository) {
 		this.employeeRepository = employeeRepository;
 	}
-
+	
+	//*****GET*****
 	// where the file or information is located to be drawn from
 	// is this a GET/POST setup???
 	// all "MAPPING" require a method underneath to work
@@ -34,7 +35,7 @@ public class EmployeeController {
 		return employeeRepository.findAll();
 	}
 
-	//
+	//*****POST*****
 	@PostMapping("/employees")
 	// when we make a post to the db,
 	EmployeeEntity newEmployee(@RequestBody EmployeeEntity newEmployee) {
@@ -42,7 +43,7 @@ public class EmployeeController {
 		return employeeRepository.save(newEmployee);
 	}
 
-	//
+	// know as "ENDPOINTS" = ("employees")
 	@GetMapping("employees/{id}")
 	//
 	EmployeeEntity employee_id(@PathVariable Long employee_id) {
