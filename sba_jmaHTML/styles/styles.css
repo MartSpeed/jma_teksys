@@ -57,3 +57,20 @@ footer{
   background-color: rgba(21, 19, 60, .5);
 }
 /*FOOTER END*/
+
+/*INDEX.HTML START*/
+/*INDEX.HTML END*/
+
+/*ABOUT.HTML START*/
+.center{
+  margin: 15px 0 15px 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+/*ABOUT.HTML END*/
+
+/*SOMETHINGSILLY.HTML START*/
+/*SOMETHINGSILLY.HTML END*/
