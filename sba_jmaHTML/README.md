@@ -22,7 +22,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
   - 7. [x] ul
   - 8. [x] li
   - 9. [x] a
-  - 10. []
+  - 10. [] table
 - [] use HTML tables
 - [] implement 2 uses for forms
 - [x] use web fonts
@@ -30,7 +30,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
   - [x] text
   - [] gifs
   - [] videos
-  - [] images
+  - [x] images
 
 ---
 
@@ -61,12 +61,12 @@ In this Skill-based Assessment, you will be creating a small website and you get
 
 ## JS
 
-- [] external scripts
-- [] use variables
-- [] if statements
+- [x] external scripts
+- [x] use variables
+- [x] if statements
 - [] at least one form of collections
 - [] functions/call back
-- [] event handling
+- [x] event handling
 
 - ### JS OPTIONAL
 - ajax
