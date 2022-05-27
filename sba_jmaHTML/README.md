@@ -36,15 +36,15 @@ In this Skill-based Assessment, you will be creating a small website and you get
 
 ## CSS
 
-- [] internal styling - navbar
-- [] inline styles - navbar
+- [] internal styling
+- [] inline styles
 - [x] external styling
 - [] use 5 different CSS selectors
   - 1. [x] html
   - 2. [x] body
   - 3. [x] section
   - 4. [x] .container
-  - 5. [] a:hover
+  - 5. [x] :hover
 - [x] Use 3 fonts minimum
 - [x] use colors that compliment each other
   - [x] background color
@@ -55,7 +55,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
 
 - [x] use flexbox
 - use sass/scss
-- use animations
+- [x] use animations
 
 ---
 
@@ -64,11 +64,18 @@ In this Skill-based Assessment, you will be creating a small website and you get
 - [x] external scripts
 - [x] use variables
 - [x] if statements
-- [] at least one form of collections
-- [] functions/call back
+- [x] at least one form of collections
+- [x] functions/call back
 - [x] event handling
 
 - ### JS OPTIONAL
 - ajax
 - json
 - jQuery
+
+# SUMMARY
+
+# REFERENCES
+[W3 Schools](https://www.w3schools.com/)
+[Color Hunt](https://colorhunt.co/)
+[Code Pen](https://codepen.io/)
