@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+  <head>
+    <title>Ex Form Page</title>
+  </head>
+  <body>
+    <!--action gives our redirect using the @ symbol to redirect to new location-->
+    <!--grab the object personForm-->
+    <!--using our method post to get the information to display on the url designated-->
+    <form action="#" th:action="@{/}" th:object="${personFrom}" method="post">
+      <table>
+        <!--NAME FORM START-->
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" th:field="*{name}" /></td>
+          <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+            Name Error
+          </td>
+        </tr>
+        <!--NAME FORM START-->
+        <!--AGE FORM START-->
+        <tr>
+          <td>Age:</td>
+          <td><input type="text" th:field="*{age}" /></td>
+          <td th:if="${#age.hasErrors('age')}" the:errors="*{age}">
+            Age Error
+          </td>
+        </tr>
+        <!--AGE FORM END-->
+        <!--BUTTON FORM START-->
+        <tr>
+          <td><button type="submit">Submit</button></td>
+        </tr>
+        <!--BUTTON FORM END-->
+      </table>
+    </form>
+  </body>
+</html>
