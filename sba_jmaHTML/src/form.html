@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <!--webfont-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@200&display=swap"
+    rel="stylesheet">
+  <title>John Anthony HTML SBA Form Page</title>
+
+  <style>
+    nav {
+      margin: 0;
+      padding: 0 8px;
+      display: flex;
+      background-color: rgba(21, 19, 60, .3);
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!--nav start-->
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html" rel="noopener noreferrer">Home</a>
+      </li>
+      <li>
+        <a href="../src/about.html" rel="noopener noreferrer">About</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- nav end-->
+  <div class="container">
+
+    <!--Header start-->
+    <header>
+      <h1>This is the form page header</h1>
+    </header>
+    <section class="content">
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Zorojuro"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Roronoa"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    <!--Header end-->
+
+    <!--section1 start-->
+    <section class="content">
+      <p>
+        this is the first section inside of the form page html webpage
+      </p>
+    </section>
+    <!--section1 start-->
+
+    <!--section2 start-->
+    <section>
+      <p class="content">Choose one of your favorite things.</p>
+
+      <form class="content" action="/action_page.php">
+        <label for="favoritethings">Choose a favorite thing:</label>
+        <select name="favoritethings" id="favoritethings">
+          <option value="garchomp">Garchomp</option>
+          <option value="braviary">Braviary</option>
+          <option value="bisharp">Bisharp</option>
+          <option value="vespiqueen">Vespiqueen</option>
+          <option value="escavalier">Ecsavalier</option>
+          <option value="aggron">Aggron</option>
+          <option value="rollerskate">Roller Skate</option>
+          <option value="onepiece">One Piece</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    <!--section2 end-->
+
+    <!-- footer start-->
+    <footer>
+      <h1>This is the form page footer</h1>
+    </footer>
+    <!--footer end-->
+  </div>
+</body>
+
+</html>
