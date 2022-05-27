@@ -16,7 +16,8 @@ public class ValidateFormController implements WebMvcConfigurer {
     // controller method to assist webmvc???
 
     // helps us get the view from the validate form
-    public void addViewController(ViewControllerRegistry registry){
+	@Override
+    public void addViewControllers(ViewControllerRegistry registry){
         // add view to the registry method and display the results on the that page
         registry.addViewController("/results").setViewName("results");
     }

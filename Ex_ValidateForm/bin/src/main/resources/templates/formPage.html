@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="https://thymeleaf.org">
   <head>
     <title>Ex Form Page</title>
   </head>
@@ -8,7 +8,7 @@
     <!--grab the object personForm-->
     <!--using our method post to get the information to display on the url designated-->
     <!--action is the response after the SUBMIT button was pressed-->
-    <form action="#" th:action="@{/}" th:object="${personForm}" method="post">
+    <form action="#" th:action="@{/}" th:object="${personFrom}" method="post">
       <table>
         <!--NAME FORM START-->
         <tr>
@@ -23,7 +23,7 @@
         <tr>
           <td>Age:</td>
           <td><input type="text" th:field="*{age}" /></td>
-          <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">
+          <td th:if="${#age.hasErrors('age')}" the:errors="*{age}">
             Age Error
           </td>
         </tr>
