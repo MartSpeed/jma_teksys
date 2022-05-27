@@ -12,7 +12,7 @@ In this Skill-based Assessment, you will be creating a small website and you get
 ## HTML
 
 - [x] create 3 web pages
-- [] use at least 10 different HTML tags
+- [x] use at least 10 different HTML tags
   - 1. [x] header
   - 2. [x] footer
   - 3. [x] section
@@ -22,8 +22,8 @@ In this Skill-based Assessment, you will be creating a small website and you get
   - 7. [x] ul
   - 8. [x] li
   - 9. [x] a
-  - 10. [] table
-- [] use HTML tables
+  - 10. [x] table
+- [x] use HTML tables
 - [] implement 2 uses for forms
 - [x] use web fonts
 - [] use different forms of content
