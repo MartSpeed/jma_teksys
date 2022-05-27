@@ -17,16 +17,15 @@ public class ValidateFormController implements WebMvcConfigurer {
 
     // helps us get the view from the validate form
     public void addViewController(ViewControllerRegistry registry){
-        // add view to the registry method
-        @Override
-        registry.addViewController("/html").setViewName("html");
+        // add view to the registry method and display the results on the that page
+        registry.addViewController("/results").setViewName("results");
     }
 
     // GET METHOD START
-    @GetMapping(value="/")
+    @GetMapping(value="/") // where our page lands when we first start off
     public String getForm(PersonForm personForm){
         // this will become the HTML URL
-        return "html";
+        return "formPage";
     }
     // GET METHOD END
 
@@ -36,10 +35,12 @@ public class ValidateFormController implements WebMvcConfigurer {
         // if it has errors
         if(bindingResult.hasErrors()){
             // this will become the HTML URL
-            return "form";
+            // if it has errors it will return you to the form page
+            return "formPage";
         }
         // this will become the HTML URL
-        return "redirect:/html";
+        // if no errors, then you will be guided to the results page
+        return "redirect:/results";
     }
     // POST METHOD END
 }

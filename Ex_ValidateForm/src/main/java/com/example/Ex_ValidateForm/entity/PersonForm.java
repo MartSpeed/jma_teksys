@@ -11,7 +11,7 @@ public class PersonForm {
     private String name;
     //
     @NotNull
-    @Min(18)
+    @Min(18) // minimum age to get the discount is 18
     private Integer age;
 
     public PersonForm() {
