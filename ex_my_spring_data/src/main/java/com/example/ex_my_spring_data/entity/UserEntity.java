@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity // declares our class object an entity for the database to be able to read from
 public class UserEntity {
     @Id // AUTO_COMPLETE for user ID's
-    @GeneratedValue(stategy = GenerationType.IDENTITY) // same thing
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // same thing
     private Integer id;
 
     // FIELDS that we will use to obtain and create data with
