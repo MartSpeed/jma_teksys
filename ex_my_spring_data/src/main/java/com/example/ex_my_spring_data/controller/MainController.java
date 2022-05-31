@@ -7,6 +7,8 @@ package com.example.ex_my_spring_data.controller;
 
 import com.example.ex_my_spring_data.entity.UserEntity;
 import com.example.ex_my_spring_data.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +24,9 @@ public class MainController {
     * */
     @Autowired
     private UserRepository user;
+
+    // LOGGER
+    Logger logger = LoggerFactory.getLogger(MainController.class);
 
     // POST
     @PostMapping(path="/add") // each path that is setup requires a HANDLER(a method)
