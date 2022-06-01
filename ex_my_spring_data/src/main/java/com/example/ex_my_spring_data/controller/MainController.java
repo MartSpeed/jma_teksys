@@ -2,7 +2,7 @@ package com.example.ex_my_spring_data.controller;
 
 /*CONTROLLER
 * author: Anthony, John
-* DESCRIPTION: the controller
+* DESCRIPTION: the controller controls the traffic(mapping) of the information we would like to use and who it flows to???
 * */
 
 import com.example.ex_my_spring_data.entity.UserEntity;
