@@ -2,7 +2,7 @@ package udemyMethods;
 
 public class Methods {
 
-	public static void main(String[] args) {
+	public static protected void main(String[] args) {
 
 		// methods using the fields
 		boolean gameOver = true;
@@ -98,4 +98,6 @@ public class Methods {
 		}
 		return -1;
 	}
+	
+	
 }
