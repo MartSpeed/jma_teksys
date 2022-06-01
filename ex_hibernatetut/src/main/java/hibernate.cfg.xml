@@ -10,7 +10,7 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/ex_hibernatedb</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">********</property>
+		<property name="connection.password">1qaz!QAZ2wsx@WSX</property>
 		<!-- Maria DB dialect -->
 		<property name="dialect">org.hibernate.dialect.MariaDB53Dialect</property>
 		<!-- Echo all executed SQL to stdout -->
@@ -18,8 +18,8 @@
 		<property name="hibernate.format_sql">true </property>
 
 		<!-- Mapping entity file -->
-		<!-- NOTE BE SURE TO ADD ALL CLASSES THAT WILL BE ACCESSED OR USED -->
-		<mapping class="entity.DepartmentEntity" />
+		<!-- NOTE: BE SURE TO ADD ALL CLASSES THAT WILL BE ACCESSED OR USED!!!!! -->
+		<mapping class="entity.UserDetails" />
 	</session-factory>
 
 </hibernate-configuration>

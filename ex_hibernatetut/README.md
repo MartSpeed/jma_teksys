@@ -29,6 +29,12 @@
 
 - [] create the Hibernate cfg.xml file
 
+## Using the Hibernate API
+
+1. Create a session factory
+2. create a session from the session factory
+3. Use the session to save the model object
+
 # SETUP
 
 1. create database
