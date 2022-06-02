@@ -27,3 +27,5 @@
 # - [] pom.xml
 
 # - [] @PostMapping (path vs value); what is the difference if any???
+
+# - [] CrudRepository vs JpaRepository

@@ -1,0 +1,49 @@
+###### 20220601
+
+# Dependency Injection (DI) + Inversion of Control (IoC)
+
+- [] <bean></bean>
+- [] setterinjection.xml file
+- [] dependency injection
+- [] @Qualifier("itemRepo")
+- [] loosely coupled
+- [] tightly coupled
+
+###### 20220602
+
+# JAVA MANAGEMENT PROJECT
+
+[Spring Initializer](start.spring.io)
+
+#### DEPENDENCIES
+
+- MySQL Driver
+- Spring Data JPA
+- Spring Web
+- Spring Boot Dev Tools
+- Validation
+- Spring Session
+- Entity Package
+- Repository Package (Interface)
+- Controller package
+- Service Package (Interface, ServiceImpl)
+  - User class
+  - @Size(min = 15) spring annotation
+  - getters/setters
+  - empty/all args constructor
+- what are pagination and sorting inside of the JpaRepository method
+- List
+- @Query
+- JpaRepository
+- CrudRepository
+- @Controller
+- Model
+- @GetMapping(value="/homepage")
+- @RequestMapping(value="/")
+- @PostMapping(value="/add-homepage")
+- @Valid
+- BindingResult
+- ModelMap
+- Optional
+- @Service
+- userService & userServiceImpl???? explained more
