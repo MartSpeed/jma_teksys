@@ -31,7 +31,7 @@ public class UserController {
         model.addAttribute("users", user_list);
         //
         model.addAttribute("users", new UserEntity());
-        return "html";
+        return "user";
     }
 
     // POST

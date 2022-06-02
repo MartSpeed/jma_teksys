@@ -52,3 +52,8 @@
 - .get()
 - model.addAllAttributes()
 - model.addAttributes()
+- thymeleaf
+  - <tr th:if="${#lists.isEmpty(userEntity)}"></tr> (thymeleaf if statement)
+  - <td colspan="7"></td>
+  - <td th:text="${userEntity.username}"></td> (thymeleaf text)
+  - <tr th:each="userEntity : ${userEntity}"> (thymeleaf for each loop)
