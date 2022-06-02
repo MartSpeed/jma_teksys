@@ -46,4 +46,9 @@
 - ModelMap
 - Optional
 - @Service
-- userService & userServiceImpl???? explained more
+- userService & userServiceImpl???? need more explanation or implementation
+- .isPresent()
+- .delete()
+- .get()
+- model.addAllAttributes()
+- model.addAttributes()

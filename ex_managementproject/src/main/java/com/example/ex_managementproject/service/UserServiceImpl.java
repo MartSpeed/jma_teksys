@@ -19,7 +19,7 @@ public interface UserServiceImpl {
     void updateUser(UserEntity user);
 
     // ADD
-    void addUser(String user_name, String user_description, Date targetDate, boolean isWorking);
+    void addUser(UserEntity userEntity);
 
     // DELETE
     void deleteUser(long id);

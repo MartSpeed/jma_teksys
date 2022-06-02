@@ -19,9 +19,14 @@ public class UserService implements UserServiceImpl{
     @Autowired
     private UserRepository userRepository;
 
+    // method to get all users and return them
+    public List<UserEntity> getAllUsers(){
+        return userRepository.findAll();
+    }
+
     @Override
     public List<UserEntity> getUserByUsername(String user_name) {
-        // this method is a list inside of the controller
+        // this method is a list INSIDE the controller
         return userRepository.findByUserName(user_name);
     }
 
@@ -32,17 +37,23 @@ public class UserService implements UserServiceImpl{
 
     @Override
     public void updateUser(UserEntity user) {
-
+        // why do we also save user here???
+        userRepository.save(user);
     }
 
     @Override
-    public void addUser(String user_name, String user_description, Date targetDate, boolean isWorking) {
-
+    public void addUser(UserEntity userEntity) {
+        // going to leave this ERROR as is
+        userRepository.save(userEntity);
     }
 
     @Override
     public void deleteUser(long id) {
-
+    // OPTIONAL???
+        Optional<UserEntity> user = userRepository.findById(id);
+        if(user.isPresent()){
+            userRepository.delete(user.get());
+        }
     }
 
     @Override

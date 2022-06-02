@@ -33,6 +33,13 @@ public class UserEntity {
         this.target_date = target_date;
     }
 
+    public UserEntity(String user_name, String user_description, Date target_date) {
+        this.user_id = user_id;
+        this.user_name = user_name;
+        this.user_description = user_description;
+        this.target_date = target_date;
+    }
+
     public Long getUser_id() {
         return user_id;
     }

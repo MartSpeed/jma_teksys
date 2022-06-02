@@ -1,6 +1,8 @@
 package com.example.ex_managementproject.controller;
 
 import com.example.ex_managementproject.entity.UserEntity;
+import com.example.ex_managementproject.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -9,27 +11,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class UserController {
+    //@Autowire or Dependency Injection for the UserService file
+    @Autowired
+    private UserService userService;
+
     // building out the maps
 
-    // get our list
+    // GET our list
     @GetMapping(value="/list-users")
     public String showUsers(Model model){
     // model allows you to add attributes to your variables
+        //
+        List<UserEntity> user_list = userService.getAllUsers();
+        // add all attributes from the list to the user
+        model.addAttribute("users", user_list);
+        //
+        model.addAttribute("users", new UserEntity());
         return "html";
     }
 
     // POST
     @PostMapping(value="/add-users")
     public String addUser(ModelMap model, @Valid UserEntity userEntity, BindingResult result){
+        // checking for a NULL entry
         if(result.hasErrors()){
-            // return html page
+            // return HTML page
             return "userEntity";
         }
-    return userEntity.setUser_name(model);
-        // save the user
-        // return to the user list
+        // else save the user
+        // & return the user list
+        userService.addUser(userEntity);
+
+        // redirect the return
+        return "redirect:/";
     }
 }
