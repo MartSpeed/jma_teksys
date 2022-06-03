@@ -57,3 +57,12 @@
   - <td colspan="7"></td>
   - <td th:text="${userEntity.username}"></td> (thymeleaf text)
   - <tr th:each="userEntity : ${userEntity}"> (thymeleaf for each loop)
+
+###### 20220603
+
+# JAVA MANAGEMENT PROJECT
+
+- @PathVariable(path="/${user_id}")
+- @GetMapping
+- Model???
+- getUsernameById(user_id)
