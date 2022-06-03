@@ -8,6 +8,7 @@ import java.util.Optional;
 
 // INTERFACE METHODS
 public interface UserServiceImpl {
+
     // building abstract method calls
     List<UserEntity> getUserByUsername(String user_name);
 
@@ -19,7 +20,7 @@ public interface UserServiceImpl {
     void updateUser(UserEntity user);
 
     // ADD
-    void addUser(UserEntity userEntity);
+    void addUser(UserEntity user);
 
     // DELETE
     void deleteUser(long id);

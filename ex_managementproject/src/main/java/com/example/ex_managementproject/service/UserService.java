@@ -27,7 +27,7 @@ public class UserService implements UserServiceImpl{
     @Override
     public List<UserEntity> getUserByUsername(String user_name) {
         // this method is a list INSIDE the controller
-        return userRepository.findByUserName(user_name);
+        return userRepository.findByUser_name(user_name);
     }
 
     @Override
@@ -38,6 +38,7 @@ public class UserService implements UserServiceImpl{
     @Override
     public void updateUser(UserEntity user) {
         // why do we also save user here???
+        // we are updating the user as a new name/number
         userRepository.save(user);
     }
 
@@ -56,6 +57,7 @@ public class UserService implements UserServiceImpl{
         }
     }
 
+    // leave alone for 0603
     @Override
     public void saveUser(UserEntity user) {
         userRepository.save(user);

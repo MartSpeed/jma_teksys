@@ -22,21 +22,21 @@ public class UserController {
     // building out the maps
 
     // GET our list
-    @GetMapping(value="/list-users")
+    @GetMapping(value="/listusers")
     public String showUsers(Model model){
     // model allows you to add attributes to your variables
         //
         List<UserEntity> user_list = userService.getAllUsers();
         // add all attributes from the list to the user
-        model.addAttribute("users", user_list);
+        model.addAttribute("user_name", user_list);
         //
-        model.addAttribute("users", new UserEntity());
-        return "user";
+        model.addAttribute("user_name", new UserEntity());
+        return "html";
     }
 
     // POST
-    @PostMapping(value="/add-users")
-    public String addUser(ModelMap model, @Valid UserEntity userEntity, BindingResult result){
+    @PostMapping(value="/addusers")
+    public String addUser(Model model, @Valid UserEntity userEntity, BindingResult result){
         // checking for a NULL entry
         if(result.hasErrors()){
             // return HTML page

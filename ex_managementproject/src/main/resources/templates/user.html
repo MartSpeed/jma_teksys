@@ -22,9 +22,9 @@
       <!--ROW 2 END-->
       <!--ROW 3 START-->
       <tr th:each="userEntity : ${userEntity}">
-        <td th:text="${userEntity.username}"></td>
-        <td th:text="${userEntity.description}"></td>
-        <td th:text="${userEntity.targetDate}"></td>
+        <td th:text="${userEntity.user_name}"></td>
+        <td th:text="${userEntity.user_description}"></td>
+        <td th:text="${userEntity.target_date}"></td>
       </tr>
       <!--ROW 3 END-->
     </table>

@@ -32,7 +32,9 @@
 ## Using the Hibernate API
 
 1. Create a session factory
+   - sessionsFactory creates sessions, depending on how many you want.
 2. create a session from the session factory
+   - you will create sessions for every actions you want to do, Create, Read, Update, Delete from the sessions
 3. Use the session to save the model object
 
 # SETUP

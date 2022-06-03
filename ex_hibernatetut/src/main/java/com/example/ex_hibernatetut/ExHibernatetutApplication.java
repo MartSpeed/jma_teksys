@@ -16,8 +16,8 @@ public class ExHibernatetutApplication {
 		UserDetails user = new UserDetails();
 
 		// change the value of users
-		user.setUserId(1);
-		user.setUserName("First User");
+		user.setUserId(3);
+		user.setUserName("Third User");
 
 		// save the object in the database using the HQL API methods
 		// use this to create new sessions
@@ -31,7 +31,7 @@ public class ExHibernatetutApplication {
 		// use the transaction to define a SINGLE unit of work
 		session.beginTransaction();
 
-		//to save the object
+		//save the user object
 		session.save(user);
 
 		// once you save the object, we need to end/close the transaction
