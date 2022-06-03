@@ -14,7 +14,7 @@
   	</dependency>
   ```
 
-- [] define a controller
+- [x] define a controller
   - [x] create package mycontroller
   - [x] create a class HomeController
     > HOMECONTROLLER CLASS
@@ -38,3 +38,52 @@ public class HomeController{
 ```
 
 - [x] set localhost:8080 to create showflowerList DB
+
+---
+
+# CREATING A THYMELEAF TEMPLATE
+
+- [x] create viewFlower.html file
+
+```
+<!DOCTYPE html>
+<html xmls:th="http://www/thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table style="boder: 1px solid black">
+<tr th:each="showflowers: ${flowersVariable}">
+  <td th:text="${showflowers}"/>
+</tr>
+</table>
+</body>
+</html>
+```
+
+> COMPLETED HTML FILE WITH FLOWERS AND CITIES
+
+```
+<!DOCTYPE html>
+<html xmls:th="http://www/thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table style="border: 1px solid black">
+  <tr th:each="showflowers: ${flowersVariable}">
+    <td th:text="${showflowers}"/>
+  </tr>
+  </tr>
+</table>
+
+<table style="border: 1px solid black">
+  <tr th:each="showcities: ${CityVariable}">
+    <td th:text="${showcities}"/>
+  </tr>
+</table>
+</body>
+</html>
+```
