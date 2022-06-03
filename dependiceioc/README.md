@@ -66,3 +66,8 @@
 - @GetMapping
 - Model???
 - getUsernameById(user_id)
+- RedirectView; retrieved from spring servlet
+- RedirectAttributes
+- isActive()
+- ternary operator
+- addFlashAttribute

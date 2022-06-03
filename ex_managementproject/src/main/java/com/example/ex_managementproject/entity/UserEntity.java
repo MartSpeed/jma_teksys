@@ -21,6 +21,9 @@ public class UserEntity {
     // Date from the java util
     private Date target_date;
 
+    //
+    private boolean active =  true;
+
     // empty constructor
     public UserEntity(){
 
@@ -69,5 +72,11 @@ public class UserEntity {
 
     public void setTarget_date(Date target_date) {
         this.target_date = target_date;
+    }
+    public boolean isActive() {
+        return active;
+    }
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

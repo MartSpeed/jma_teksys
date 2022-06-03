@@ -2,6 +2,7 @@ package com.example.ex_managementproject.service;
 
 import com.example.ex_managementproject.entity.UserEntity;
 import com.example.ex_managementproject.repository.UserRepository;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,11 +33,30 @@ public class UserService implements UserServiceImpl{
 
     @Override
     public Optional<UserEntity> getUsernameById(long user_id) {
+
         return userRepository.findById(user_id);
     }
 
+    //???
+    public List<UserEntity> getUsers(){
+        //
+        return userRepository.findAllByActiveOrderByIdDesc(true);
+    }
+
     @Override
-    public void updateUser(UserEntity user) {
+    public void updateUser(long user_id, UserEntity user) {
+        // creating an object
+        // grab user from database
+        // grab and set user FROM the database
+        UserEntity user_from_db = getUsernameById(user_id).orElseThrow(()->new IllegalArgumentException("No such user" + user_id));
+
+        // get the user name
+        // updating only what we allow from the user
+        user_from_db.setUser_name(user.getUser_name());
+        user_from_db.setUser_description(user.getUser_description());
+        user_from_db.setActive(user.isActive());
+
+
         // why do we also save user here???
         // we are updating the user as a new name/number
         userRepository.save(user);
