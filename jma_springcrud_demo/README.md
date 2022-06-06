@@ -118,3 +118,18 @@ creating, retrieving, updating, deleting, and finding tutorials
 
 - [x] create java package myservices
   - [x] create java class TutorialServices
+
+### SERVICE METHODS
+
+- [] getALLTutorials()
+- [] getTutorialById()
+- [] addTutorial()
+- [] updateTutorial()
+- [] deleteTutorial()
+- [] deleteAllTutorials()
+  - ResponseEntity ??????? this needs more elaboration
+
+# CONTROLLER LAYER SETUP
+
+- [] create mycontroller java package
+- [] create tutorialcontroller java class
