@@ -84,21 +84,23 @@ spring.jpa.hibernate.ddl-auto=update
 ### FIELDS
 
 - [] MODEL ENTITY
-  - [] @Entity
-  - [] @Table(name="model")
-  - [] @Id
-  - [] @GeneratedValue(strategy=GenerationType.IDENTITY)
-  - [] @Column(name="id") is this standard practice or needed since it will by named the variable name by default???
-  - [] private int model_id;
-  - [] @Column(name="title")
-  - [] private String model_title;
-  - [] @Column(name="description")
-  - [] @Size(min = 50) I need to review if this is the correct way to use this annotation again
-  - [] private String model_description;
-  - [] @Column(name="published")
-  - [] private boolean model_published = true;
-  - [] @Data
-  - [] @NoArgsConstructor
-    - [] getters/setters
-    - [] toString
-    - [] no args/all args constructor
+  - [x] @Entity
+  - [x] @Table(name="tutorials")
+  - [x] @Id
+  - [x] @GeneratedValue(strategy=GenerationType.IDENTITY)
+  - [x] @Column(name="id") is this standard practice or needed since it will by named the variable name by default???
+  - [x] private int model_id;
+  - [x] @Column(name="title")
+  - [x] private String model_title;
+  - [x] @Column(name="description")
+  - [x] @Size(min = 50) I need to review if this is the correct way to use this annotation again
+  - [x] private String model_description;
+  - [x] @Column(name="published")
+  - [x] private boolean model_published = true;
+  - [x] @Data
+  - [x] @AllArgsConstructor
+    - [x] getters/setters
+    - [x] toString
+    - [x] no args/all args constructor
+
+# REPOSITORY SETUP
