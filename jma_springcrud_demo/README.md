@@ -76,14 +76,14 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-# ENTITY SETUP
+# ENTITY LAYER SETUP
 
 - [] create a package name model
   - [] in the model package create the Tutorial.java class
 
 ### FIELDS
 
-- [] MODEL ENTITY
+- [x] MODEL ENTITY
   - [x] @Entity
   - [x] @Table(name="tutorials")
   - [x] @Id
@@ -103,4 +103,18 @@ spring.jpa.hibernate.ddl-auto=update
     - [x] toString
     - [x] no args/all args constructor
 
-# REPOSITORY SETUP
+# REPOSITORY LAYER SETUP
+
+- [x] create TutorialRepository
+- [x] extends JpaRepository<Tutorial,Long>
+- [x] create custom finder method
+  - [] findByPublished() should return all tutorials with published having value as the input published
+- [x] tables created when application ran
+
+# SERVICE LAYER SETUP
+
+the service layer works between the **CONTROLLER** and **REPOSITORY** and will create API's for
+creating, retrieving, updating, deleting, and finding tutorials
+
+- [x] create java package myservices
+  - [x] create java class TutorialServices

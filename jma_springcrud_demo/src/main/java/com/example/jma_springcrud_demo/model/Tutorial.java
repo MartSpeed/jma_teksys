@@ -12,10 +12,10 @@ import javax.persistence.*;
 public class Tutorial {
 
     // FIELDS START
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
-    private long model_id; // Primary Key
+    @Id // this designates our PRIMARY KEY
+    @GeneratedValue(strategy=GenerationType.IDENTITY) // this AUTO_COMPLETED new entries created with an ID number
+    @Column(name="id") // tells SQL to create a column with this name
+    private long model_id; // Primary Key (PK)
 
     // TITLE
     @Column(name="title")
@@ -38,7 +38,6 @@ public class Tutorial {
     // NO ARGS/ALL ARGS CONSTRUCTORS END
 
     // GETTERS/SETTERS START
-
     public long getModel_id() {
         return model_id;
     }
@@ -73,7 +72,6 @@ public class Tutorial {
     // GETTERS/SETTERS END
 
     // TO STRING METHOD
-
     @Override
     public String toString() {
         return "Tutorial{" +
