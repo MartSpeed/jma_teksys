@@ -2,10 +2,12 @@ package com.example.jma_springcrud_demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name="tutorials")
@@ -32,9 +34,16 @@ public class Tutorial {
     // FIELDS END
 
     // NO ARGS/ALL ARGS CONSTRUCTORS START
-    public Tutorial(){
+//    public Tutorial(){
+//
+//    }
 
-    }
+//    public Tutorial(long model_id, String model_title, String model_description, boolean model_published) {
+//        this.model_id = model_id;
+//        this.model_title = model_title;
+//        this.model_description = model_description;
+//        this.model_published = model_published;
+//    }
     // NO ARGS/ALL ARGS CONSTRUCTORS END
 
     // GETTERS/SETTERS START

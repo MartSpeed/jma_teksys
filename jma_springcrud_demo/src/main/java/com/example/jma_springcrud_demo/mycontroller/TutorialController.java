@@ -4,13 +4,14 @@ import com.example.jma_springcrud_demo.model.Tutorial;
 import com.example.jma_springcrud_demo.myservices.TutorialServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequestMapping("/api")
 public class TutorialController {
 
@@ -20,11 +21,12 @@ public class TutorialController {
     private TutorialServices tutorialServices;
 
     // GET INCANTATION START
-
     @GetMapping("/tutorials")
     public List<Tutorial> getAllTutorials(@RequestParam(required = false) String title){
         return tutorialServices.getAllTutorials();
     }
+
+
 
     /*
         DESCRIPTION: getTutorialById()
@@ -89,7 +91,7 @@ public class TutorialController {
     // ??? I need to research what this response entity is and how it works
 
     // FIND BY PUBLISHED TUTORIAL BOOLEAN
-    @GetMapping("/tutorials/published")
+    @GetMapping("/tutorials/model_published")
     public ResponseEntity<List<Tutorial>> findByPublished(){
         return tutorialServices.findByPublished();
     }
