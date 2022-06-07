@@ -15,68 +15,55 @@ public class Tutorial {
 
     // FIELDS START
     @Id // this designates our PRIMARY KEY
-    @GeneratedValue(strategy=GenerationType.IDENTITY) // this AUTO_COMPLETED new entries created with an ID number
-    @Column(name="id") // tells SQL to create a column with this name
-    private long model_id; // Primary Key (PK)
+    @GeneratedValue(strategy=GenerationType.AUTO) // this AUTO_COMPLETED new entries created with an ID number
+    //@Column(name="id") // tells SQL to create a column with this name
+    private long modelId; // Primary Key (PK)
 
     // TITLE
     @Column(name="title")
-    private String model_title;
+    private String modelTitle;
 
     // DESCRIPTION
     //??????? @Size(min=0, max=40) why cant I use this here, is the dependency not included for this annotation ???????
     @Column(name="description")
-    private String model_description;
+    private String modelDescription;
 
     // PUBLISHED
-    @Column(name="published")
-    private boolean model_published;
+    //@Column(name="published")
+    private boolean modelPublished;
     // FIELDS END
 
-    // NO ARGS/ALL ARGS CONSTRUCTORS START
-//    public Tutorial(){
-//
-//    }
-
-//    public Tutorial(long model_id, String model_title, String model_description, boolean model_published) {
-//        this.model_id = model_id;
-//        this.model_title = model_title;
-//        this.model_description = model_description;
-//        this.model_published = model_published;
-//    }
-    // NO ARGS/ALL ARGS CONSTRUCTORS END
-
     // GETTERS/SETTERS START
-    public long getModel_id() {
-        return model_id;
+    public long getModelId() {
+        return modelId;
     }
 
-    public void setModel_id(long model_id) {
-        this.model_id = model_id;
+    public void setModelId(long modelId) {
+        this.modelId = modelId;
     }
 
-    public String getModel_title() {
-        return model_title;
+    public String getModelTitle() {
+        return modelTitle;
     }
 
-    public void setModel_title(String model_title) {
-        this.model_title = model_title;
+    public void setModelTitle(String modelTitle) {
+        this.modelTitle = modelTitle;
     }
 
-    public String getModel_description() {
-        return model_description;
+    public String getModelDescription() {
+        return modelDescription;
     }
 
-    public void setModel_description(String model_description) {
-        this.model_description = model_description;
+    public void setModelDescription(String modelDescription) {
+        this.modelDescription = modelDescription;
     }
 
-    public boolean isModel_published() {
-        return model_published;
+    public boolean isModelPublished() {
+        return modelPublished;
     }
 
-    public void setModel_published(boolean model_published) {
-        this.model_published = model_published;
+    public void setModelPublished(boolean modelPublished) {
+        this.modelPublished = modelPublished;
     }
     // GETTERS/SETTERS END
 
@@ -84,10 +71,10 @@ public class Tutorial {
     @Override
     public String toString() {
         return "Tutorial{" +
-                "model_id=" + model_id +
-                ", model_title='" + model_title + '\'' +
-                ", model_description='" + model_description + '\'' +
-                ", model_published=" + model_published +
+                "modelId=" + modelId +
+                ", modelTitle='" + modelTitle + '\'' +
+                ", modelDescription='" + modelDescription + '\'' +
+                ", modelPublished=" + modelPublished +
                 '}';
     }
 }

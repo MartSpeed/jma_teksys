@@ -13,5 +13,5 @@ public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
     *  returns all Tutorials with published having value as input published
     * */
 
-    List<Tutorial> findByPublished(boolean model_published);
+    List<Tutorial> findByModelPublished(boolean modelPublished);
 }

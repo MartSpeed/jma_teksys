@@ -33,9 +33,9 @@ public class TutorialController {
         the tutorialRepository provides a method finById(). This method
         takes the id of the tutorial to find.
      */
-    @GetMapping("/tutorials/{model_id}") // ??? are the brackets the same as a template literal while used an as endpoint ???
-    public Optional<Tutorial> getTutorialById(@PathVariable("model_id") long model_id){
-        return tutorialServices.getTutorialById(model_id);
+    @GetMapping("/tutorials/{modelId}") // ??? are the brackets the same as a template literal while used an as endpoint ???
+    public Optional<Tutorial> getTutorialById(@PathVariable("modelId") long modelId){
+        return tutorialServices.getTutorialById(modelId);
     }
 
     // GET INCANTATION END
@@ -52,18 +52,18 @@ public class TutorialController {
     // PUT INCANTATION START
 
     // to update a tutorial record, we use the same save() and findById()
-    @PutMapping("/tutorials/{model_id}")
-    public void updateTutorial(@PathVariable("model_id") long model_id, @RequestBody Tutorial tutorial){
+    @PutMapping("/tutorials/{modelId}")
+    public void updateTutorial(@PathVariable("modelId") long modelId, @RequestBody Tutorial tutorial){
 
         // ??? need to ask about Optional again, more clarification
-        Optional<Tutorial> tutorialData = tutorialServices.getTutorialById(model_id);
+        Optional<Tutorial> tutorialData = tutorialServices.getTutorialById(modelId);
 
         //
         if(tutorialData.isPresent()){
             Tutorial _tutorial = tutorialData.get();
-            _tutorial.setModel_title(tutorial.getModel_title());
-            _tutorial.setModel_description(tutorial.getModel_description());
-            _tutorial.setModel_published(tutorial.isModel_published());
+            _tutorial.setModelTitle(tutorial.getModelTitle());
+            _tutorial.setModelDescription(tutorial.getModelDescription());
+            _tutorial.setModelPublished(tutorial.isModelPublished());
             tutorialServices.addTutorial(_tutorial);
         }
     }
@@ -75,9 +75,9 @@ public class TutorialController {
     // then you pass in the model_id of the record you want to delete
 
     // DELETE TUTORIAL AT ID
-    @DeleteMapping("/tutorials/{model_id}")
-    public void deleteTutorial(@PathVariable("model_id") long model_id){
-        tutorialServices.deleteTutorial(model_id);
+    @DeleteMapping("/tutorials/{modelId}")
+    public void deleteTutorial(@PathVariable("modelId") long modelId){
+        tutorialServices.deleteTutorial(modelId);
     }
 
     // DELETE ALL TUTORIALS
@@ -92,7 +92,7 @@ public class TutorialController {
 
     // FIND BY PUBLISHED TUTORIAL BOOLEAN
     @GetMapping("/tutorials/model_published")
-    public ResponseEntity<List<Tutorial>> findByPublished(){
-        return tutorialServices.findByPublished();
+    public ResponseEntity<List<Tutorial>> findByModelPublished(){
+        return tutorialServices.findByModelPublished();
     }
 }

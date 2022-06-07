@@ -25,8 +25,8 @@ public class TutorialServices {
     }
 
     // RETRIEVING TUTORIALS BY ID FIELD
-    public Optional<Tutorial> getTutorialById(Long model_id){
-        return tutorialRepository.findById(model_id);
+    public Optional<Tutorial> getTutorialById(Long modelId){
+        return tutorialRepository.findById(modelId);
     }
 
     // ADDING THE CURRENT CREATED TUTORIAL TO THE DATABASE COLLECTION
@@ -35,23 +35,23 @@ public class TutorialServices {
     }
 
     // UPDATE THE TUTORIAL WITH THE NEW TUTORIAL MODEL INFO
-    public void updateTutorial(long model_id, Tutorial tutorial){
+    public void updateTutorial(long modelId, Tutorial tutorial){
         // ??????? Need to do more research on Optional, its not sticking
-        Optional<Tutorial> tutorialData = tutorialRepository.findById(model_id);
+        Optional<Tutorial> tutorialData = tutorialRepository.findById(modelId);
 
         // if data is present set the model data to the get() information retrieved and then save it
         if(tutorialData.isPresent()) {
             Tutorial _tutorial = tutorialData.get();
-            _tutorial.setModel_title((tutorial.getModel_title()));
-            _tutorial.setModel_description((tutorial.getModel_description()));
-            _tutorial.setModel_published(tutorial.isModel_published());
+            _tutorial.setModelTitle((tutorial.getModelTitle()));
+            _tutorial.setModelDescription((tutorial.getModelDescription()));
+            _tutorial.setModelPublished(tutorial.isModelPublished());
             tutorialRepository.save(_tutorial);
         }
     }
 
     // DELETE BY ID
-    public void deleteTutorial(long model_id){
-        tutorialRepository.deleteById(model_id);
+    public void deleteTutorial(long modelId){
+        tutorialRepository.deleteById(modelId);
     }
 
     // DELETE ALL TUTORIALS
@@ -60,10 +60,10 @@ public class TutorialServices {
     }
 
     // FIND BY PUBLISHED IN LIST
-    public ResponseEntity<List<Tutorial>> findByPublished(){
+    public ResponseEntity<List<Tutorial>> findByModelPublished(){
         //
         try{
-            List<Tutorial> tutorials = tutorialRepository.findByPublished(true);
+            List<Tutorial> tutorials = tutorialRepository.findByModelPublished(true);
 
             //
             if(tutorials.isEmpty()){
