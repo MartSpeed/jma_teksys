@@ -64,6 +64,6 @@ spring.jpa.hibernate.ddl-auto=update
 
 # SPRING SECURITY CONFIGURATION
 
-we secure our app using **SPRING SECURITY FORM AUTHENTICATION**
+secure our app using **SPRING SECURITY FORM AUTHENTICATION**
 
 - [] create SecurityConfiguration class
