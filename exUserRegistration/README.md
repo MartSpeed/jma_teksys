@@ -6,14 +6,14 @@
 
 ## CREATE PROJECT
 
-- spring web
-- spring security
-- thymeleaf
-- mariadb driver
-- mysql driver
-- spring data jpa
-- cloud bootstrap
-- spring boot dev tools
+- [x] spring web
+- [x] spring security
+- [x] thymeleaf
+- [x] mariadb driver
+- [x] mysql driver
+- [x] spring data jpa
+- [x] cloud bootstrap
+- [x] spring boot dev tools
 
 ## POM.XML MAV DEPENDENCIES
 
@@ -50,3 +50,12 @@ spring.datasource.password=password
 spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
 spring.jpa.hibernate.ddl-auto=update
 ```
+
+## CREATE JPA ENTITIES
+
+- [x] user entity
+- [x] role entity
+
+## CREATE REPOSITORY
+
+- [x] userRepository

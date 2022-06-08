@@ -8,7 +8,6 @@ public class ExUserRegistrationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ExUserRegistrationApplication.class, args);
-		System.out.println("USER REGISTRATION APP FIRED CORRECTLY");
 	}
 
 }
