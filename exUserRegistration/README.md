@@ -59,3 +59,11 @@ spring.jpa.hibernate.ddl-auto=update
 ## CREATE REPOSITORY
 
 - [x] userRepository
+
+> # **APP RUNS SUCCESSFULLY**
+
+# SPRING SECURITY CONFIGURATION
+
+we secure our app using **SPRING SECURITY FORM AUTHENTICATION**
+
+- [] create SecurityConfiguration class
