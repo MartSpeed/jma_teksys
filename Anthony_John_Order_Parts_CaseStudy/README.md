@@ -29,8 +29,10 @@
 # CURRENT WEAKPOINTS
 > *NOTE*: JUnit Testing, need more practice with how to encapsulate you project with this and how to set it up better.
 
-> *NOTE*: Using the HQL database query annotations. i.e. setting up an @ManytoMany relationship.
+> *NOTE*: Using the HQL database query annotations. i.e. setting up an @ManytoMany relationship properly.
 
-> *NOTE*: Exception Handling, need more on hands practice with using try/catch cases.
+> *NOTE*: Exception Handling, need more hands-on practice with using try/catch cases.
 
 > *NOTE*: Properly scoping my project ideas so I dont keep falling into feature creep.
+
+> *NOTE*: 

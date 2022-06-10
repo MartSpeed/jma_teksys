@@ -46,15 +46,12 @@ public class AircraftEntity {
 
     // requires a Left Wing
     // requires a Right Wing
-    @Column(name="wing")
     private String wing;
 
     // requires a Left Elevator
     // requires a Right Elevator
-    @Column(name="elevator")
     private String elevator;
 
-    @Column(name="rudder")
     private String rudder;
 
     // GETTERS/SETTERS START
