@@ -15,11 +15,11 @@
 - [] check dependencies pom.xml file to make sure all dependencies are unzipped
 - [] connect springboot driver to database
 - [] create packages
-    - [] entity
+    - [] entity/DAO
     - [] repository
     - [] services
     - [] controller
-    - [] configuration
+    - [] configuration/security
 
 # CURRENT WEAKPOINTS
 > *NOTE*: JUnit Testing, need more practice with how to encapsulate you project with this and how to set it up better.
