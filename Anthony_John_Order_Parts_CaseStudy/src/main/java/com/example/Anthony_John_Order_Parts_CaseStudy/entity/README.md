@@ -2,26 +2,28 @@
 the entity package contains all of our Database Access Objects (DAO)
 
 # AIRCRAFT ENTITY
-- [] the aircraft DAO will contain the list of all current aircraft
-    - ???(might be interface method)
-- [] the aircraft DAO will contain the list of all current aircraft parts
-    - [] Landing Gear - int id
-        - [] Nose 
-        - [] Left Main 
-        - [] Right Main 
-    - [] Wing - int id
-        - [] Left 
-        - [] Right
-    - [] Elevator - int id
-        - [] Left
-        - [] Right
-    - [] Rudder - int id
+- [X] Landing Gear - int id
+    - [] Nose 
+    - [] Left Main 
+    - [] Right Main 
+- [x] Wing - int id
+    - [] Left 
+    - [] Right
+- [x] Elevator - int id
+    - [] Left
+    - [] Right
+- [x] Rudder - int id
+
+# AIRCRAFT INTERFACE - wireframe
 - [] it will contain a list of all current working aircraft
     - ???(might be interface call)
 - [] it will contain a list of all current inoperable aircraft
     - ???(might be interface call)
 - [] it will contain a list of current aircraft that require specific parts to be completed
     - ???(might be interface call)
+- [] the aircraft Interface will contain the list of all current aircraft
+    - ???(might be interface method)
+- [] the aircraft Interface will contain the list of all current aircraft parts
 
 # LANDING ENTITY
 the landing gear DAO will contain the correct landing gear type to order and how many are available of that type. you can put in an order for more, but you can not cancel you order.

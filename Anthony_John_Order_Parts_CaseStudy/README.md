@@ -1,21 +1,26 @@
-###### Thursday June 9, 2022
+###### Friday June 10, 2022
 ##### [LINK TO WEBPAGE](#.com)
 # John Anthony Capstone Project
 
 # Aircraft Parts Management System
 ### CAPSTONE REQUIREMENTS CHECKLIST
-- [] project name: Anthony_John_orderparts_caseStudy
+- [x] project name: Anthony_John_orderparts_caseStudy
 - [] external CSS
 - [] 6 different pages with project wireframe
 - [] HTML with Thymeleaf/Angular/React
 - [] 1 external JavaScript file
 
 # MVC Setup
-- [] create project using [Springboot Initializer](start.spring.io)
+- [x] create project using [Springboot Initializer](start.spring.io)
 - [] check dependencies pom.xml file to make sure all dependencies are unzipped
 - [] connect springboot driver to database
 - [] create packages
     - [] entity/DAO
+        - [x] aircraft entity
+        - [] landingGear entity
+        - [] wing entity
+        - [] elevator entity
+        - [] rudder entity
     - [] repository
     - [] services
     - [] controller
@@ -27,3 +32,5 @@
 > *NOTE*: Using the HQL database query annotations. i.e. setting up an @ManytoMany relationship.
 
 > *NOTE*: Exception Handling, need more on hands practice with using try/catch cases.
+
+> *NOTE*: Properly scoping my project ideas so I dont keep falling into feature creep.
