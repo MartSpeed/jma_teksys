@@ -15,13 +15,20 @@
 - [] check dependencies pom.xml file to make sure all dependencies are unzipped
 - [] connect springboot driver to database
 - [] create packages
-    - [] entity/DAO
+    - [x] entity/DAO
+        - [x] entity package README.md
         - [x] aircraft entity
-        - [] landingGear entity
-        - [] wing entity
-        - [] elevator entity
-        - [] rudder entity
+        - [x] landingGear entity
+        - [x] wing entity
+        - [x] elevator entity
+        - [x] rudder entity
     - [] repository
+        - [x] repository package README.md
+        - [] aircraft repository
+        - [] landingGear repository
+        - [] wing repository
+        - [] elevator repository
+        - [] rudder repository
     - [] services
     - [] controller
     - [] configuration/security

@@ -18,8 +18,8 @@ public class WingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int wingId;
+    private int wingId; // PK for wing
 
     private String lWing; // designates the left wing
-    private String rWing; // designates the right win
+    private String rWing; // designates the right wing
 }
