@@ -15,23 +15,23 @@
 - [] check dependencies pom.xml file to make sure all dependencies are unzipped
 - [] connect springboot driver to database
 - [] create packages
-    - [x] entity/DAO
+    - [x] Entity package
         - [x] entity package README.md
         - [x] aircraft entity
         - [x] landingGear entity
         - [x] wing entity
         - [x] elevator entity
         - [x] rudder entity
-    - [] repository
+    - [] Repository package
         - [x] repository package README.md
         - [] aircraft repository
         - [] landingGear repository
         - [] wing repository
         - [] elevator repository
         - [] rudder repository
-    - [] services
-    - [] controller
-    - [] configuration/security
+    - [] Services package
+    - [] Controller package
+    - [] Configuration/Security package
 
 # CURRENT WEAKPOINTS
 > *NOTE*: JUnit Testing, need more practice with how to encapsulate you project with this and how to set it up better.
