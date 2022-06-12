@@ -3,7 +3,7 @@
     DESCRIPTION: the elevator hold the id number for each elevator object
 */
 
-package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
+package com.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

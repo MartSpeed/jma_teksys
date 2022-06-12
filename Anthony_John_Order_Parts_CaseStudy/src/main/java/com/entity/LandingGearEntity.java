@@ -4,7 +4,7 @@
     information as well the Strings to determine if the landing gear will
     be nose, right main landing, or left main landing gear
 */
-package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
+package com.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -3,7 +3,7 @@
     DESCRIPTION: the wing entity will add the wing object to the aircraft
     object and will designate whether its a left wing or a right wing
 */
-package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
+package com.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
