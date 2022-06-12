@@ -16,7 +16,6 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "aircraft")
 public class AircraftEntity {
 
     /*

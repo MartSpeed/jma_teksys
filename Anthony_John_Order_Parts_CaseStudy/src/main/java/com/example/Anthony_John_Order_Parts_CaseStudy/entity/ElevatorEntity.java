@@ -1,10 +1,8 @@
 /*  AUTHOR: John Anthony
     DATE: 20220611
-    DESCRIPTION: the rudder enttotu hold the id number for the rudder object
-
-    ??? is this all that I need to make this object and connect it to the
-    aircraft object.
+    DESCRIPTION: the elevator hold the id number for each elevator object
 */
+
 package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
 
 import javax.persistence.Entity;
@@ -17,11 +15,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="rudder")
-public class Rudder {
+public class ElevatorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rudderId; // Rudder (PK)
+    private int elevatorId; // PK for elevator
 
+    private String lElevator; // designate letf elevator
+    private String rElevator; // designate right elevator
 }
