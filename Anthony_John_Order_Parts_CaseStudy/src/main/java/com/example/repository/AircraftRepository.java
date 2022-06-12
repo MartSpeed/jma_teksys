@@ -1,8 +1,8 @@
-package repository;
+package com.example.repository;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RudderRepository {
+public class AircraftRepository {
     
 }

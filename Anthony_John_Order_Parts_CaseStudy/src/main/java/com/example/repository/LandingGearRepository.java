@@ -1,4 +1,4 @@
-package repository;
+package com.example.repository;
 
 public class LandingGearRepository {
     
