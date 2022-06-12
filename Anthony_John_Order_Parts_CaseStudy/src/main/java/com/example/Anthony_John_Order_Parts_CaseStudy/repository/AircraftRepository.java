@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.Anthony_John_Order_Parts_CaseStudy.repository;
 
 import org.springframework.stereotype.Repository;
 

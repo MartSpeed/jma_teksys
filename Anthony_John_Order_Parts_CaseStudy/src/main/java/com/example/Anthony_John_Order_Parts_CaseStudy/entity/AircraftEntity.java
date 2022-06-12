@@ -7,7 +7,7 @@
     rudder entity,
     wing entity ( Left wing, right wing)
 */
-package com.entity;
+package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
 
 import lombok.*;
 
