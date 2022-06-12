@@ -1,4 +1,4 @@
-###### Friday June 10, 2022
+###### Friday June 11, 2022
 ##### [LINK TO WEBPAGE](#.com)
 # John Anthony Capstone Project
 
@@ -16,12 +16,6 @@
 - [] connect springboot driver to database
 - [] create packages
     - [x] Entity package
-        - [x] entity package README.md
-        - [x] aircraft entity
-        - [x] landingGear entity
-        - [x] wing entity
-        - [x] elevator entity
-        - [x] rudder entity
     - [] Repository package
         - [x] repository package README.md
         - [] aircraft repository
@@ -41,5 +35,3 @@
 > *NOTE*: Exception Handling, need more hands-on practice with using try/catch cases.
 
 > *NOTE*: Properly scoping my project ideas so I dont keep falling into feature creep.
-
-> *NOTE*: 
