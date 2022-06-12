@@ -1,26 +1,22 @@
 /*  AUTHOR: John Anthony
-    DATE: 20220610
+    DATE: 20220611
     DESCRIPTION: the aircraft will inform the user if the aircraft is in need of maintenance or not.
     this class will hold the aircraft objects:
-    landing gear entity,
-    elevator entity,
+    landing gear entity (Nose, Left Main, Right Main),
+    elevator entity (Left, Right),
     rudder entity,
-    wing entity
+    wing entity ( Left wing, right wing)
 */
 package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-@Table(name="aircraft")
+@Table(name = "aircraft")
 public class AircraftEntity {
 
     /*
@@ -35,13 +31,11 @@ public class AircraftEntity {
     // AIRCRAFT FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
     private int aircraftId;  // PK for the aircraft
 
     // requires a Nose Landing Gear
     // requires a Left Main Landing Gear
     // requires a Right Main Landing Gear
-    @Column(name="landing_gear")
     private String landingGear;
 
     // requires a Left Wing
@@ -53,58 +47,4 @@ public class AircraftEntity {
     private String elevator;
 
     private String rudder;
-
-    // GETTERS/SETTERS START
-    public int getAircraftId() {
-        return aircraftId;
-    }
-
-    public void setAircraftId(int aircraftId) {
-        this.aircraftId = aircraftId;
-    }
-
-    public String getLandingGear() {
-        return landingGear;
-    }
-
-    public void setLandingGear(String landingGear) {
-        this.landingGear = landingGear;
-    }
-
-    public String getWing() {
-        return wing;
-    }
-
-    public void setWing(String wing) {
-        this.wing = wing;
-    }
-
-    public String getElevator() {
-        return elevator;
-    }
-
-    public void setElevator(String elevator) {
-        this.elevator = elevator;
-    }
-
-    public String getRudder() {
-        return rudder;
-    }
-
-    public void setRudder(String rudder) {
-        this.rudder = rudder;
-    }
-    // GETTERS/SETTERS END
-
-    //TOSTRING
-    @Override
-    public String toString() {
-        return "AircraftEntity{" +
-                "aircraftId=" + aircraftId +
-                ", landingGear='" + landingGear + '\'' +
-                ", wing='" + wing + '\'' +
-                ", elevator='" + elevator + '\'' +
-                ", rudder='" + rudder + '\'' +
-                '}';
-    }
 }

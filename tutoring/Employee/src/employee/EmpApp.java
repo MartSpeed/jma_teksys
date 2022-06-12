@@ -9,5 +9,10 @@ public class EmpApp {
         empOne.displayEmpData();
         empTwo.displayEmpData();
 
+        Employee emp = new Employee();
+        emp.enterEmpData();
+        emp.displayArrayList();
+
+
     }
 }
