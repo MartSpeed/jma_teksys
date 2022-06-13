@@ -22,10 +22,10 @@ public class FileSystemStorageService {
     private final Path rootLocation;
 
     // create storage properties
-    public FileSystemStorageService(){
+    public FileSystemStorageService(StorageProperties properties){
         // specify the root location
         // add path location
-        this.rootLocation = Path.get();
+        this.rootLocation = Paths.get(properties.getLocation());
 
     }
 
@@ -105,5 +105,14 @@ public class FileSystemStorageService {
     // DELETE ALL
     public void deleteAll(){
         FileSystemUtils.deleteRecursively(rootLocation.toFile());
+    }
+
+    // INITIALIZE
+    public void init() {
+        try{
+            Files.createDirectories(rootLocation);
+        }catch(IOException e){
+            throw new StorageException("Could not initialize storage ", e);
+        }
     }
 }

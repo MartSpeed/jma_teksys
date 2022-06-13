@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USER PROFILE</title>
+  </head>
+  <body>
+    <table>
+      <!--ROW 1 START-->
+      <tr>
+        <th>username</th>
+        <th>description</th>
+        <th>date</th>
+      </tr>
+      <!--ROW 1 END-->
+      <!--ROW 2 START-->
+      <tr th:if="${#lists.isEmpty(userEntity)}">
+        <td colspan="7">No users found. Add user</td>
+      </tr>
+      <!--ROW 2 END-->
+      <!--ROW 3 START-->
+      <tr th:each="userEntity : ${userEntity}">
+        <td th:text="${userEntity.user_name}"></td>
+        <td th:text="${userEntity.user_description}"></td>
+        <td th:text="${userEntity.target_date}"></td>
+      </tr>
+      <!--ROW 3 END-->
+    </table>
+  </body>
+</html>

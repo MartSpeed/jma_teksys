@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto"> update </property>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/ex_hibernatedb</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1qaz!QAZ2wsx@WSX</property>
+		<!-- mySQL DB dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">true </property>
+		<property name="hibernate.format_sql">true </property>
+
+		<!-- Mapping entity file -->
+		<!-- NOTE: BE SURE TO ADD ALL CLASSES THAT WILL BE ACCESSED OR USED!!!!! -->
+		<mapping class="entity.UserDetails" />
+	</session-factory>
+
+</hibernate-configuration>

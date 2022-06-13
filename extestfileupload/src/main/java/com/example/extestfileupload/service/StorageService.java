@@ -15,7 +15,7 @@ public interface StorageService {
     public void init();
 
     // STORING
-    public void store(MultipartFile);
+    public void store(MultipartFile MultipartFile file);
 
     // LOAD THE PATH THAT FINDS THE FILENAME???
     Stream<Path> loadAll();

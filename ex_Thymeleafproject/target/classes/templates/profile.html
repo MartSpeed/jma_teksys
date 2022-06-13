@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><h4 th:text="${userEntity.name}">
+        </h4></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><h4 th:text="${userEntity.email}"></h4></td>
+    </tr>
+</table>
+
+</body>
+</html>
