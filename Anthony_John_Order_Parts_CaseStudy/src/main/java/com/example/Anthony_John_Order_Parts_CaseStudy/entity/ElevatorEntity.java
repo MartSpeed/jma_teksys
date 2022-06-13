@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.Data;
 
@@ -21,6 +20,6 @@ public class ElevatorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int elevatorId; // PK for elevator
 
-    private String lElevator; // designate letf elevator
+    private String lElevator; // designate left elevator
     private String rElevator; // designate right elevator
 }
