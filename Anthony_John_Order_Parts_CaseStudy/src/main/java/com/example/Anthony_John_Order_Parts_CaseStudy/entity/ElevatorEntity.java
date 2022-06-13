@@ -18,7 +18,7 @@ public class ElevatorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int elevatorId; // PK for elevator
+    private long elevatorId; // PK for elevator
 
     private String lElevator; // designate left elevator
     private String rElevator; // designate right elevator

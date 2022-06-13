@@ -20,6 +20,6 @@ public class RudderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rudderId; // PK for rudder
+    private long rudderId; // PK for rudder
 
 }

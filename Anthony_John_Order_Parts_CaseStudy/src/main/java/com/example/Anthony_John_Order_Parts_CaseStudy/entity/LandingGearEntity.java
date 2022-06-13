@@ -19,7 +19,7 @@ public class LandingGearEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int landingGearId; // PK for landing gear
+    private long landingGearId; // PK for landing gear
 
     private String nlg; // designate to nose landing gear
     private String rMlg; // desinate to right main landing gear

@@ -2,7 +2,7 @@
 ##### [LINK TO WEBPAGE](#.com)
 # John Anthony Capstone Project
 
-# Aircraft Parts Management System
+# Aircraft Status Management System
 ### CAPSTONE REQUIREMENTS CHECKLIST
 - [x] project name: Anthony_John_orderparts_caseStudy
 - [] external CSS

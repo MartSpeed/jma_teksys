@@ -15,6 +15,8 @@ import javax.persistence.*;
 
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class AircraftEntity {
 
@@ -30,20 +32,29 @@ public class AircraftEntity {
     // AIRCRAFT FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int aircraftId;  // PK for the aircraft
+    @Column(name="aircraft_id")
+    private long aircraftId;  // PK for the aircraft
+
+    // name of aircraft
+    @Column(name="aircraft_name")
+    private String aircraftName;
 
     // requires a Nose Landing Gear
     // requires a Left Main Landing Gear
     // requires a Right Main Landing Gear
+    @Column(name="landing_gear")
     private String landingGear;
 
     // requires a Left Wing
     // requires a Right Wing
-    private String wing;
+    @Column(name="aircraft_wing")
+    private String aircraftWing;
 
     // requires a Left Elevator
     // requires a Right Elevator
-    private String elevator;
+    @Column(name="aircraft_elevator")
+    private String aircraftElevator;
 
-    private String rudder;
+    @Column(name="aircraft_rudder")
+    private String aircraftRudder;
 }
