@@ -29,33 +29,51 @@ public class AircraftCraftPartInventoryEntity {
         4. order parts for plane by proper order id
     */
 
-    // AIRCRAFT FIELDS
+    // AIRCRAFT INVENTORY FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="aircraft_id")
     private long aircraftId;  // PK for the aircraft
 
-    // name of aircraft
+    // AIRCRAFT NAME
     @Column(name="aircraft_name")
     private String aircraftName;
 
-    // requires a Nose Landing Gear
-    // requires a Left Main Landing Gear
-    // requires a Right Main Landing Gear
-    @Column(name="landing_gear")
+    // AIRCRAFT MODEL
+    @Column(name="aircraft_model")
+    private String aircraftModel;
+
+    // NOSE LANDING GEAR (NLG)
+    @Column(name="nose_landing_gear")
     @OneToMany
-    private String landingGear;
+    private String noseLandingGear;
 
-    // requires a Left Wing
-    // requires a Right Wing
-    @Column(name="aircraft_wing")
-    private String aircraftWing;
+    // RIGHT MAIN LANDING GEAR (RMLG)
+    @Column(name="right_main_landing_gear")
+    private String rightMainLandingGear;
 
-    // requires a Left Elevator
-    // requires a Right Elevator
-    @Column(name="aircraft_elevator")
-    private String aircraftElevator;
+    // LEFT MAIN LANDING GEAR (LMLG)
+    @Column(name="left_main_landing_gear")
+    @OneToMany
+    private String leftMainLandingGear;
 
+    // LEFT WING
+    @Column(name="left_aircraft_wing")
+    private String leftAircraftWing;
+
+    // RIGHT WING
+    @Column(name="right_aircraft_wing")
+    private String rightAircraftWing;
+
+    // RIGHT ELEVATOR
+    @Column(name="right_aircraft_elevator")
+    private String rightAircraftElevator;
+
+    // LEFT ELEVATOR
+    @Column(name="left_aircraft_elevator")
+    private String leftAircraftElevator;
+
+    // RUDDER
     @Column(name="aircraft_rudder")
     private String aircraftRudder;
 }

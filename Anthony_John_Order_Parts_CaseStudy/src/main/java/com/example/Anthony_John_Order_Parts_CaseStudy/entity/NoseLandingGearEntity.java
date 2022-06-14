@@ -11,17 +11,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class LandingGearEntity {
+public class NoseLandingGearEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long landingGearId; // PK for landing gear
-
-    private String nlg; // designate to nose landing gear
-    private String rMlg; // desinate to right main landing gear
-    private String lMlg; // designate to left main landing gear
+    private long noseLandingGearId; // PK for landing gear
 }

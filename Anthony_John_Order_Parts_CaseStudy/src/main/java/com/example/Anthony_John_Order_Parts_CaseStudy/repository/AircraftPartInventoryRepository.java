@@ -23,6 +23,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AircraftRepository extends JpaRepository<AircraftCraftPartInventoryEntity, Long> {
-
+public interface AircraftPartInventoryRepository extends JpaRepository<AircraftCraftPartInventoryEntity, Long> {
+    // create new aircraft
+    // create new aircraft name
+    // create new aircraft model
 }
