@@ -10,7 +10,7 @@ The repository will *extend* the **JpaRepository** specifically for the use of t
 
 ---
 
-# AIRCRAFT REPOSITORY
+# AIRCRAFT PARTS INVENTORY REPOSITORY
 the aircraft repository is responsible for handling how the aircraft methods that supply the information for each objects method
 - aircraftStatus
     check to see the current status of the aircraft
@@ -26,10 +26,10 @@ the aircraft repository is responsible for handling how the aircraft methods tha
     if condition is a signature
 - 
 
-# LANDING GEAR REPOSITORY
+# NOSE, RIGHT & LEFT MAIN LANDING GEAR REPOSITORY
 
-# WING REPOSITORY
+# LEFT & RIGHT WING REPOSITORY
+
+# LEFT & RIGHT ELEVATOR REPOSITORY
 
 # RUDDER REPOSITORY
-
-# ELEVATOR REPOSITORY

@@ -18,11 +18,15 @@
     - [x] Entity package
     - [] Repository package
         - [x] repository package README.md
-        - [] aircraft repository
-        - [] landingGear repository
-        - [] wing repository
-        - [] elevator repository
-        - [] rudder repository
+        - [x] AircraftPartInventoryRepository
+        - [] NoselandingGearRepository
+        - [] RightMainlandingGearRepository
+        - [] LeftMainlandingGearRepository
+        - [x] LeftWingRepository
+        - [x] RightWingRepository
+        - [x] RightElevatorRepository
+        - [x] LeftElevatorRepository
+        - [x] RudderRepository
     - [] Services package
     - [] Controller package
     - [] Configuration/Security package

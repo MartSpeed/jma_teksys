@@ -3,17 +3,14 @@
 The entity package contains all of our Database Access Objects (DAO). These objects will contain all the information we want to
 access in them using Lombok annotations.
 
-# AIRCRAFT ENTITY
-- [X] Landing Gear - int id
-    - [x] Nose 
-    - [x] Left Main 
-    - [x] Right Main 
-- [x] Wing - int id
-    - [x] Left 
-    - [x] Right
-- [x] Elevator - int id
-    - [x] Left
-    - [x] Right
+# AIRCRAFT PARTS INVENTORY ENTITY
+- [X] Nose Landing Gear - int id
+- [X] Right Main Landing Gear - int id
+- [X] Left Main Landing Gear - int id
+- [x] Left Wing - int id
+- [x] Right Wing - int id
+- [x] Left Elevator - int id
+- [x] Right Elevator - int id
 - [x] Rudder - int id
 
 # LANDING ENTITY
@@ -26,7 +23,7 @@ the landing gear DAO will contain the correct landing gear type to order and how
 - the landing gear type will determine which code you need to use to order for the aircraft.
 - how do I make
 
-# WING ENTITY
+# LEFT & RIGHT WING ENTITY
 the wing DAO will contain the contain the correct wing type to order and how many are available of that type. you can create an order and you can only cancel your current order.
 - [x] Right Wing
 - [x] Left Wing
@@ -35,7 +32,7 @@ the wing DAO will contain the contain the correct wing type to order and how man
 the rudder DAO will contain the correct rudder type to order and how many are available of that type. you can create an order and you can cancel any order.
 - [x] rudder
 
-# ELEVATOR ENTITY
+# LEFT & RIGHT ELEVATOR ENTITY
 the elevator DAO will contain the correct elevator type to order and how many are available of that typ.e you can create only a single order at a time, you can only cancel order older than you current order.
 - [x] right elevator
 - [x] left elevator
