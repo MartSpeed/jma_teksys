@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employee {
-    //
+
+    // adding a single comment
     private long id;
     private String firstName;
     private String lastName;
