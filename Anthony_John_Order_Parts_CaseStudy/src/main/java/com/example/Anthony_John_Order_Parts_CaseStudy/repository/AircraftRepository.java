@@ -32,6 +32,4 @@ public interface AircraftRepository extends JpaRepository<AircraftEntity, Long> 
     // DELETE
     AircraftEntity flightReady();
 
-    // check to see whats broken
-
 }
