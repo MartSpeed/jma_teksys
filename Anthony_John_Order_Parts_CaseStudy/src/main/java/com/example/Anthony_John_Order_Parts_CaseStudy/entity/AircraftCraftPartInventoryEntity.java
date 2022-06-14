@@ -18,7 +18,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class AircraftEntity {
+public class AircraftCraftPartInventoryEntity {
 
     /*
         what does your aircraft need to be whole?
@@ -43,6 +43,7 @@ public class AircraftEntity {
     // requires a Left Main Landing Gear
     // requires a Right Main Landing Gear
     @Column(name="landing_gear")
+    @OneToMany
     private String landingGear;
 
     // requires a Left Wing
