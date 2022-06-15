@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>JMA LOGIN</title>
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header><strong>
+            <h1>AIRCRAFT PARTS ORDERING SYSTEM</h1>
+        </strong></header>
+    <!-- HEADER END -->
+
+
+    <!-- FORM START -->
+    <section class="login_form">
+        <form action="login">
+            <!-- form username -->
+            <tr>
+                <label for="username">USERNAME</label>
+                <br>
+                <td><input type="text" id="username" name="username" placeholder="username"></td>
+            </tr>
+            <br>
+            <!-- form password w/ BCrypt in springboot-->
+            <tr>
+                <label for="password">PASSWORD</label>
+                <br>
+                <td><input type="text" id="password" name="password" placeholder="password"></td>
+            </tr>
+            <br>
+            <br>
+            <!-- form submit/login button -->
+            <!-- form submit/register button -->
+            <tr>
+                <label for="register">REGISTER</label>
+                <td><input type="submit" id="register" name="register"></td>
+                <label for="login">LOGIN</label>
+                <td><input type="submit" id="login" name="login"></td>
+            </tr>
+        </form>
+    </section>
+    <!-- FORM END -->
+
+    <!-- FOOTER START -->
+    <br>
+    <br>
+    <section class="footer">
+        <footer><a href="#">GITHUB</a></footer>
+    </section>
+    <!-- FOOTER END -->
+</body>
+
+</html>
