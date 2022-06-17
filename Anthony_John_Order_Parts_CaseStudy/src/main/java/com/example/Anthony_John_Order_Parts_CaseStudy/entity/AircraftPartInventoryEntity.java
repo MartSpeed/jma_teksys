@@ -18,7 +18,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class AircraftCraftPartInventoryEntity {
+public class AircraftPartInventoryEntity {
 
     /*
         what does your aircraft need to be whole?
@@ -45,7 +45,6 @@ public class AircraftCraftPartInventoryEntity {
 
     // NOSE LANDING GEAR (NLG)
     @Column(name="nose_landing_gear")
-    @OneToMany
     private String noseLandingGear;
 
     // RIGHT MAIN LANDING GEAR (RMLG)
@@ -54,7 +53,6 @@ public class AircraftCraftPartInventoryEntity {
 
     // LEFT MAIN LANDING GEAR (LMLG)
     @Column(name="left_main_landing_gear")
-    @OneToMany
     private String leftMainLandingGear;
 
     // LEFT WING

@@ -16,6 +16,7 @@ public class Tutorial {
     // FIELDS START
     @Id // this designates our PRIMARY KEY
     @GeneratedValue(strategy=GenerationType.AUTO) // this AUTO_COMPLETED new entries created with an ID number
+
     //@Column(name="id") // tells SQL to create a column with this name
     private long modelId; // Primary Key (PK)
 

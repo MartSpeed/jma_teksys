@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,14 +25,12 @@ public class TutorialController {
         return tutorialServices.getAllTutorials();
     }
 
-
-
     /*
         DESCRIPTION: getTutorialById()
         the tutorialRepository provides a method finById(). This method
         takes the id of the tutorial to find.
      */
-    @GetMapping("/tutorials/{modelId}") // ??? are the brackets the same as a template literal while used an as endpoint ???
+    @GetMapping("/tutorials/{modelId}")
     public Optional<Tutorial> getTutorialById(@PathVariable("modelId") long modelId){
         return tutorialServices.getTutorialById(modelId);
     }
@@ -55,7 +52,6 @@ public class TutorialController {
     @PutMapping("/tutorials/{modelId}")
     public void updateTutorial(@PathVariable("modelId") long modelId, @RequestBody Tutorial tutorial){
 
-        // ??? need to ask about Optional again, more clarification
         Optional<Tutorial> tutorialData = tutorialServices.getTutorialById(modelId);
 
         //
