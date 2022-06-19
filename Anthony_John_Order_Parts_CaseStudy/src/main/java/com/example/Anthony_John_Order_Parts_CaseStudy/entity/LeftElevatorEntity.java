@@ -17,4 +17,6 @@ public class LeftElevatorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long leftElevatorId;
+
+
 }

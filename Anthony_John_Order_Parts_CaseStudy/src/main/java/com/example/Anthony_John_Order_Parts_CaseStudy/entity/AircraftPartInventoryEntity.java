@@ -44,34 +44,42 @@ public class AircraftPartInventoryEntity {
     private String aircraftModel;
 
     // NOSE LANDING GEAR (NLG)
-    @Column(name="nose_landing_gear")
-    private String noseLandingGear;
+    @ManyToOne
+    @JoinColumn(name="nose_landing_gear")
+    private NoseLandingGearEntity nLg;
 
     // RIGHT MAIN LANDING GEAR (RMLG)
-    @Column(name="right_main_landing_gear")
-    private String rightMainLandingGear;
+    @ManyToOne
+    @JoinColumn(name="right_main_landing_gear")
+    private RightMainLandingGearEntity rMlg;
 
     // LEFT MAIN LANDING GEAR (LMLG)
-    @Column(name="left_main_landing_gear")
-    private String leftMainLandingGear;
+    @ManyToOne
+    @JoinColumn(name="left_main_landing_gear")
+    private LeftMainLandingGearEntity lMlg;
 
     // LEFT WING
-    @Column(name="left_aircraft_wing")
-    private String leftAircraftWing;
+    @ManyToOne
+    @JoinColumn(name="left_aircraft_wing")
+    private LeftWingEntity lWing;
 
     // RIGHT WING
-    @Column(name="right_aircraft_wing")
-    private String rightAircraftWing;
+    @ManyToOne
+    @JoinColumn(name="right_aircraft_wing")
+    private RightWingEntity rWing;
 
     // RIGHT ELEVATOR
-    @Column(name="right_aircraft_elevator")
-    private String rightAircraftElevator;
+    @ManyToOne
+    @JoinColumn(name="right_aircraft_elevator")
+    private RightElevatorEntity rElevator;
 
     // LEFT ELEVATOR
-    @Column(name="left_aircraft_elevator")
-    private String leftAircraftElevator;
+    @ManyToOne
+    @JoinColumn(name="left_aircraft_elevator")
+    private LeftElevatorEntity lElevator;
 
     // RUDDER
-    @Column(name="aircraft_rudder")
-    private String aircraftRudder;
+    @ManyToOne
+    @JoinColumn(name="aircraft_rudder")
+    private RudderEntity rudder;
 }
