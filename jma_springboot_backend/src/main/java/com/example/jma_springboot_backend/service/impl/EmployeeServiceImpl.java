@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 // YOu dont HAVE to add the @Transactional annotation here because
 // spring provides a transaction to all of its methods
@@ -44,6 +46,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    @Override
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
 
 
 }

@@ -29,6 +29,7 @@ public class LeftElevatorEntity {
     @Column
     private String isAvailable;
 
+    @Column
     private String type;
 
 }

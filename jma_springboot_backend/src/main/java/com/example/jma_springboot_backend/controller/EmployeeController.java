@@ -4,10 +4,10 @@ import com.example.jma_springboot_backend.model.Employee;
 import com.example.jma_springboot_backend.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 /* NOTE: you can also use the @Controller annotation, however you would need to
     implement the @Responsebody annotation on each and every REST API that we define.
 * */
@@ -36,4 +36,10 @@ public class EmployeeController {
     }
 
     // build GET ALL EMPLOYEES REST API
+    // get all employees API
+    @GetMapping("")
+    public List<Employee> getAllEmployees(){
+    return employeeService.getAllEmployees();
+    }
+
 }
