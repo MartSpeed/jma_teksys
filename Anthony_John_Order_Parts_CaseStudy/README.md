@@ -38,8 +38,8 @@
 ### 6 pages
 - [x] login.html
 - [] aircraftpartsinventory.html
-- [] register.html
-- [] about.html
+- [x] register.html
+- [x] about.html
 - []
 - []
 

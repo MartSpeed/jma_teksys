@@ -19,10 +19,6 @@ the landing gear DAO will contain the correct landing gear type to order and how
 - [x] Right Main Landing Gear
 - [x] Left Main Landing Gear
 
-## EXTRA???
-- the landing gear type will determine which code you need to use to order for the aircraft.
-- how do I make
-
 # LEFT & RIGHT WING ENTITY
 the wing DAO will contain the contain the correct wing type to order and how many are available of that type. you can create an order and you can only cancel your current order.
 - [x] Right Wing
@@ -38,6 +34,8 @@ the elevator DAO will contain the correct elevator type to order and how many ar
 - [x] left elevator
 ---
 # EXTRAS - will move once the rep is completed after testing
+## EXTRA???
+- is the type/model of acft part necessary to create for this simple capstone
 
 # AIRCRAFT INTERFACE - wireframe
 - [] it will contain a list of all current working aircraft

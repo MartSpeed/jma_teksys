@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -15,8 +12,23 @@ import javax.persistence.Id;
 @Entity
 public class LeftElevatorEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long leftElevatorId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
+    @Column
+    private String partName;
+
+    @Column
+    private int quantity;
+
+    @Column
+    private int availableAmount;
+
+    // if quantity() !isAvailable() return false
+    // if quantity() > isAvailable() return true
+    @Column
+    private String isAvailable;
+
+    private String type;
 
 }
