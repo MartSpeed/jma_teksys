@@ -24,19 +24,11 @@ public class AircraftController {
         return "/aircraftform";
     }
 
-    @PostMapping("/aircraftform") // save the nose gear
+    @PostMapping("/aircraftform") // save the aircraft model
     public String addPart(AircraftPartInventoryEntity part) {
-       aircraftRepo.save(part);
-       return "redirect:/aircraftform";
+        aircraftRepo.save(part);
+        return "redirect:/aircraftform";
     }
-    // FIND BY NAME
-//    @GetMapping("/nameinventory")
-//    public List<AircraftCraftPartInventoryEntity> allPartNames
-
-    // FIND BY ID
-    // FIND BY TYPE
-
-
 }
 
 

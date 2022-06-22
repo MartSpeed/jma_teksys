@@ -31,7 +31,7 @@ public class AircraftPartInventoryEntity {
 
     // AIRCRAFT INVENTORY FIELDS
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="aircraft_id")
     private long aircraftId;  // PK for the aircraft
 
