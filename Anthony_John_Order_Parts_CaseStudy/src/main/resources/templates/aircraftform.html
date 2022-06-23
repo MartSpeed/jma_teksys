@@ -6,7 +6,7 @@
 </head>
 <body>
     <div>
-        <form th:action="@{/aircraftform}" method="POST" th:object="${aircraftPartInventoryEntity}">
+        <form th:action="@{/aircraftform}" th:object="${aircraftPartInven}" method="POST">
             <tr>
                 <td>
                     Id
@@ -15,7 +15,7 @@
             <!-- aircraft name-->
             <tr>
                 <td><label for="input" >aircraft name</label></td>
-                <td><input th:field="#{aircraftName}" id="input" type="text"  placeholder="name of aircraft"></td><br>
+                <td><input th:field="*{aircraftName}" id="input" type="text" placeholder="name of aircraft"></td><br>
             </tr>
             <!-- aircraft model-->
             <tr>
