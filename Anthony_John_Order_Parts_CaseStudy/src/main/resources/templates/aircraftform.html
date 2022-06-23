@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml?">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <div>
-        <form th:action="@{/aircraftform}" th:object="${aircraftPartInven}" method="POST">
+        <form th:action="@{/aircraftform}" th:object="${part}" method="post">
             <tr>
                 <td>
                     Id
@@ -15,7 +15,7 @@
             <!-- aircraft name-->
             <tr>
                 <td><label for="input" >aircraft name</label></td>
-                <td><input th:field="*{aircraftName}" id="input" type="text" placeholder="name of aircraft"></td><br>
+                <td><input th:field="*{part.aircraftName}" id="input" type="text" placeholder="name of aircraft"></td><br>
             </tr>
             <!-- aircraft model-->
             <tr>
@@ -63,7 +63,7 @@
                 <td><input type="text" placeholder="rudder"></td><br>
             </tr>
             <!-- submit-->
-            <tr><td><input type="submit" value="submit"></td></tr>
+            <tr><td><input type="submit"></td></tr>
             
         </form>
     </div>

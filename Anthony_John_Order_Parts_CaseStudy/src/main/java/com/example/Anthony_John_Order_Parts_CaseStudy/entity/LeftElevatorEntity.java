@@ -31,5 +31,4 @@ public class LeftElevatorEntity {
 
     @Column
     private String type;
-
 }
