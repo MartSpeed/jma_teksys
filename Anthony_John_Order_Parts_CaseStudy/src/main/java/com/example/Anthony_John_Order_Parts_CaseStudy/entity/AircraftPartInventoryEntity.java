@@ -15,6 +15,8 @@ import javax.persistence.*;
 
 
 @Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -36,7 +38,6 @@ public class AircraftPartInventoryEntity {
     private long aircraftId;  // PK for the aircraft
 
     // AIRCRAFT NAME
-    @Column(name="aircraft_name")
     private String aircraftName;
 
     // AIRCRAFT MODEL
