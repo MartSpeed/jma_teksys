@@ -4,6 +4,7 @@ import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftPartInvento
 import com.example.Anthony_John_Order_Parts_CaseStudy.repository.AircraftPartInventoryRepository;
 import com.example.Anthony_John_Order_Parts_CaseStudy.service.AircraftPartInventoryService;
 import com.example.Anthony_John_Order_Parts_CaseStudy.service.impl.AircraftPartInventoryImpl;
+import org.apache.logging.log4j.util.PerformanceSensitive;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,13 +15,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 //@RequestMapping("/home")
 public class AircraftController {
     // INJECT AIRCRAFT SERVICE DEPENDENCY
     private AircraftPartInventoryService aircraftPartInventoryService;
 
     // CONSTRUCTOR BASED DEPENDENCY INJECTION
+    @Autowired
     public AircraftController(AircraftPartInventoryService aircraftPartInventoryService) {
         this.aircraftPartInventoryService = aircraftPartInventoryService;
     }
@@ -31,9 +33,15 @@ public class AircraftController {
         return new ResponseEntity<AircraftPartInventoryEntity>(aircraftPartInventoryService.savePart(aircraftPartInventoryEntity), HttpStatus.CREATED);
     }
 
+//    @PostMapping("/view")
+//    public void display
+
     @GetMapping("/aircraftform")
-    public List<AircraftPartInventoryEntity> getAllParts(AircraftPartInventoryEntity aircraftPartInventoryEntity){
-        return aircraftPartInventoryService.getAllParts(aircraftPartInventoryEntity.getAircraftName(), aircraftPartInventoryEntity.getAircraftModel());
+    public String getAllParts(Model model){
+        List<AircraftPartInventoryEntity> aircraftPartInventoryEntity = aircraftPartInventoryService.getAllParts();
+        // model.addAttribute is needed when using thymeleaf in springboot to display
+        model.addAttribute("aircraftPartInventoryEntities", aircraftPartInventoryEntity);
+        return "/aircraftform";
     }
 
 

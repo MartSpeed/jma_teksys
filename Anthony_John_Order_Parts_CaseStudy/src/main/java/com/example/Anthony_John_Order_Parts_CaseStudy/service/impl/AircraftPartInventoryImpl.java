@@ -25,7 +25,7 @@ public class AircraftPartInventoryImpl implements AircraftPartInventoryService {
     }
 
     @Override
-    public List<AircraftPartInventoryEntity> getAllParts(String aircraftName, String aircraftModel) {
+    public List<AircraftPartInventoryEntity> getAllParts() {
         return aircraftRepo.findAll();
     }
 

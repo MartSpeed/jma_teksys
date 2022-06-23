@@ -1,5 +1,7 @@
 ```
 <!-- aircraft model-->
+<td><label for="input" >aircraft name</label></td>
+<td><input th:field="*{aircraftName}" id="input" type="text" placeholder="name of aircraft"></td><br>
             <tr>
                 <td><label for="input">aircraft model</label></td>
                 <td><input type="text" placeholder="model of aircraft"></td><br>

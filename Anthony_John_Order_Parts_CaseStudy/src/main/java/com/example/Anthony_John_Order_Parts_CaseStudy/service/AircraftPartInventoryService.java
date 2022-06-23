@@ -8,10 +8,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Repository
 public interface AircraftPartInventoryService {
     // SAVE AIRCRAFT PART
     AircraftPartInventoryEntity savePart(AircraftPartInventoryEntity aircraftPartInventoryEntity);
 
-    List<AircraftPartInventoryEntity> getAllParts(String aircraftName, String aircraftModel);
+    List<AircraftPartInventoryEntity> getAllParts();
 }
