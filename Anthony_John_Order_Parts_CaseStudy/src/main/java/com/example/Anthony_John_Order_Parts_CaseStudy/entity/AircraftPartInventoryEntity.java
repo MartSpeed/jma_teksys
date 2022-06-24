@@ -34,53 +34,54 @@ public class AircraftPartInventoryEntity {
     // AIRCRAFT INVENTORY FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="aircraft_id")
+    @Column
     private long aircraftId;  // PK for the aircraft
 
     // AIRCRAFT NAME
+    @Column
     private String aircraftName;
 
     // AIRCRAFT MODEL
-    @Column(name="aircraft_model")
+    @Column
     private String aircraftModel;
 
-    // NOSE LANDING GEAR (NLG)
-    @ManyToOne
-    @JoinColumn(name="nose_landing_gear")
-    private NoseLandingGearEntity nLg;
-
-    // RIGHT MAIN LANDING GEAR (RMLG)
-    @ManyToOne
-    @JoinColumn(name="right_main_landing_gear")
-    private RightMainLandingGearEntity rMlg;
-
-    // LEFT MAIN LANDING GEAR (LMLG)
-    @ManyToOne
-    @JoinColumn(name="left_main_landing_gear")
-    private LeftMainLandingGearEntity lMlg;
-
-    // LEFT WING
-    @ManyToOne
-    @JoinColumn(name="left_aircraft_wing")
-    private LeftWingEntity lWing;
-
-    // RIGHT WING
-    @ManyToOne
-    @JoinColumn(name="right_aircraft_wing")
-    private RightWingEntity rWing;
-
-    // RIGHT ELEVATOR
-    @ManyToOne
-    @JoinColumn(name="right_aircraft_elevator")
-    private RightElevatorEntity rElevator;
-
-    // LEFT ELEVATOR
-    @ManyToOne
-    @JoinColumn(name="left_aircraft_elevator")
-    private LeftElevatorEntity lElevator;
-
-    // RUDDER
-    @ManyToOne
-    @JoinColumn(name="aircraft_rudder")
-    private RudderEntity rudder;
+//    // NOSE LANDING GEAR (NLG)
+//    @ManyToOne
+//    @JoinColumn(name="nose_landing_gear")
+//    private NoseLandingGearEntity nLg;
+//
+//    // RIGHT MAIN LANDING GEAR (RMLG)
+//    @ManyToOne
+//    @JoinColumn(name="right_main_landing_gear")
+//    private RightMainLandingGearEntity rMlg;
+//
+//    // LEFT MAIN LANDING GEAR (LMLG)
+//    @ManyToOne
+//    @JoinColumn(name="left_main_landing_gear")
+//    private LeftMainLandingGearEntity lMlg;
+//
+//    // LEFT WING
+//    @ManyToOne
+//    @JoinColumn(name="left_aircraft_wing")
+//    private LeftWingEntity lWing;
+//
+//    // RIGHT WING
+//    @ManyToOne
+//    @JoinColumn(name="right_aircraft_wing")
+//    private RightWingEntity rWing;
+//
+//    // RIGHT ELEVATOR
+//    @ManyToOne
+//    @JoinColumn(name="right_aircraft_elevator")
+//    private RightElevatorEntity rElevator;
+//
+//    // LEFT ELEVATOR
+//    @ManyToOne
+//    @JoinColumn(name="left_aircraft_elevator")
+//    private LeftElevatorEntity lElevator;
+//
+//    // RUDDER
+//    @ManyToOne
+//    @JoinColumn(name="aircraft_rudder")
+//    private RudderEntity rudder;
 }

@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -33,14 +34,41 @@ public class AircraftController {
         return new ResponseEntity<AircraftPartInventoryEntity>(aircraftPartInventoryService.savePart(aircraftPartInventoryEntity), HttpStatus.CREATED);
     }
 
+    // POST THE PART
+    @PostMapping("aircraftform/postForm")
+    public String postPart(@ModelAttribute("aircraft") AircraftPartInventoryEntity aircraftPartInventoryEntity, HttpSession session){
+        System.out.println(aircraftPartInventoryEntity.getAircraftName());
+        // create a new aircraft object
+        AircraftPartInventoryEntity aircraftPartInventory = new AircraftPartInventoryEntity();
+        // GET AIRCRAFT NAME
+        aircraftPartInventory.setAircraftName(aircraftPartInventoryEntity.getAircraftName());
+        // GET AIRCRAFT MODEL
+        aircraftPartInventory.setAircraftModel(aircraftPartInventoryEntity.getAircraftModel());
+        //
+        session.setAttribute("taco2", aircraftPartInventoryEntity.getAircraftName());
+        // SAVE THE OBJECT
+        aircraftPartInventoryService.savePart(aircraftPartInventoryEntity);
+        return "redirect:/aircraftform/view";
+    }
+
+    // DISPLAY THE PART
+    @GetMapping("/aircraftform/view")
+    public String displayPart(Model model, HttpSession session){
+        // when submitting
+        // save the session and redirects to display
+        model.addAttribute("aircraftEntity", aircraftPartInventoryService.findByAcftName(session.getAttribute("taco2").toString()));
+        //
+        return "aircraftDisplay";
+    }
+
 //    @PostMapping("/view")
 //    public void display
 
     @GetMapping("/aircraftform")
-    public String getAllParts(Model model){
-        List<AircraftPartInventoryEntity> aircraftPartInventoryEntity = aircraftPartInventoryService.getAllParts();
-        // model.addAttribute is needed when using thymeleaf in springboot to display
-        model.addAttribute("aircraftPartInventoryEntities", aircraftPartInventoryEntity);
+    public String getAllParts(@ModelAttribute("taco") AircraftPartInventoryEntity aircraftPartInventoryEntity, BindingResult result, Model model){
+        List<AircraftPartInventoryEntity> aircraftPartInventoryEntity2 = aircraftPartInventoryService.getAllParts();
+        // model.addAttribute is needed when using thymeleaf in springboot to display the requested object
+        model.addAttribute("aircraftPartInventoryEntities", aircraftPartInventoryEntity2);
         return "/aircraftform";
     }
 

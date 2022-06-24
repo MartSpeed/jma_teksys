@@ -13,4 +13,10 @@ public interface AircraftPartInventoryService {
     AircraftPartInventoryEntity savePart(AircraftPartInventoryEntity aircraftPartInventoryEntity);
 
     List<AircraftPartInventoryEntity> getAllParts();
+
+    // FIND BY ID
+    AircraftPartInventoryEntity findById(Long aircraftId);
+
+    // FIND BY NAME
+    AircraftPartInventoryEntity findByAcftName(String aircraftName);
 }

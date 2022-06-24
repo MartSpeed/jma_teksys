@@ -30,5 +30,5 @@ public class LeftElevatorEntity {
     private String isAvailable;
 
     @Column
-    private String type;
+    private String aircraftModel;
 }

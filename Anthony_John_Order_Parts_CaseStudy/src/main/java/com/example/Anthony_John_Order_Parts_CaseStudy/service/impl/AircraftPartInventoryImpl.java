@@ -29,5 +29,15 @@ public class AircraftPartInventoryImpl implements AircraftPartInventoryService {
         return aircraftRepo.findAll();
     }
 
+    @Override
+    public AircraftPartInventoryEntity findById(Long aircraftId) {
+        return aircraftRepo.findById(aircraftId).get();
+    }
+
+    @Override
+    public AircraftPartInventoryEntity findByAcftName(String aircraftName) {
+        return aircraftRepo.findByName(aircraftName);
+    }
+
     // SAVE AIRCRAFT PARTS INVEN
 }
