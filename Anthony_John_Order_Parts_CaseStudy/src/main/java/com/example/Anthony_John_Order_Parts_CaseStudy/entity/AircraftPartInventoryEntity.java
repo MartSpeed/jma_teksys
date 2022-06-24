@@ -46,42 +46,8 @@ public class AircraftPartInventoryEntity {
     private String aircraftModel;
 
     // NOSE LANDING GEAR (NLG)
-//    @ManyToOne
-//    @JoinColumn(name="nose_landing_gear")
-//    private NoseLandingGearEntity nLg;
-//
-//    // RIGHT MAIN LANDING GEAR (RMLG)
-//    @ManyToOne
-//    @JoinColumn(name="right_main_landing_gear")
-//    private RightMainLandingGearEntity rMlg;
-//
-//    // LEFT MAIN LANDING GEAR (LMLG)
-//    @ManyToOne
-//    @JoinColumn(name="left_main_landing_gear")
-//    private LeftMainLandingGearEntity lMlg;
-//
-//    // LEFT WING
-//    @ManyToOne
-//    @JoinColumn(name="left_aircraft_wing")
-//    private LeftWingEntity lWing;
-//
-//    // RIGHT WING
-//    @ManyToOne
-//    @JoinColumn(name="right_aircraft_wing")
-//    private RightWingEntity rWing;
-//
-//    // RIGHT ELEVATOR
-//    @ManyToOne
-//    @JoinColumn(name="right_aircraft_elevator")
-//    private RightElevatorEntity rElevator;
-//
-//    // LEFT ELEVATOR
-//    @ManyToOne
-//    @JoinColumn(name="left_aircraft_elevator")
-//    private LeftElevatorEntity lElevator;
-//
-//    // RUDDER
-//    @ManyToOne
-//    @JoinColumn(name="aircraft_rudder")
-//    private RudderEntity rudder;
+    @ManyToOne
+    @JoinColumn(name="nose_landing_gear")
+    private NoseLandingGearEntity nLg;
+
 }

@@ -25,8 +25,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AircraftPartInventoryRepository extends JpaRepository<AircraftPartInventoryEntity, Long> {
-
     @Query("SELECT a FROM AircraftPartInventoryEntity a WHERE a.aircraftName = ?1")
     public AircraftPartInventoryEntity findByName(String aircraftName);
-
 }
