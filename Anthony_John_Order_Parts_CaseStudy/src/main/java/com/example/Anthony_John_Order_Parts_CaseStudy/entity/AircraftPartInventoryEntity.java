@@ -45,7 +45,7 @@ public class AircraftPartInventoryEntity {
     @Column
     private String aircraftModel;
 
-//    // NOSE LANDING GEAR (NLG)
+    // NOSE LANDING GEAR (NLG)
 //    @ManyToOne
 //    @JoinColumn(name="nose_landing_gear")
 //    private NoseLandingGearEntity nLg;
