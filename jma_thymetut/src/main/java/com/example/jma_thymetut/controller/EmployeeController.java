@@ -64,5 +64,10 @@ public class EmployeeController {
     }
 
     // DELETE
+    @GetMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam Long employeeId) {
+        repo.deleteById(employeeId);
+        return "redirect:/list";
+    }
 
 }
