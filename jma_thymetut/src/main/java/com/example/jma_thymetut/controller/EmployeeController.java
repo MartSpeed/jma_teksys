@@ -4,9 +4,7 @@ import com.example.jma_thymetut.entity.EmployeeEntity;
 import com.example.jma_thymetut.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -48,6 +46,22 @@ public class EmployeeController {
         repo.save(employee);
         return "redirect:/list";
     }
+
+    //HANDLER METHOD FOR THE UPDATE BUTTON
+    @GetMapping("/showUpdateForm")
+    public ModelAndView showUpdateForm(@RequestParam Long employeeId){
+        // create the ModelAndView Object and use the THYMELEAF template name "show-update-form"
+        ModelAndView mav = new ModelAndView("add-employee-form");
+        // use the repo to call JpaRepository methods
+        // .get() gives us the employee object, store in employee variable
+        // return an Optional
+        EmployeeEntity employee = repo.findById(employeeId).get();
+        // save the employee to the ModelAndView object
+        mav.addObject("employee", employee);
+        return mav;
+
+    }
+
     // POST
     // UPDATE
     // DELETE
