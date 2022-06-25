@@ -27,7 +27,7 @@ public class EmployeeController {
         return mav;
     }
 
-    // HANDLER METHOD FOR ADD EMPLOYEE BUTTON
+    //HANDLER METHOD FOR ADD EMPLOYEE BUTTON
     @GetMapping("/addEmployeeForm")
     public ModelAndView addEmployeeForm() {
         // create the ModelAndView OBJECT and uses the THYMELEAF template name "add-employee-form"
@@ -40,13 +40,15 @@ public class EmployeeController {
         return mav;
     }
 
-    // HANDLER METHOD FOR SAVING THE NEW ADDED EMPLOYEE OBJECTS
+    // POST
+    //HANDLER METHOD FOR SAVING THE NEW ADDED EMPLOYEE OBJECTS
     @PostMapping("/saveEmployee")
     public String saveEmployee(@ModelAttribute EmployeeEntity employee){
         repo.save(employee);
         return "redirect:/list";
     }
 
+    // UPDATE
     //HANDLER METHOD FOR THE UPDATE BUTTON
     @GetMapping("/showUpdateForm")
     public ModelAndView showUpdateForm(@RequestParam Long employeeId){
@@ -61,7 +63,6 @@ public class EmployeeController {
         return mav;
     }
 
-    // POST
-    // UPDATE
     // DELETE
+
 }
