@@ -6,16 +6,13 @@
 */
 package com.example.Anthony_John_Order_Parts_CaseStudy.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -24,4 +21,14 @@ public class NoseLandingGearEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long noseLandingGearId; // PK for landing gear
+
+    // the total amount of the entity
+    @Column
+    private int quantity, availableAmount;
+
+    // if quantity() !isAvailable() return false
+    // if quantity() > isAvailable() return true
+    @Column
+    private String isAvailable;
+
 }
