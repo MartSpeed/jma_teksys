@@ -15,7 +15,7 @@ public class EmployeeController {
     private EmployeeRepository repo;
 
     // GET
-    @GetMapping("/showEmployees")
+    @GetMapping({"/showEmployees", "/", "/list"}) // what are the curly braces for?
     public ModelAndView showEmployees(){
         // create the ModelAndView OBJECT and takes the THYMELEAF template name "list-employees"
         ModelAndView mav = new ModelAndView("list-employees");
