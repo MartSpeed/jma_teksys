@@ -30,7 +30,7 @@
                     <td th:text="${employee.department}"></td>
                     <td class="d-flex flex-row">
                         <a th:href="@{/showUpdateForm(employeeId=${employee.id})}" class="btn btn-info">Update</a>
-                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-dan ms-2 ml-2">Delete</a>
+                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger ms-2 ml-2">Delete</a>
                     </td>
                 </tr>
             </tbody>
