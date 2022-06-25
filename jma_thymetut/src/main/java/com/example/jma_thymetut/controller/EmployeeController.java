@@ -59,7 +59,6 @@ public class EmployeeController {
         // save the employee to the ModelAndView object
         mav.addObject("employee", employee);
         return mav;
-
     }
 
     // POST
