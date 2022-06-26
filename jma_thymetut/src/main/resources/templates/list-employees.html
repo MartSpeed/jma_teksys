@@ -2,19 +2,19 @@
 
 <head>
     <title>List Employees</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
           crossorigin="anonymous">
-
 </head>
 
 <body>
     <div class="container">
         <h3>List Employees</h3>
         <hr/>
-        <a th:href="@{/addEmployeeForm}" class="btn btn-primary mb-2">Add Employee</a>
-        <table class="table table-bordered table-striped">
+        <a th:href="@{/addEmployeeForm}" class="btn btn-primary btn-sm mb-2">Add Employee</a>
+        <table class="table table-bordered table-striped" id="employee-table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -29,11 +29,23 @@
                     <td th:text="${employee.email}"></td>
                     <td th:text="${employee.department}"></td>
                     <td class="d-flex flex-row">
-                        <a th:href="@{/showUpdateForm(employeeId=${employee.id})}" class="btn btn-info">Update</a>
-                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger ms-2 ml-2">Delete</a>
+                        <a th:href="@{/showUpdateForm(employeeId=${employee.id})}" class="btn btn-info btn-sm">Update</a>
+                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger btn-sm ms-2 ml-2">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#employee-table").DataTable({
+                'aoColumnDefs' : [{
+                    'bSortable': false,
+                    'aTargets': [-1]
+                }]
+            });
+        })
+    </script>
 </body>

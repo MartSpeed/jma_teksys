@@ -17,10 +17,10 @@
         <input type="text" th:field="*{name}" placeholder="Enter Name" class="form-control col-4 mb-4"/>
         <input type="text" th:field="*{email}" placeholder="Enter Email" class="form-control col-4 mb-4"/>
         <input type="text" th:field="*{department}" placeholder="Enter Department" class="form-control col-4 mb-4"/>
-        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-primary btn-sm" type="submit">Save</button>
         <input type="hidden" th:field="*{id}"/>
     </form>
     <hr/>
-    <a th:href="@{/list}">Back to list</a>
+    <a th:href="@{/list}" class="btn btn-primary btn-sm">Back to list</a>
 </div>
 </body>
