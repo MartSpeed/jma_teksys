@@ -29,7 +29,7 @@ public class UserRegistrationController {
     }
 
     // HANDLER METHOD FOR REGISTRATION HTML FILE AND HTTP GET REQUEST
-    @GetMapping()
+    @GetMapping
     public String showRegistrationForm(){
         return "registration";
     }
