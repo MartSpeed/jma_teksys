@@ -27,9 +27,20 @@ public class AircraftPartInventoryEntity {
     @Column
     private long partId;  // PK for the aircraft part
 
-    // AIRCRAFT PART NAME, AIRCRAFT PART DESCRIPTION
+    // IMPORT THE AIRCRAFT PART MODEL
+    @ManyToOne
+    @JoinColumn(name = "aircraft_part_id")
+    private AircraftPartInventoryEntity aircraftPartInventoryEntity;
+
+    // IMPORT THE USER ENTITY
+    private UserEntity userEntity;
+
+    // IMPORT THE ADMIN ENTITY
+    private AdminEntity adminEntity;
+
+    // AIRCRAFT PART DESCRIPTION
     @Column
-    private String partName, partDescription;
+    private String partDescription;
 
     // AIRCRAFT PART INSTOCK
     @Column
@@ -42,8 +53,7 @@ public class AircraftPartInventoryEntity {
     // NO ARGS/ALL ARGS
     public AircraftPartInventoryEntity() {
     }
-    public AircraftPartInventoryEntity(String partName, String partDescription, boolean inStock, double listPrice) {
-        this.partName = partName;
+    public AircraftPartInventoryEntity(String partDescription, boolean inStock, double listPrice) {
         this.partDescription = partDescription;
         this.inStock = inStock;
         this.listPrice = listPrice;
