@@ -18,6 +18,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@Table(name="aircraft_part_inventory")
 public class AircraftPartInventoryEntity {
 
     // AIRCRAFT INVENTORY FIELDS
@@ -26,12 +27,9 @@ public class AircraftPartInventoryEntity {
     @Column
     private long partId;  // PK for the aircraft part
 
-    // AIRCRAFT PART NAME
+    // AIRCRAFT PART NAME, AIRCRAFT PART DESCRIPTION
     @Column
-    private String partName;
-
-    // AIRCRAFT PART DESCRIPTION
-    private String partDescription;
+    private String partName, partDescription;
 
     // AIRCRAFT PART INSTOCK
     @Column
@@ -40,4 +38,14 @@ public class AircraftPartInventoryEntity {
     // AIRCRAFT LIST PRICE
     @Column
     private double listPrice;
+
+    // NO ARGS/ALL ARGS
+    public AircraftPartInventoryEntity() {
+    }
+    public AircraftPartInventoryEntity(String partName, String partDescription, boolean inStock, double listPrice) {
+        this.partName = partName;
+        this.partDescription = partDescription;
+        this.inStock = inStock;
+        this.listPrice = listPrice;
+    }
 }

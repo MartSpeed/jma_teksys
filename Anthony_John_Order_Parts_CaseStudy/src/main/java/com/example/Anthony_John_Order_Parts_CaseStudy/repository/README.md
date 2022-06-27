@@ -12,24 +12,4 @@ The repository will *extend* the **JpaRepository** specifically for the use of t
 
 # AIRCRAFT PARTS INVENTORY REPOSITORY
 the aircraft repository is responsible for handling how the aircraft methods that supply the information for each objects method
-- aircraftStatus
-    check to see the current status of the aircraft
-    - private String redX
-    - private String redSlash
-    - private String redDash
-    - private String signature
-- isAircraftBroken
-    this will check is the current aircraft selected has any listed parts broken
-- inspectionRequired
-    if condition is a redDash
-- flightReady
-    if condition is a signature
-- 
 
-# NOSE, RIGHT & LEFT MAIN LANDING GEAR REPOSITORY
-
-# LEFT & RIGHT WING REPOSITORY
-
-# LEFT & RIGHT ELEVATOR REPOSITORY
-
-# RUDDER REPOSITORY
