@@ -24,7 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    // to integrate spring jpa and hibernate with spring security with DaoAunthenticatio file
+    // to integrate spring jpa and hibernate with spring security with DaoAunthentication file
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         // create new auth object to save data into
