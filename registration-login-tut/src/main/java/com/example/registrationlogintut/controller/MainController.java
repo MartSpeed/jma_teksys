@@ -1,4 +1,4 @@
-package com.example.registrationlogintut.web.dto;
+package com.example.registrationlogintut.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

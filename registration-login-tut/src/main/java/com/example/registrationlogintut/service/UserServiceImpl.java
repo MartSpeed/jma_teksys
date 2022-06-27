@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository){
-        super();
         this.userRepository= userRepository;
     }
 
