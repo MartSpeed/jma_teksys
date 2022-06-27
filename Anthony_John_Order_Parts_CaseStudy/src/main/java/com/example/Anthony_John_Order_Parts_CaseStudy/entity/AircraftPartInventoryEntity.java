@@ -17,37 +17,27 @@ import javax.persistence.*;
 @Data
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class AircraftPartInventoryEntity {
-
-    /*
-        what does your aircraft need to be whole?
-        these objects will connect to the aircraft object to,
-        1. fix the aircraft as the overall task including the methods below,
-        2. order parts for a status update,
-        3. show fixed or completed aircraft,
-        4. order parts for plane by proper order id
-    */
 
     // AIRCRAFT INVENTORY FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private long aircraftId;  // PK for the aircraft
+    private long partId;  // PK for the aircraft part
 
-    // AIRCRAFT NAME
+    // AIRCRAFT PART NAME
     @Column
-    private String aircraftName;
+    private String partName;
 
-    // AIRCRAFT MODEL
+    // AIRCRAFT PART DESCRIPTION
+    private String partDescription;
+
+    // AIRCRAFT PART INSTOCK
     @Column
-    private String aircraftModel;
+    private boolean inStock;
 
-    // NOSE LANDING GEAR (NLG)
-    @ManyToOne
-    @JoinColumn(name="nose_landing_gear")
-    private NoseLandingGearEntity nLg;
-
+    // AIRCRAFT LIST PRICE
+    @Column
+    private double listPrice;
 }
