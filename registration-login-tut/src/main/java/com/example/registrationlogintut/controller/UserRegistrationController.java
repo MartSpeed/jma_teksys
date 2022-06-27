@@ -36,8 +36,6 @@ public class UserRegistrationController {
 
     // POST METHOD
 
-
-
     //HANDLER METHOD FOR POST HTTP REQUEST FOR REGISTRATION DTO
     @PostMapping
     public String registerUserAccount(@ModelAttribute("user")UserRegistrationDto registrationDto){
