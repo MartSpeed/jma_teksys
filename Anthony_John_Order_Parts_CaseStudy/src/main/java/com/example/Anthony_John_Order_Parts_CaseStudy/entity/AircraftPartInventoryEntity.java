@@ -33,9 +33,13 @@ public class AircraftPartInventoryEntity {
     private AircraftPartInventoryEntity aircraftPartInventoryEntity;
 
     // IMPORT THE USER ENTITY
+    @ManyToOne
+    @JoinColumn(name = "user")
     private UserEntity userEntity;
 
     // IMPORT THE ADMIN ENTITY
+    @ManyToOne
+    @JoinColumn(name = "admin")
     private AdminEntity adminEntity;
 
     // AIRCRAFT PART DESCRIPTION

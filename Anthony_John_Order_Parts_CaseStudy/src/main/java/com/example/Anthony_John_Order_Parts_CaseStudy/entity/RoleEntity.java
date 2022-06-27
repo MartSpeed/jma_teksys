@@ -19,7 +19,7 @@ public class RoleEntity {
 
     @Column
     private String name;
-    
+
     public RoleEntity(String name) {
         super();
         this.name = name;
