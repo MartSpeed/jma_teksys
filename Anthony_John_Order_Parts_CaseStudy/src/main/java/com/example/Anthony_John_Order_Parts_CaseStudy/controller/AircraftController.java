@@ -19,6 +19,7 @@ import java.util.List;
 @Controller
 //@RequestMapping("/home")
 public class AircraftController {
+
     // INJECT AIRCRAFT SERVICE DEPENDENCY
     private AircraftPartInventoryService aircraftPartInventoryService;
 
@@ -28,30 +29,9 @@ public class AircraftController {
         this.aircraftPartInventoryService = aircraftPartInventoryService;
     }
 
-    //
-    @PostMapping("/aircraftform")
-    public ResponseEntity<AircraftPartInventoryEntity> savePart(@RequestBody AircraftPartInventoryEntity aircraftPartInventoryEntity){
-        return new ResponseEntity<AircraftPartInventoryEntity>(aircraftPartInventoryService.savePart(aircraftPartInventoryEntity), HttpStatus.CREATED);
-    }
+    // GET METHODS
 
-    // POST THE PART
-    @PostMapping("aircraftform/postForm")
-    public String postPart(@ModelAttribute("aircraft") AircraftPartInventoryEntity aircraftPartInventoryEntity, HttpSession session){
-        System.out.println(aircraftPartInventoryEntity.getAircraftName());
-        // create a new aircraft object
-        AircraftPartInventoryEntity aircraftPartInventory = new AircraftPartInventoryEntity();
-        // GET AIRCRAFT NAME
-        aircraftPartInventory.setAircraftName(aircraftPartInventoryEntity.getAircraftName());
-        // GET AIRCRAFT MODEL
-        aircraftPartInventory.setAircraftModel(aircraftPartInventoryEntity.getAircraftModel());
-        //
-        session.setAttribute("taco2", aircraftPartInventoryEntity.getAircraftName());
-        // SAVE THE OBJECT
-        aircraftPartInventoryService.savePart(aircraftPartInventoryEntity);
-        return "redirect:/aircraftform/view";
-    }
-
-    // DISPLAY THE PART
+    // HANDLER METHOD FOR AIRCRAFT FROM VIEW HTML PAGE
     @GetMapping("/aircraftform/view")
     public String displayPart(Model model, HttpSession session){
         // when submitting
@@ -61,8 +41,8 @@ public class AircraftController {
         return "aircraftDisplay";
     }
 
-//    @PostMapping("/view")
-//    public void display
+    // **find the reference for taco**
+    // HANDELR METHOD FOR DISPLAYING THE AIRCRAFTFORM FILE
 
     @GetMapping("/aircraftform")
     public String getAllParts(@ModelAttribute("taco") AircraftPartInventoryEntity aircraftPartInventoryEntity, BindingResult result, Model model){
@@ -72,62 +52,31 @@ public class AircraftController {
         return "/aircraftform";
     }
 
+    // POST METHODS
 
+    // HANDLER METHOD TO SAVE AIRCRAFT PART
+    @PostMapping("/aircraftform")
+    public ResponseEntity<AircraftPartInventoryEntity> savePart(@RequestBody AircraftPartInventoryEntity aircraftPartInventoryEntity){
+        return new ResponseEntity<AircraftPartInventoryEntity>(aircraftPartInventoryService.savePart(aircraftPartInventoryEntity), HttpStatus.CREATED);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-    // ORIGINAL CODE
-    // FIND ALL PARTS
-//    @GetMapping("/aircraftform")
-//    public String allAircraftParts (){
-//        //List<AircraftPartInventoryEntity> allParts;
-//        aircraftRepo.findAll();
-//        return "aircraftform";
-//    }
-//
-//    @PostMapping("/aircraftform") // save the nose gear
-//    public String addPart(AircraftPartInventoryEntity part) {
-//        aircraftRepo.save(part);
-//        return "redirect:/aircraftform";
-//    }
-
-    // OTHER CODE
-    // this is set inside of the ipml file
-//    @Autowired
-//    private AircraftPartInventoryImpl aircraftImpl;
-
-    // ORIGINAL CODE
-//    @Autowired
-//    private AircraftPartInventoryRepository aircraftRepo;
-
-    // FIND ALL PARTS
-    // NEW CODE
-//    @GetMapping("/aircraftform")
-//    public String allAircraftParts (){
-//        return "aircraftform";
-//    }
-//
-//    @PostMapping("/aircraftform") // save the aircraft model
-//    public String addPart(@ModelAttribute AircraftPartInventoryEntity part, BindingResult result, Model model) {
-//        // if the result !hasErrors
-//        // add new part with message
-//        if(!result.hasErrors()){
-//            //
-//            aircraftImpl.savePart(part);
-//            model.addAttribute("SUCCESSFULLY ADDED PARTS\n");
-//            model.addAttribute("AIRCRAFT PART: ", new AircraftPartInventoryEntity());
-//        }
-//        return "redirect:/aircraftform";
-//    }
+    // HANDLER METHOD FOR DISPLAYING THE AIRCRAFT PART INFORMATION
+    @PostMapping("aircraftform/postForm")
+    public String postPart(@ModelAttribute("aircraft") AircraftPartInventoryEntity aircraftPartInventoryEntity, HttpSession session){
+        System.out.println(aircraftPartInventoryEntity.getPartName());
+        // create a new aircraft object
+        AircraftPartInventoryEntity aircraftPartInventory = new AircraftPartInventoryEntity();
+        // GET AIRCRAFT NAME
+        aircraftPartInventory.setPartName(aircraftPartInventoryEntity.getPartName());
+        // GET AIRCRAFT PART NAME
+        aircraftPartInventory.setPartName(aircraftPartInventoryEntity.getPartName());
+        // **find the reference for taco2**
+        // [x]
+        session.setAttribute("taco2", aircraftPartInventoryEntity.getPartName());
+        // SAVE THE PART OBJECT
+        aircraftPartInventoryService.savePart(aircraftPartInventoryEntity);
+        return "redirect:/aircraftform/view";
+    }
 }
 
 
