@@ -25,26 +25,25 @@ public class AircraftPartInventoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private long partId;  // PK for the aircraft part
+    private Long id;  // PK for the aircraft part
 
     // IMPORT THE AIRCRAFT PART MODEL
     @ManyToOne
-    @JoinColumn(name = "aircraft_part_id")
-    private AircraftPartInventoryEntity aircraftPartInventoryEntity;
+    @JoinColumn(name = "aircraft_part")
+    private AircraftPartEntity aircraftPartEntity;
 
     // IMPORT THE USER ENTITY
     @ManyToOne
     @JoinColumn(name = "user")
     private UserEntity userEntity;
 
-    // IMPORT THE ADMIN ENTITY
-    @ManyToOne
-    @JoinColumn(name = "admin")
-    private AdminEntity adminEntity;
-
     // AIRCRAFT PART DESCRIPTION
     @Column
     private String partDescription;
+
+    // AIRCRAFT PART QUANITY
+    @Column
+    private int quantity;
 
     // AIRCRAFT PART INSTOCK
     @Column
@@ -57,8 +56,12 @@ public class AircraftPartInventoryEntity {
     // NO ARGS/ALL ARGS
     public AircraftPartInventoryEntity() {
     }
-    public AircraftPartInventoryEntity(String partDescription, boolean inStock, double listPrice) {
+
+    public AircraftPartInventoryEntity(AircraftPartEntity aircraftPartEntity, UserEntity userEntity, String partDescription, int quantity, boolean inStock, double listPrice) {
+        this.aircraftPartEntity = aircraftPartEntity;
+        this.userEntity = userEntity;
         this.partDescription = partDescription;
+        this.quantity = quantity;
         this.inStock = inStock;
         this.listPrice = listPrice;
     }
