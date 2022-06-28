@@ -39,5 +39,4 @@ public class AircraftCartTest {
 
         assertTrue(saveCartItem.getId() > 0);
     }
-
 }
