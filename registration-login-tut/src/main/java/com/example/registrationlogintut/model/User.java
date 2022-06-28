@@ -23,7 +23,7 @@ public class User {
 
     //one USER can have multiple ROLES
     // many-to-many mapping for user and role
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     @JoinTable(
         name = "user_roles",
         joinColumns = @JoinColumn(
