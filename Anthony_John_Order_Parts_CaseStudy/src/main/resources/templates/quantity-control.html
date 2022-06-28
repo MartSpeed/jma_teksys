@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Aircraft Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+</head>
+<body>
+    <!-- QUANTITY CONTROL-->
+    <div th:fragment="quantity_control(qtyValue, aircraftProductId)">
+        <nav>
+            <ul class="pagination">
+                <!-- BUTTON MINUS -->
+                <li class="page-item">
+                    <a class="page-link minusButton" href="" th:pid="${aircraftProductId}"><b>-</b></a>
+                </li>
+
+                <!-- QUANTITY NUMBER -->
+                <li class="page-item">
+                    <input type="text" th:value="${qtyValue}" class="form-control text-center"
+                    onkeydown="return false" style="max-width: 55px"
+                    th:id="'quantity' + ${aircraftProductId}"/>
+                </li>
+
+                <!-- BUTTON PLUS -->
+                <li class="page-item">
+                    <a class="page-link plusButton" href="" th:pid="${aircraftProductId}"><b>+</b></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

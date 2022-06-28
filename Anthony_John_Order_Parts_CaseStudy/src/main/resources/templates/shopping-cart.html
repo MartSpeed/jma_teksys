@@ -52,7 +52,7 @@
                         </div>
 
                         <!-- PRODUCT QUANTITY -->
-                        <div><input type="number" th:value="${item.quantity}" class="form-control"></div>
+                        <div th:replace="quantity-control :: quantityControl(${item.quantity}, ${item.aircraftProduct.id})">Quantity</div>
 
                         <!-- PRODUCT PRICE -->
                         <div>
@@ -74,7 +74,7 @@
             </div>
 
             <!-- CHECKOUT TOTAL -->
-            <div class="col-sm-4">
+            <div class="col-sm-4" th:unless="${#lists.isEmpty(cartItems)}">
                 <!-- ESTIMATED TOTAL -->
                 <div>
                     <span class="h3">Estimated Total:</span>
@@ -88,9 +88,12 @@
                     <button class="btn btn-danger btn-sm p-3 mt-2">check out</button>
                 </div>
             </div>
-
-
         </div>
+
+    <!-- DISPLAY IF USER HAS NO ITEMS IN CART -->
+    <div th:if="${#lists.isEmpty(cartItems)}">
+        <h3>You have not chosen any aircraft parts to order</h3>
+    </div>
 
 
     <div th:replace="fragments :: footer">Static Footer</div>
