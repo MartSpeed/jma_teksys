@@ -1,6 +1,6 @@
 package com.example.Anthony_John_Order_Parts_CaseStudy;
 
-import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftProduct;
+import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftCartItem;
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.UserEntity;
 import com.example.Anthony_John_Order_Parts_CaseStudy.repository.AircraftPartInventoryRepository;
 import org.junit.jupiter.api.Test;
@@ -37,11 +37,11 @@ public class AircraftInventoryTest {
         UserEntity userEntity = testEntityManager.find(UserEntity.class, 3);
 
         // CREATE A NEW PART ITEM
-        AircraftProduct newPart = new AircraftProduct();
+        AircraftCartItem newPart = new AircraftCartItem();
         newPart.setUserEntity(userEntity);
         newPart.setAircraftPartEntity(aircraftPart);
         newPart.setQuantity(1);
-        AircraftProduct savedPart =  repo.save(newPart);
+        AircraftCartItem savedPart =  repo.save(newPart);
         // SET ID PART HAS ID GREATER THAN 0
         assertTrue(savedPart.getId() > 0);
     }

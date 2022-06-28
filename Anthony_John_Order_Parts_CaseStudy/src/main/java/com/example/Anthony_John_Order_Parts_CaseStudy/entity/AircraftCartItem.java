@@ -8,15 +8,15 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="aircraft_product")
-public class AircraftProduct {
+@Table(name="aircraft_cart_items")
+public class AircraftCartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @ManyToOne
     @JoinColumn(name="aircraft_product_id")
-    private AircraftProduct aircraftProduct;
+    private AircraftCartItem aircraftCartItem;
 
     @ManyToOne
     @JoinColumn(name="user_id")
@@ -25,10 +25,10 @@ public class AircraftProduct {
     private int quantity;
 
     //ALL ARGS/NO ARGS
-    public AircraftProduct() {
+    public AircraftCartItem() {
     }
-    public AircraftProduct(AircraftProduct aircraftProduct, UserEntity userEntity, int quantity) {
-        this.aircraftProduct = aircraftProduct;
+    public AircraftCartItem(AircraftCartItem aircraftCartItem, UserEntity userEntity, int quantity) {
+        this.aircraftCartItem = aircraftCartItem;
         this.userEntity = userEntity;
         this.quantity = quantity;
     }
