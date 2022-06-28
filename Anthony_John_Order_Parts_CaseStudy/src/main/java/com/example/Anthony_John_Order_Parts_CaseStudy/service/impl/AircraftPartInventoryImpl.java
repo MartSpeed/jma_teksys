@@ -1,12 +1,12 @@
 package com.example.Anthony_John_Order_Parts_CaseStudy.service.impl;
 
-import com.example.Anthony_John_Order_Parts_CaseStudy.service.AircraftPartInventoryService;
+import com.example.Anthony_John_Order_Parts_CaseStudy.service.AircraftCartService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class AircraftPartInventoryImpl implements AircraftPartInventoryService {
+public class AircraftPartInventoryImpl implements AircraftCartService {
 //    private AircraftPartInventoryRepository aircraftRepo;
 //
 //    @Autowired
