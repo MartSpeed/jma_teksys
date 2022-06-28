@@ -15,7 +15,7 @@ public class RoleEntity {
     // FIELDS
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private int id;
 
     @Column
     private String name;

@@ -11,6 +11,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest
@@ -26,7 +29,7 @@ public class AircraftInventoryTest {
     @Autowired
     private TestEntityManager testEntityManager;
 
-    // TEST AN ITEM ADDED TO THE CART WITH THE ID OF 7
+    // TEST METHOD FOR CART ITEMS
     @Test
     public void testOnePart() {
         //
@@ -42,5 +45,15 @@ public class AircraftInventoryTest {
         AircraftPartInventoryEntity savedPart =  repo.save(newPart);
         // SET ID PART HAS ID GREATER THAN 0
         assertTrue(savedPart.getId() > 0);
+    }
+
+    // TEST METHOD FOR FINDING ITEMS BY USER
+    @Test
+    public void testGetPartByCustomer(){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(2);
+        // RETURN A COLLECTION OF PART ITEM OBJECTS
+        List<AircraftPartEntity> aircraftPartEntities = repo.findByUser(userEntity);
+        assertEquals(2, aircraftPartEntities.size());
     }
 }

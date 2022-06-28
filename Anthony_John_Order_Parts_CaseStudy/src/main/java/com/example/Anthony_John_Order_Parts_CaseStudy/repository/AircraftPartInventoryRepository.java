@@ -18,10 +18,15 @@
 package com.example.Anthony_John_Order_Parts_CaseStudy.repository;
 
 
+import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftPartEntity;
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftPartInventoryEntity;
+import com.example.Anthony_John_Order_Parts_CaseStudy.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface AircraftPartInventoryRepository extends JpaRepository<AircraftPartInventoryEntity, Long> {
+    public List<AircraftPartEntity> findByUser(UserEntity userEntity);
 }
