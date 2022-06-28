@@ -2,7 +2,6 @@ package com.example.Anthony_John_Order_Parts_CaseStudy;
 
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftCartItem;
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.UserEntity;
-import com.example.Anthony_John_Order_Parts_CaseStudy.repository.AircraftPartInventoryRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;

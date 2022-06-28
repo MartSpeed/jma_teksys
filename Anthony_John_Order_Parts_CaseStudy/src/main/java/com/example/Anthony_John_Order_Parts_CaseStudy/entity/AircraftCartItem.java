@@ -16,7 +16,7 @@ public class AircraftCartItem {
 
     @ManyToOne
     @JoinColumn(name="aircraft_product_id")
-    private AircraftCartItem aircraftCartItem;
+    private AircraftProduct aircraftProduct;
 
     @ManyToOne
     @JoinColumn(name="user_id")
@@ -27,8 +27,9 @@ public class AircraftCartItem {
     //ALL ARGS/NO ARGS
     public AircraftCartItem() {
     }
-    public AircraftCartItem(AircraftCartItem aircraftCartItem, UserEntity userEntity, int quantity) {
-        this.aircraftCartItem = aircraftCartItem;
+
+    public AircraftCartItem(AircraftProduct aircraftProduct, UserEntity userEntity, int quantity) {
+        this.aircraftProduct = aircraftProduct;
         this.userEntity = userEntity;
         this.quantity = quantity;
     }
