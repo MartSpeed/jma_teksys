@@ -1,0 +1,78 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-sringsecurity3">
+
+<head>
+    <title>List Employees</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<!-- NAV BAR (header) -->
+<nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login Module</a>
+        </div>
+        <!-- logout link -->
+        <ul class="nav navbar-nav text-white">
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+
+<!-- LOGIN MESSAGE VERIFICATION-->
+<div class="container">
+    <!-- login message -->
+    <h1>Aircraft Maintenance Qualification Tracker</h1>
+    <!-- print user email id on the homepage -->
+    Welcome <span sec:authentication="principal.username">User</span>
+</div>
+<hr>
+
+<div class="container">
+    <h3>List Employees</h3>
+    <hr/>
+    <a th:href="@{/addEmployeeForm}" class="btn btn-primary btn-sm mb-2">Add Employee</a>
+    <table class="table table-bordered table-striped" id="employee-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee: ${employees}">
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.department}"></td>
+            <td class="d-flex flex-row">
+                <a th:href="@{/showUpdateForm(employeeId=${employee.id})}" class="btn btn-info btn-sm">Update</a>
+                <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger btn-sm ms-2 ml-2">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+<script>
+        $(document).ready(function(){
+        $("#employee-table").DataTable({
+                'aoColumnDefs' : [{
+                    'bSortable': false,
+                    'aTargets': [-1]
+                }]
+            });
+        })
+    </script>
+</body>
