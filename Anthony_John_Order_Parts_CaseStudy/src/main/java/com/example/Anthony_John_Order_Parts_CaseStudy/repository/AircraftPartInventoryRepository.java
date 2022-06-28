@@ -22,7 +22,6 @@ package com.example.Anthony_John_Order_Parts_CaseStudy.repository;
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftProduct;
 =======
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftPartEntity;
-import com.example.Anthony_John_Order_Parts_CaseStudy.entity.AircraftPartInventoryEntity;
 >>>>>>> 0d029e7bba39682655086c451ee173e092fa3f86
 import com.example.Anthony_John_Order_Parts_CaseStudy.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
