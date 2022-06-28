@@ -25,7 +25,7 @@ public class AircraftPartInventoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private Long id;  // PK for the aircraft part
+    private int id;  // PK for the aircraft part
 
     // IMPORT THE AIRCRAFT PART MODEL
     @ManyToOne
