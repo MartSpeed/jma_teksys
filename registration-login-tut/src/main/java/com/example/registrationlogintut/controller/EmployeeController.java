@@ -16,7 +16,7 @@ public class EmployeeController {
 
     // GET
     //HANDLER METHOD FOR FORM DISPLAY
-    @GetMapping({"/showEmployees","/employees", "/list"}) // what are the curly braces for?
+    @GetMapping({"/showEmployees", "/employees", "/list"}) // what are the curly braces for?
     public ModelAndView showEmployees(){
         // create the ModelAndView OBJECT and takes the THYMELEAF template name "list-employees"
         ModelAndView mav = new ModelAndView("list-employees");

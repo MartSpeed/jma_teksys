@@ -5,11 +5,19 @@ import lombok.*;
 import javax.persistence.Column;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 public class UserRegistrationDto {
-    @Column
     private String firstName, lastName, email, password;
+
+    //ALL ARGS/NO ARGS
+    public UserRegistrationDto() {
+    }
+
+    public UserRegistrationDto(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
 }
