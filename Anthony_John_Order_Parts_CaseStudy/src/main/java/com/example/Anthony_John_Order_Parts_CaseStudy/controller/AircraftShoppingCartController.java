@@ -36,7 +36,7 @@ public class AircraftShoppingCartController {
         model.addAttribute("cartItems", cartItems);
         model.addAttribute("pageTitle", "Shopping Cart");
 
-        return"shopping_cart";
+        return"shopping-cart";
     }
 
 
