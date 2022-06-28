@@ -8,13 +8,28 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="aircraft_part_inventory")
+@Table(name="aircraft_product")
 public class AircraftProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    @Column
-    private String name;
-    @Column
-    private Double price;
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name="aircraft_product_id")
+    private AircraftProduct aircraftProduct;
+
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private UserEntity userEntity;
+
+    private int quantity;
+
+    //ALL ARGS/NO ARGS
+    public AircraftProduct() {
+    }
+    public AircraftProduct(AircraftProduct aircraftProduct, UserEntity userEntity, int quantity) {
+        this.aircraftProduct = aircraftProduct;
+        this.userEntity = userEntity;
+        this.quantity = quantity;
+    }
 }
