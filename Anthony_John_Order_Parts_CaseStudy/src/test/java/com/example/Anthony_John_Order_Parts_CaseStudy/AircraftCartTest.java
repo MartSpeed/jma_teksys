@@ -12,6 +12,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest
@@ -39,4 +42,20 @@ public class AircraftCartTest {
 
         assertTrue(saveCartItem.getId() > 0);
     }
+<<<<<<< HEAD
+=======
+
+    // TEST METHOD FOR AIRCRAFT CART ITEM REPOSITORY
+    @Test
+    public void testGetCartItemByUser(){
+        // create new user object
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(5);
+
+        List<AircraftCartItem> cartItems = repo.findByUser(userEntity);
+
+        assertEquals(2,cartItems.size());
+    }
+
+>>>>>>> main
 }
