@@ -1,6 +1,7 @@
 import java.io.ObjectInputStream.GetField;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class App {
@@ -74,8 +75,17 @@ public class App {
         people.stream()
         .min(Comparator.comparing(Person :: getAge))
         .ifPresent(System.out::println);
-        
+
         // Group
+            // group information based on gender
+        Map<Gender, List<Person>> groupByGender = people.stream()
+            .collect(Collectors.groupingBy(Person::getGender));
+
+            groupByGender.forEach((gender, people1) -> {
+                System.out.println(gender);
+                people1.forEach(System.out::println);
+                System.out.println();
+            });
     }
 
     // static list of people
