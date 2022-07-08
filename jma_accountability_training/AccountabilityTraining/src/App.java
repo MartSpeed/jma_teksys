@@ -59,7 +59,7 @@ public class App {
         // AGE > 5 true
             // AGE > 20 false
             boolean noneMatch = people.stream()
-            .noneMatch(person -> person.getAge() > 121);
+            .noneMatch(person -> person.getName().equals("Albedo"));
 
             System.out.println(noneMatch);
         // Max
