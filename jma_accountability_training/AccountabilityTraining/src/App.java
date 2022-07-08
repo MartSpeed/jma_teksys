@@ -37,11 +37,31 @@ public class App {
             .sorted(Comparator.comparing(Person :: getAge).reversed())
             .collect(Collectors.toList());
 
-        sorted.forEach(System.out :: println);
+        //sorted.forEach(System.out :: println);
 
         // All match
+        //     // AGE > 5 true
+        //     // AGE > 20 false
+        // boolean allMatch = people.stream()
+        //     .allMatch(person -> person.getAge() > 5);
+
+        //     System.out.println(allMatch);
+
         // Any match
+            // // AGE > 5 true
+            // // AGE > 20 false
+            // boolean anyMatch = people.stream()
+            // .anyMatch(person -> person.getAge() > 121);
+
+            // System.out.println(anyMatch);
+
         // None match
+        // AGE > 5 true
+            // AGE > 20 false
+            boolean noneMatch = people.stream()
+            .noneMatch(person -> person.getAge() > 121);
+
+            System.out.println(noneMatch);
         // Max
         // Min
         // Group
