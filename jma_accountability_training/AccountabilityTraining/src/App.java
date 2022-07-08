@@ -2,6 +2,7 @@ import java.io.ObjectInputStream.GetField;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class App {
@@ -81,11 +82,18 @@ public class App {
         Map<Gender, List<Person>> groupByGender = people.stream()
             .collect(Collectors.groupingBy(Person::getGender));
 
-            groupByGender.forEach((gender, people1) -> {
-                System.out.println(gender);
-                people1.forEach(System.out::println);
-                System.out.println();
-            });
+            // groupByGender.forEach((gender, people1) -> {
+            //     System.out.println(gender);
+            //     people1.forEach(System.out::println);
+            //     System.out.println();
+            // });
+
+            // chaining stream methods
+            Optional<String> oldestFemaleAge = people.stream()
+                .filter(person ->  person.getGender().equals(Gender.FEMALE))
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getName);
+            oldestFemaleAge.ifPresent(name -> System.out.println(name + " is the eldest of this category"));
     }
 
     // static list of people
