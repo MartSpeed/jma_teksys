@@ -61,9 +61,20 @@ public class App {
             boolean noneMatch = people.stream()
             .noneMatch(person -> person.getName().equals("Albedo"));
 
-            System.out.println(noneMatch);
+            //System.out.println(noneMatch);
+
         // Max
+            // people with the MAX age
+            people.stream()
+                .max(Comparator.comparing(Person :: getAge))
+                .ifPresent(System.out::println);
+
         // Min
+        // people with the MIN age
+        people.stream()
+        .min(Comparator.comparing(Person :: getAge))
+        .ifPresent(System.out::println);
+        
         // Group
     }
 
