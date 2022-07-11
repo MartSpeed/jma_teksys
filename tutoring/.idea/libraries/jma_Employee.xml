@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jma_Employee">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/jma_Employee.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
