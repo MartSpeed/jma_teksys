@@ -1,14 +1,14 @@
 package com.example.registrationlogintut.model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "tbl_employees")
 public class EmployeeEntity {
