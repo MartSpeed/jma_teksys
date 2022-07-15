@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-sringsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Aircraft Parts Order System Login and Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+</head>
+<body>
+<!-- NAV BAR (header) -->
+<nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login Module</a>
+        </div>
+        <!-- logout link -->
+            <ul class="nav navbar-nav text-white">
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+    </div>
+</nav>
+<br>
+<br>
+
+<div class="container">
+    <!-- login message -->
+    <h1>Registration and Login with Spring Boot, Spring Security, Thymeleaf, Hibernate and MySQL</h1>
+    <!-- print user email id on the homepage -->
+    Welcome <span sec:authentication="principal.username">User</span>
+</div>
+</body>
+</html>
